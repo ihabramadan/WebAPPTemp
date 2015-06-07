@@ -1,0 +1,62 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package GPStreet.BB;
+
+import GPStreet.DAO.UserDAO;
+import java.util.Locale;
+import java.util.ResourceBundle;
+import javax.faces.context.FacesContext;
+import javax.faces.view.ViewScoped;
+import javax.inject.Named;
+
+
+/**
+ *
+ * @author iramadan
+ */
+@Named(value = "commonBB")
+@ViewScoped
+public class CommonBB {
+
+    
+    /**
+     * Creates a new instance of CommonBB
+     */
+    static ResourceBundle localRB = ResourceBundle.getBundle("Messages",FacesContext.getCurrentInstance().getViewRoot().getLocale());
+
+    
+    
+    @SuppressWarnings("unchecked")
+    public static <T> T findBean(String beanName) {
+        FacesContext context = FacesContext.getCurrentInstance();
+        return (T) context.getApplication().evaluateExpressionGet(context, "#{" + beanName + "}", Object.class);
+    }
+    public static Locale getLocal(){
+        return FacesContext.getCurrentInstance().getViewRoot().getLocale();
+    }
+    public String getCurrentURL() {
+		String pageUrl = FacesContext.getCurrentInstance().getViewRoot().getViewId();
+		pageUrl = pageUrl.trim();
+		return pageUrl;
+	}
+    public ResourceBundle getLocalRB() {
+        if(this.localRB == null)
+            this.localRB = ResourceBundle.getBundle("Messages",getLocal());
+        return localRB;
+    }
+
+    public void setLocalRB(ResourceBundle localRB) {
+        this.localRB = localRB; 
+    }
+    
+    
+    public CommonBB() {
+        
+    }
+    
+    
+}

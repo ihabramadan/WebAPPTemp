@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 16, 2015 2:52:07 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="GPStreet.DB.Gpst_users" table="gpst_users">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="native"></generator>
+        </id>
+        <property name="userName" type="string">
+            <column name="username" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" />
+        </property>
+        <property name="phone" type="string">
+            <column name="phone" />
+        </property>
+        <property name="firstName" type="string">
+            <column name="firstname" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="lastname" />
+        </property>
+    </class>
+</hibernate-mapping>

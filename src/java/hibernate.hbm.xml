@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="GpstUsers" table="gpst_users"/>
+  <class name="GpstGroups" table="gpst_groups"/>
+  <class name="GpstUserHasGroup" table="gpst_user_has_groups"/>
+  <class name="GpstPages" table="gpst_pages"/>
+  <class name="GpstGroupHasPage" table="gpst_group_has_page"/>
+</hibernate-mapping>

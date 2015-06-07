@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <title>Login</title>
+        <!-- Core CSS - Include with every page -->
+        <!--<link href="../assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />-->
+        <h:outputStylesheet name="plugins/bootstrap/bootstrap.css"/>
+        <h:outputStylesheet name="font-awesome/css/font-awesome.css"/>
+        <h:outputStylesheet name="plugins/pace/pace-theme-big-counter.css"/>
+        <h:outputStylesheet name="css/style.css"/>
+        <h:outputStylesheet name="css/main-style.css"/>
+        
+        
+    </h:head>
+    <h:body class="body-Login-back">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center logo-margin ">
+                    <h:graphicImage name="img/logo.png" alt=""/>
+                </div>
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="login-panel panel panel-default">                  
+                        <div class="panel-heading">
+                            <h3 class="panel-title">#{msg['login.please_login']}</h3>
+                        </div>
+                        <div class="panel-body">
+                            <h:form  id="loginForm">
+                                
+                                    
+                                            <div class="form-group" >
+
+                                                <h:message for="userName"   class="form-control alertLogin alert-danger"/>
+                                                <h:message for="password"   class="form-control alertLogin alert-danger"/>
+                                                <h:message for="submitBtn"   class="form-control alertLogin alert-danger"/>
+                                            </div>
+                                    
+                               
+                                <fieldset>
+                                    
+                                    <div class="form-group">
+
+                                        <h:inputText class="form-control" required="true" requiredMessage="#{msg['login.please_userName']}" id="userName" value="#{userBean.userName}"></h:inputText>
+                                    </div>
+                                    <div class="form-group">
+                                        <h:inputSecret class="form-control" required="true" requiredMessage="#{msg['login.please_password']}" id="password" value="#{userBean.password}"></h:inputSecret>
+                                    </div>
+                                   
+                                    <!-- Change this to a button or input when using this as a form -->
+                                    <h:commandLink  id="submitBtn" binding="#{userBean.submitBtn}" action="#{userBean.login()}" class="btn btn-lg btn-success btn-block">Login</h:commandLink>
+
+                                </fieldset>
+                            </h:form>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </h:body>
+</html>
+
