@@ -24,7 +24,7 @@ public class UserDAO {
         List<GpstUsers> allUsers;
         allUsers = users.listALLUsers();
         if(allUsers != null){
-            if(users.listALLUsers().isEmpty()){
+            if(allUsers.isEmpty()){
                 FacesContext.getCurrentInstance().addMessage("errorMessage", new FacesMessage(StartupBean.localRB.getString("database.error")));
                 return null;
             }
@@ -36,7 +36,7 @@ public class UserDAO {
     }
 
     
-    public static boolean addUser(String userName,String password,String userEmail,String userPhone,String userFirstName,String userLastName){
+    public static boolean addUser(String userName,String password,String userEmail,String userPhone,String userFirstName,String userLastName , int groupId){
             ManageUsers mu = new ManageUsers();
             Integer userId = null;
         try {
@@ -44,7 +44,7 @@ public class UserDAO {
             if(userId == null){
                 
             
-            userId = mu.addUser(userName, password, userEmail, userPhone, userFirstName, userLastName);
+            userId = mu.addUser(userName, password, userEmail, userPhone, userFirstName, userLastName ,groupId);
             if(userId == null)
                 return false;
             FacesContext.getCurrentInstance().addMessage("addSuccess", new FacesMessage(StartupBean.localRB.getString("users.user_added")));

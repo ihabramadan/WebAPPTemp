@@ -6,7 +6,10 @@
 
 package GPStreet.BB;
 
+import GPStreet.DAO.GroupsDAO;
 import GPStreet.DAO.UserDAO;
+import GPStreet.DB.Mapping.Entity.GpstGroups;
+import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import javax.faces.context.FacesContext;
@@ -27,7 +30,7 @@ public class CommonBB {
      * Creates a new instance of CommonBB
      */
     static ResourceBundle localRB = ResourceBundle.getBundle("Messages",FacesContext.getCurrentInstance().getViewRoot().getLocale());
-
+    List<GpstGroups> gpstGroups;
     
     
     @SuppressWarnings("unchecked")
@@ -57,6 +60,8 @@ public class CommonBB {
     public CommonBB() {
         
     }
-    
+    public static List<GpstGroups> getAllGroups(){
+        return GroupsDAO.getAllGroups();
+    }
     
 }

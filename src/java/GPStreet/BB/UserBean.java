@@ -6,6 +6,7 @@
 
 package GPStreet.BB;
 
+import GPStreet.DAO.GroupsDAO;
 import GPStreet.DAO.UserDAO;
 import GPStreet.DB.Mapping.Entity.GpstGroups;
 import GPStreet.DB.Mapping.Entity.GpstPages;
@@ -48,10 +49,13 @@ public class UserBean {
     String userPhone;
     
     List<GpstUsers> usersList;
+  
     
     private UIComponent submitBtn;
     private boolean loggedIn;
     Logger logger = Logger.getLogger(UserBean.class);
+
+    
     
     
 
@@ -171,6 +175,7 @@ public class UserBean {
             setUsersList(allUsers);
         }
     }
+    
     public Set<String> getUserPages(GpstUsers user){
          Set userGroup =  user.getGpstGroupses() ;
                Set userPages = new HashSet();

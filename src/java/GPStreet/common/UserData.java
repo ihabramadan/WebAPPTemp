@@ -5,7 +5,9 @@
  */
 package GPStreet.common;
 
+import GPStreet.BB.GroupsBean;
 import GPStreet.DAO.UserDAO;
+import GPStreet.DB.Mapping.Entity.GpstGroups;
 import GPStreet.EJB.StartupBean;
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
@@ -14,6 +16,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.LinkedHashMap;
 import java.util.Locale;
 import java.util.Map;
+import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.component.UIComponent;
@@ -51,12 +54,35 @@ public class UserData implements Serializable {
     String userEmail;
     String userPhone;
     String userConfirmPassword;
+    GroupsBean groupBean;
+    //GpstGroups groupBean;
+
+    
+    
 
     private static Map<String, Object> countries;
     private static Locale arabicLocal = new Locale("ar");
     private Logger logger = Logger.getLogger(UserData.class);
     private String local;
 
+    
+    @PostConstruct
+    public void init() {
+        groupBean = new GroupsBean();
+    }
+    public GroupsBean getGroupBean() {
+        return groupBean;
+    }
+
+    public void setGroupBean(GroupsBean groupBean) {
+        this.groupBean = groupBean;
+    }
+
+    
+
+    
+
+    
     public Map<String, Object> getCountries() {
         return countries;
     }
@@ -218,10 +244,11 @@ public class UserData implements Serializable {
         this.userEmail =null;
         this.password = null;
         this.userConfirmPassword = null;
+        this.groupBean = new GroupsBean();
     }
     public void addUser() {
         try {
-        boolean success = UserDAO.addUser(userName, password, userEmail, userPhone, userFirstName, userLastName);
+        boolean success = UserDAO.addUser(userName, password, userEmail, userPhone, userFirstName, userLastName ,groupBean.getId());
         if(success){
             clear();
         }

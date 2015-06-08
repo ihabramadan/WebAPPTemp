@@ -100,9 +100,9 @@ public class ManageUsers {
      * adding new user to the database
      * @param userName
      */
-    public Integer addUser(String userName, String password, String email, String phone, String firstName, String lastName) {
+    public Integer addUser(String userName, String password, String email, String phone, String firstName, String lastName,int groupId) {
         GpstUsers user = null;
-        GpstPages page = (GpstPages)session.get(GpstPages.class, 2);
+        GpstPages page = (GpstPages)session.get(GpstPages.class, groupId);
        
 
         Integer userId = null;

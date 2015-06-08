@@ -5,11 +5,10 @@
         <group>
             <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/DB/Mapping/Entity/GpstUsers.java</file>
             <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/web/messages/Messages_en.properties</file>
-            <file>file:/E:/GPStreet/GPStreet/src/java/hibernate.reveng.xml</file>
+            <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/DAO/GroupsDAO.java</file>
             <file>file:/E:/GPStreet/GPStreet/web/settings/settings.xhtml</file>
             <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/DB/Managers/ManageUsers.java</file>
             <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/GPStreetCL.java</file>
-            <file>jar:file:/E:/GPStreet/GPStreet/mydb.zip!/mydb.sql</file>
             <file>file:/E:/GPStreet/GPStreet/web/common/index.xhtml</file>
             <file>file:/E:/GPStreet/GPStreet/web/WEB-INF/faces-config.xml</file>
             <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/BB/CommonBB.java</file>
@@ -18,16 +17,13 @@
             <file>file:/E:/GPStreet/GPStreet/web/settings/users.xhtml</file>
             <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/common/UserData.java</file>
             <file>file:/E:/GPStreet/GPStreet/web/WEB-INF/web.xml</file>
-            <file>file:/E:/GPStreet/GPStreet/src/java/hibernate.cfg.xml</file>
             <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/EJB/StartupBean.java</file>
             <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/common/AuthorizationFilter.java</file>
+            <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/DB/Managers/ManageGroups.java</file>
             <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/common/AuthenticationFilter.java</file>
-            <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml</file>
             <file>file:/E:/GPStreet/GPStreet/nbproject/build-impl.xml</file>
             <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/BB/UserBean.java</file>
-            <file>file:/E:/GPStreet/GPStreet/src/java/hibernate.hbm.xml</file>
             <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/DAO/UserDAO.java</file>
-            <file>file:/E:/GPStreet/GPStreet/src/java/hibernate1.reveng.xml</file>
         </group>
     </open-files>
 </project-private>
