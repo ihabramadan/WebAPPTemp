@@ -12,7 +12,9 @@
     <h:body id="body" >
         
         <div >
-            <h1 class="page-header">#{msg['settings.settings']}</h1>
+            <h1 class="page-header">#{msg['settings.settings']}
+                
+            </h1>
             
         </div>
         <c:if test="#{userBean.isAuthorized('settings.xhtml')}">
@@ -20,7 +22,7 @@
             <ul class="nav nav-tabs">
                 <li  class="active" ><a href="#users" data-toggle="tab"><strong>#{msg['users.users']}</strong></a>
                 </li>
-                <li><a href="#dom" data-toggle="tab"><strong>Roles domains</strong></a>
+                <li><a href="#groupTab" data-toggle="tab"><strong>#{msg['groups.groups']}</strong></a>
                 </li>                                
             </ul>
             <div class="tab-content" >
@@ -38,9 +40,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="dom">
+                <div class="tab-pane fade" id="groupTab">
                     <div class="panel panel-default">
-                        
+                        <div class="panel-body">
+                        <ui:include src="groups.xhtml" />   
+                        </div>
                     </div>
                 </div>
             </div>

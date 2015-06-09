@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+        <script type="text/javascript" src="../jquery-1.11.0.min.js"></script>
+        <title>Groups</title>
+    </h:head>
+    <h:body >
+
+
+        <div class="col-lg-12">
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        #{msg['groups.add_delete']}
+                    </div>
+                    <div class="panel-body">
+                        
+                        <h:form id="addGroupError">
+                            
+                        </h:form>
+                        
+                        <h:form id="addGroupForm">
+                            
+                                
+                            <div class="form-group" >
+                               
+                                <h:message id="addGroupSuccess" for="addGroupSuccess" class="form-control-messages alertLogin alert-success"/>
+                            
+                            </div>
+                            
+                            
+                            <h:messages  rendered="#{facesContext.validationFailed }" layout="table" class="form-control-messages alertLogin alert-danger"/>
+                        
+                       <div class="form-group" >
+                                <h:message id="addGroupError" for="addGroupError" class="form-control-messages alertLogin alert-danger"/>
+                            </div>
+                            
+                               
+                                    <label >#{msg['groups.group_name']}</label><h:outputText style="color:red" value="*" />
+                                    <div class="form-group">
+                                    <h:inputText id="txtGroupName" value="#{groupData.groupName}" class="form-control" required="true" requiredMessage="#{msg['groups.group_name_required']}" ></h:inputText>
+                                    </div>
+                                    <div class="form-group">
+                                        <h:commandButton  class='btn btn-primary' id="addGroupButton"  actionListener="#{groupData.addGroup()}" value="#{msg['groups.add_group']}">
+                                            <f:ajax execute="txtGroupName"   listener="#{groupsBean.bindGroups()}" render="addGroupForm txtGroupName addGroupSuccess addGroupError groupList"  />
+                                        </h:commandButton>
+                                    </div>
+                                   
+                                   <div class="form-group">
+                                <label>#{msg['users.group']}</label><h:outputText style="color:red" value="*" />
+                                <h:selectOneMenu value="#{userData.groupBean.id}"  class="form-control" id="groupList" >
+                                    <f:selectItems value="#{groupsBean.groupsList}" var="glist" itemValue="#{glist.id}" itemLabel="#{glist.groupname}" />
+                                    
+                                </h:selectOneMenu>
+                            </div> 
+                            
+                                    <div class="form-group">
+                                        <h:commandButton class='btn btn-primary' id="deleteGroupButton"  actionListener="#{userData.addUser()}" value="#{msg['users.add_user']}"></h:commandButton>
+                                    </div>
+                        </h:form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        #{msg['users.all_users']}
+                    </div>
+                    <div class="panel-body">
+                        <h:form id="successGroup">
+                            <div class="form-group" >
+                                <h:message for="successGroup"    class="form-control-messages alertLogin alert-success"/>
+                            </div>
+                        </h:form>
+                        <h:form id="errorGroup">
+                            <div class="form-group" >
+                                <h:message for="errorGroup"    class="form-control-messages alertLogin alert-danger"/>
+                            </div>
+                        </h:form>
+                        <h:form id="form1" style="overflow:scroll;height:480px">
+
+                            <h:dataTable  value="#{userBean.usersList}" var="usersList" class="table table-striped table-bordered table-hover">
+
+                                <h:column>
+
+                                    <f:facet name="header" >
+
+                                        <h:outputText value="#{msg['users.first_name']}"/>
+
+                                    </f:facet>
+
+                                    <h:outputText id="firstNamen" value="#{usersList.firstname}"/>
+
+                                </h:column>
+                                <h:column>
+
+                                    <f:facet name="header" >
+
+                                        <h:outputText value="#{msg['users.last_name']}"/>
+
+                                    </f:facet>
+
+                                    <h:outputText value="#{usersList.lastname}"/>
+
+                                </h:column>
+                                <h:column>
+
+                                    <f:facet name="header" >
+
+                                        <h:outputText value="#{msg['users.email']}"/>
+
+                                    </f:facet>
+
+                                    <h:outputText value="#{usersList.email}"/>
+
+                                </h:column>
+                                <h:column>
+
+                                    <f:facet name="header" >
+
+                                        <h:outputText value="#{msg['users.phone']}"/>
+
+                                    </f:facet>
+
+                                    <h:outputText value="#{usersList.phone}"/>
+
+                                </h:column>
+                                <h:column>
+
+                                    <f:facet name="header" >
+
+                                        <h:outputText value="#{msg['users.delete']}"/>
+
+                                    </f:facet>
+
+                                    <h:commandButton class='btn btn-danger' onclick="if (!confirm('#{msg['users.you_sure']}')) return false;" actionListener="#{userBean.deleteUser(usersList.id)}" value="#{msg['users.delete']}"></h:commandButton>
+
+                                </h:column>
+                            </h:dataTable>
+                        </h:form>
+                    </div>
+                </div>
+            </div> 
+
+
+
+        </div>
+        
+    </h:body>
+
+</html>
+

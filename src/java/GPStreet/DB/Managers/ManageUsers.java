@@ -102,14 +102,14 @@ public class ManageUsers {
      */
     public Integer addUser(String userName, String password, String email, String phone, String firstName, String lastName,int groupId) {
         GpstUsers user = null;
-        GpstPages page = (GpstPages)session.get(GpstPages.class, groupId);
+        GpstPages page = (GpstPages)session.get(GpstPages.class, 2);
        
 
         Integer userId = null;
         try {
             session = HibernateUtil.getSessionFactory().openSession();
             Set<GpstGroups> groupSet = new HashSet();
-            GpstGroups defaultGroup = (GpstGroups)session.get(GpstGroups.class, 2);
+            GpstGroups defaultGroup = (GpstGroups)session.get(GpstGroups.class, groupId);
             Set<GpstPages> pagesSet = new HashSet();
             pagesSet.add(page);
             defaultGroup.setGpstPageses(pagesSet);
