@@ -36,6 +36,22 @@
         <servlet-name>GPStreetCL</servlet-name>
         <servlet-class>GPStreet.GPStreetCL</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GetAllGroups</servlet-name>
+        <servlet-class>GPStreet.Servlets.GetAllGroups</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetAllgroups</servlet-name>
+        <servlet-class>GPStreet.Servlets.GetAllgroups</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddGroup</servlet-name>
+        <servlet-class>GPStreet.Servlets.AddGroup</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteGroup</servlet-name>
+        <servlet-class>GPStreet.Servlets.DeleteGroup</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.xhtml</url-pattern>
@@ -43,6 +59,22 @@
     <servlet-mapping>
         <servlet-name>GPStreetCL</servlet-name>
         <url-pattern>/GPStreetCL</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetAllGroups</servlet-name>
+        <url-pattern>/GetAllGroups</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetAllgroups</servlet-name>
+        <url-pattern>/GetAllgroups</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddGroup</servlet-name>
+        <url-pattern>/AddGroup</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteGroup</servlet-name>
+        <url-pattern>/DeleteGroup</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
@@ -52,5 +84,4 @@
     <welcome-file-list>
         <welcome-file>common/login.xhtml</welcome-file>
     </welcome-file-list>
-    
 </web-app>

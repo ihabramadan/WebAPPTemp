@@ -36,6 +36,28 @@ public class ManageGroups {
     
     
     
+    public boolean deleteGroup(int id){
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
+           
+            
+            group = new GpstGroups();
+            group.setId(id);
+            
+            
+            tx = session.beginTransaction();
+            session.delete(group);
+            tx.commit();
+        } catch (HibernateException ex) {
+            if (tx != null) {
+                tx.rollback();
+            }
+            
+            logger.error(ex.getMessage());
+            return false;
+        }
+        return true;
+    }
     
     public Integer addGroup(String groupName, String groupDesc) {
         GpstGroups group = null;

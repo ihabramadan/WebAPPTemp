@@ -14,7 +14,7 @@ public class GpstPages  implements java.io.Serializable {
      private Integer id;
      private String name;
      private String description;
-     private Set gpstGroupses = new HashSet(0);
+     //private Set gpstGroupses = new HashSet(0);
 
     public GpstPages() {
     }
@@ -22,7 +22,7 @@ public class GpstPages  implements java.io.Serializable {
     public GpstPages(String name, String description, Set gpstGroupses) {
        this.name = name;
        this.description = description;
-       this.gpstGroupses = gpstGroupses;
+       //this.gpstGroupses = gpstGroupses;
     }
    
     public Integer getId() {
@@ -46,13 +46,7 @@ public class GpstPages  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
-    public Set getGpstGroupses() {
-        return this.gpstGroupses;
-    }
     
-    public void setGpstGroupses(Set gpstGroupses) {
-        this.gpstGroupses = gpstGroupses;
-    }
 
 
 

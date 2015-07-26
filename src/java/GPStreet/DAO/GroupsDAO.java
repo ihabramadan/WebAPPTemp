@@ -38,6 +38,15 @@ public class GroupsDAO {
         this.groupDesc = groupDesc;
     }
 
+    public static boolean deleteGroup(int id){
+        ManageGroups mu = new ManageGroups();
+        try {
+           mu.deleteGroup(id);
+        }catch(Exception ex){
+            return false;
+        }
+        return true;
+    }
     public static boolean addGroup(String groupName, String groupDesc) {
         ManageGroups mu = new ManageGroups();
         Integer groupId = null;
@@ -49,10 +58,10 @@ public class GroupsDAO {
                 if (groupId == null) {
                     return false;
                 }
-                FacesContext.getCurrentInstance().addMessage("addGroupForm:addGroupSuccess", new FacesMessage(StartupBean.localRB.getString("groups.group_added")));
+                
                 return true;
             } else {
-                FacesContext.getCurrentInstance().addMessage("addGroupForm:addGroupError", new FacesMessage(StartupBean.localRB.getString("groups.group_exists")));
+                
                 return false;
             }
 

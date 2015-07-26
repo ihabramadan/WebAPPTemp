@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        
+        
+        <script type="text/javascript" src="../assets/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+
+        <!-- Include the plugin's CSS and JS: -->
+        <script type="text/javascript" src="../assets/bootstrap-3.3.5-dist/js/bootstrap-multiselect.js"></script>
+        <link rel="stylesheet" href="../assets/bootstrap-3.3.5-dist/css/bootstrap-multiselect.css" type="text/css"/>
+        <title>Groups</title>
+    </h:head>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#example-getting-started').multiselect();
+    });
+</script>
+
+    <h:body>
+        <div class="modal fade" id="groupPagesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="groupPagesModalLabel"></h4>
+                        </div>
+                        <div class="modal-body edit_content">
+                            <select id="example-getting-started" multiple="multiple">
+    <option value="cheese">Cheese</option>
+    <option value="tomatoes">Tomatoes</option>
+    <option value="mozarella">Mozzarella</option>
+    <option value="mushrooms">Mushrooms</option>
+    <option value="pepperoni">Pepperoni</option>
+    <option value="onions">Onions</option>
+</select>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">#{msg['groupsModal.close']}</button>
+                            <button type="button" class="btn btn-primary">#{msg['groupsModal.save_changes']}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <script>
+        $(document).on("click", "[data-toggle='modal']", function () {
+
+                var $modal = $(this);
+                        //esseyId = e.relatedTarget.id;
+
+
+                //$(document).find('.edit_content').html($modal.attr("id"));
+                $("#groupPagesModalLabel").html(($modal.attr("groupName")) +' #{msg['groups.pages']}');
+
+            });
+            </script>
+            
+    </h:body>
+</html>
+

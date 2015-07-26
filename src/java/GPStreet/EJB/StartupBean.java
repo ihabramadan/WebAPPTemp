@@ -17,15 +17,8 @@ import javax.faces.context.FacesContext;
 import javax.naming.AuthenticationException;
 import javax.servlet.http.HttpServletRequest;
 import org.apache.log4j.Logger;
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.IncorrectCredentialsException;
-import org.apache.shiro.authc.LockedAccountException;
-import org.apache.shiro.authc.UnknownAccountException;
-import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.config.IniSecurityManagerFactory;
-import org.apache.shiro.mgt.SecurityManager;
-import org.apache.shiro.subject.Subject;
-import org.apache.shiro.util.Factory;
+
+
 
 /**
  *
@@ -55,6 +48,7 @@ public class StartupBean {
   public static void getUserInfo(HttpServletRequest request, String userName){
       
   }
+  /*
   private void initShiro(){
       ExternalContext context =  FacesContext.getCurrentInstance().getExternalContext();
       
@@ -104,6 +98,6 @@ public class StartupBean {
         }
         
   }
-
+*/
     
 }
