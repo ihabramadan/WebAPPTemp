@@ -7,6 +7,7 @@ package GPStreet.BB;
 
 import GPStreet.DAO.GroupsDAO;
 import GPStreet.DB.Mapping.Entity.GpstGroups;
+import GPStreet.DB.Mapping.Entity.GpstPages;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
@@ -25,12 +26,22 @@ public class GroupsBean {
     String description;
     GpstGroups groupBean;
     List<GpstGroups> groupsList;
+    List<GpstPages> pagesList;
 
     @PostConstruct
     public void init() {
         groupBean = new GpstGroups();
     }
 
+    public List<GpstPages> getPagesList() {
+        return pagesList;
+    }
+
+    public void setPagesList(List<GpstPages> pagesList) {
+        this.pagesList = pagesList;
+    }
+
+    
     public GpstGroups getGroupBean() {
         return groupBean;
     }

@@ -6,6 +6,7 @@
 package GPStreet.common;
 
 import GPStreet.BB.GroupsBean;
+import GPStreet.BB.PagesBean;
 import GPStreet.DAO.UserDAO;
 import GPStreet.DB.Mapping.Entity.GpstGroups;
 import GPStreet.EJB.StartupBean;
@@ -55,6 +56,7 @@ public class UserData implements Serializable {
     String userPhone;
     String userConfirmPassword;
     GroupsBean groupBean;
+    PagesBean pageBean;
     //GpstGroups groupBean;
 
     
@@ -69,6 +71,7 @@ public class UserData implements Serializable {
     @PostConstruct
     public void init() {
         groupBean = new GroupsBean();
+        pageBean =  new PagesBean();
     }
     public GroupsBean getGroupBean() {
         return groupBean;
@@ -76,6 +79,14 @@ public class UserData implements Serializable {
 
     public void setGroupBean(GroupsBean groupBean) {
         this.groupBean = groupBean;
+    }
+
+    public PagesBean getPageBean() {
+        return pageBean;
+    }
+
+    public void setPageBean(PagesBean pageBean) {
+        this.pageBean = pageBean;
     }
 
     
