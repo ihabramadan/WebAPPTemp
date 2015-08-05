@@ -23,6 +23,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.jboss.weld.util.collections.ArraySet;
 
 /**
  *
@@ -86,6 +87,38 @@ public class ManageGroups {
         return groupId;
     }
     
+    
+    public Integer addGroupPages(int groupId, List<Integer> pagesIds) {
+        GpstGroups group = null;
+        
+        Set<GpstPages> groupPages = new ArraySet();
+        
+        
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
+           
+            for(Integer page : pagesIds){
+            groupPages.add((GpstPages)session.get(GpstPages.class, page));
+        }
+        
+            
+            group =(GpstGroups) session.get(GpstGroups.class, groupId);
+            group.setGpstPageses(groupPages);
+            tx = session.beginTransaction();
+            groupId = (int) session.save(group);
+            tx.commit();
+        } catch (HibernateException ex) {
+            if (tx != null) {
+                tx.rollback();
+                
+            }
+            FacesContext.getCurrentInstance().addMessage("addError", new FacesMessage(StartupBean.localRB.getString("users.database_error")));
+            logger.error(ex.getMessage());
+            return null;
+        }
+        return groupId;
+    }
+    
     public Integer findGroup(String groupName){
         Integer groupId = null;
         GpstGroups group = null;
@@ -103,6 +136,32 @@ public class ManageGroups {
                 return null;
             else
                 return group.getId();
+            
+        } catch (HibernateException ex) {
+           
+            logger.error(ex.getMessage());
+            return null;
+        }
+    }
+    
+    public GpstGroups getGroup(String groupName , int id){
+        Integer groupId = null;
+        GpstGroups group = null;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
+            
+            
+            Query query = session.createQuery("from GpstGroups where groupname = ? or id= ?");
+            query.setString(0,groupName);
+            query.setInteger(1, id);
+            List groupList = query.list();
+            for(Iterator it = groupList.iterator();it.hasNext();){
+               group = (GpstGroups)it.next();
+            }
+            if(group == null)
+                return null;
+            else
+                return group;
             
         } catch (HibernateException ex) {
            

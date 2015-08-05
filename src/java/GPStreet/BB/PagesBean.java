@@ -57,6 +57,9 @@ public class PagesBean {
         this.description = description;
     }
  
+    public void saveGroupPages(){
+        
+    }
     public void bindPages(){
         List<GpstPages> allPages = PagesDAO.getAllPages();
         if (allPages != null) {

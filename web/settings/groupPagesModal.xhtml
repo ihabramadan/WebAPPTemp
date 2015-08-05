@@ -6,8 +6,8 @@
     <h:head>
         <title>GroupPagesModal</title>
 
-           
-       
+
+
 
 
         <!-- Include the plugin's CSS and JS: -->
@@ -16,16 +16,12 @@
     </h:head>
 
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#example-getting-started').multiselect();
-        });
-    </script>
 
-    <h:body>
-        
-        
-        
+
+    <h:body >
+
+
+
         <div class="modal fade" id="groupPagesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -35,8 +31,8 @@
                     </div>
                     <div class="modal-body edit_content">
                         <div class="form-group">
-                            <label>#{msg['users.group']}</label><h:outputText style="color:red" value="*" />
-                            <h:selectManyMenu   value="#{userData.groupBean.pagesList}"  class="form-control" id="pagesList" >
+                            <label>#{msg['groupsModal.pages']}</label><h:outputText style="color:red" value="*" />
+                            <h:selectManyMenu style="height: 200px"  value="#{userData.groupBean.pagesList}"  class="form-control" id="pagesList" >
                                 <f:selectItems  value="#{pagesBean.pagesList}" var="plist" itemValue="#{plist.id}" itemLabel="#{plist.name}" />
 
                             </h:selectManyMenu>
@@ -44,12 +40,57 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">#{msg['groupsModal.close']}</button>
-                        <button type="button" class="btn btn-primary">#{msg['groupsModal.save_changes']}</button>
+
+                        <h:commandButton type="button" class="btn btn-primary" immediate="true" value="#{msg['groupsModal.save_changes']}" onclick="saveGroupPages()" ></h:commandButton>
                     </div>
                 </div>
             </div>
+            <script>
+
+
+                $(document).ready(function () {
+
+                $("#pagesList option:selected").val('1');
+
+
+
+                });
+
+                function getpages() {
+                    alert(#{userData.groupBean.pagesList})
+                }
+
+
+
+
+                function saveGroupPages() {
+                    var pagesIds = [];
+                     $("#pagesList :selected").each(function(){
+                        pagesIds.push($(this).val()); 
+    });
+                    
+                    
+                    $.ajax({
+                        
+                        url: '#{facesContext.externalContext.requestContextPath}/SaveGroupPages',
+                        data: {
+                            groupId: $groupId,
+                            pagesIds: JSON.stringify(pagesIds)
+                        }
+                    }).done(function (result) {
+                        
+                    });
+
+                }
+
+                function loadGroupPages() {
+
+                }
+            </script>
         </div>
         <script>
+            var $groupName;
+            var $groupId;
             $(document).on("click", "[data-toggle='modal']", function () {
 
                 var $modal = $(this);
@@ -58,8 +99,16 @@
 
                 //$(document).find('.edit_content').html($modal.attr("id"));
                 $("#groupPagesModalLabel").html(($modal.attr("groupName")) + ' #{msg['groups.pages']}');
+                $groupName = $modal.attr("groupName");
+                $groupId = $modal.attr("id");
 
             });
+
+
+        </script>
+        <script>
+
+
         </script>
 
     </h:body>

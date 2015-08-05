@@ -3,7 +3,6 @@
     <listener>
         <listener-class>GPStreet.GPStreetCL</listener-class>
     </listener>
-    
     <context-param>
         <param-name>javax.faces.WEBAPP_RESOURCES_DIRECTORY</param-name>
         <param-value>/WEB-INF/resources/assets</param-value>
@@ -37,6 +36,14 @@
         <servlet-name>DeleteGroup</servlet-name>
         <servlet-class>GPStreet.Servlets.DeleteGroup</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SaveGroupPages</servlet-name>
+        <servlet-class>GPStreet.Servlets.SaveGroupPages</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetGroupPages</servlet-name>
+        <servlet-class>GPStreet.Servlets.GetGroupPages</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.xhtml</url-pattern>
@@ -61,11 +68,39 @@
         <servlet-name>DeleteGroup</servlet-name>
         <url-pattern>/DeleteGroup</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SaveGroupPages</servlet-name>
+        <url-pattern>/SaveGroupPages</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetGroupPages</servlet-name>
+        <url-pattern>/GetGroupPages</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+    
+    <servlet>
+		<description />
+		<display-name>JAX-WS</display-name>
+		<servlet-name>ws</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+		
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ws</servlet-name>
+		<url-pattern>/services/*</url-pattern>
+	</servlet-mapping>
+	<mime-mapping>
+		<extension>wsdl</extension>
+		<mime-type>text/xml</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>xsd</extension>
+		<mime-type>text/xml</mime-type>
+	</mime-mapping>
     <welcome-file-list>
         <welcome-file>common/login.xhtml</welcome-file>
     </welcome-file-list>

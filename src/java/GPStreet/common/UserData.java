@@ -8,6 +8,7 @@ package GPStreet.common;
 import GPStreet.BB.GroupsBean;
 import GPStreet.BB.PagesBean;
 import GPStreet.DAO.UserDAO;
+import GPStreet.DB.Managers.ManageGroups;
 import GPStreet.DB.Mapping.Entity.GpstGroups;
 import GPStreet.EJB.StartupBean;
 import java.io.Serializable;
@@ -256,6 +257,11 @@ public class UserData implements Serializable {
         this.password = null;
         this.userConfirmPassword = null;
         this.groupBean = new GroupsBean();
+    }
+    public void saveGroupPages(){
+        ManageGroups mg = new ManageGroups();
+            GpstGroups group = mg.getGroup(null,1);
+        
     }
     public void addUser() {
         try {
