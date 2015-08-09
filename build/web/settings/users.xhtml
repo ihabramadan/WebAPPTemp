@@ -63,7 +63,7 @@
                             </div>
                                    <div class="form-group">
                                 <label>#{msg['users.group']}</label><h:outputText style="color:red" value="*" />
-                                <h:selectOneMenu value="#{userData.groupBean.id}"  class="form-control">
+                                <h:selectOneMenu value="#{userData.groupBean.id}"  class="form-control" id="groupsMenu">
                                     <f:selectItems value="#{groupsBean.groupsList}" var="glist" itemValue="#{glist.id}" itemLabel="#{glist.groupname}"/>
                                     
                                 </h:selectOneMenu>

@@ -18,9 +18,7 @@
 
 
 
-    <h:body >
-
-
+    <h:body onload="getpages()">
 
         <div class="modal fade" id="groupPagesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -32,7 +30,7 @@
                     <div class="modal-body edit_content">
                         <div class="form-group">
                             <label>#{msg['groupsModal.pages']}</label><h:outputText style="color:red" value="*" />
-                            <h:selectManyMenu style="height: 200px"  value="#{userData.groupBean.pagesList}"  class="form-control" id="pagesList" >
+                            <h:selectManyMenu  style="height: 200px"  value="#{userData.groupBean.pagesList}"  class="form-control" id="pagesList" >
                                 <f:selectItems  value="#{pagesBean.pagesList}" var="plist" itemValue="#{plist.id}" itemLabel="#{plist.name}" />
 
                             </h:selectManyMenu>
@@ -50,14 +48,15 @@
 
                 $(document).ready(function () {
 
-                $("#pagesList option:selected").val('1');
-
+                    
+                    
 
 
                 });
 
                 function getpages() {
-                    alert(#{userData.groupBean.pagesList})
+                    
+                   
                 }
 
 
@@ -65,20 +64,19 @@
 
                 function saveGroupPages() {
                     var pagesIds = [];
-                     $("#pagesList :selected").each(function(){
-                        pagesIds.push($(this).val()); 
-    });
-                    
-                    
+                    $("#pagesList :selected").each(function () {
+                        pagesIds.push($(this).val());
+                    });
+
+
                     $.ajax({
-                        
                         url: '#{facesContext.externalContext.requestContextPath}/SaveGroupPages',
                         data: {
                             groupId: $groupId,
                             pagesIds: JSON.stringify(pagesIds)
                         }
                     }).done(function (result) {
-                        
+                       alert('#{msg['groupsModal.save_success']}');
                     });
 
                 }
@@ -95,14 +93,37 @@
 
                 var $modal = $(this);
                 //esseyId = e.relatedTarget.id;
-
-
+                
+                
                 //$(document).find('.edit_content').html($modal.attr("id"));
                 $("#groupPagesModalLabel").html(($modal.attr("groupName")) + ' #{msg['groups.pages']}');
                 $groupName = $modal.attr("groupName");
                 $groupId = $modal.attr("id");
+                
 
             });
+            
+            $(document).on("mousedown", "[data-toggle='modal']", function () {
+                
+                 $.ajax({
+                    
+                        url: '#{facesContext.externalContext.requestContextPath}/GetGroupPages',
+                        data: {
+                            groupId: $groupId
+                            
+                        }
+                    }).done(function (result) {
+                      var items = result;
+                      var pagesIds = [];
+                      $.each(items, function (i, item) {
+                          pagesIds.push("1");
+                      });
+                      $("#pagesList").val(pagesIds);
+                    });
+                
+                
+            });
+            
 
 
         </script>

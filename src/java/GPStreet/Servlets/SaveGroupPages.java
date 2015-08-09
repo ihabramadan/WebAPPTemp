@@ -7,11 +7,13 @@ package GPStreet.Servlets;
 
 import GPStreet.BB.UserBean;
 import GPStreet.DB.Managers.ManageGroups;
+import GPStreet.EJB.StartupBean;
 import com.sun.faces.spi.ConfigurationResourceProviderFactory;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
+import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -40,7 +42,7 @@ public class SaveGroupPages extends HttpServlet {
                 int groupId = Integer.parseInt(request.getParameter("groupId"));
             String groupPages= request.getParameter("pagesIds");
             List<Integer> pagesIds = new ArrayList<>();
-            if(!groupPages.equals("[]")){
+            if(!groupPages.equals("[]")){   
             String[] temp = groupPages.split(",");
             
             
@@ -50,7 +52,9 @@ public class SaveGroupPages extends HttpServlet {
             }
             ManageGroups mg;
             mg = new ManageGroups();
-            mg.addGroupPages(groupId, pagesIds);
+            Integer newGroupId = mg.addGroupPages(groupId, pagesIds);
+            
+            
             
             
             
