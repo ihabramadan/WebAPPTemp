@@ -18,9 +18,10 @@
 
 
 
-    <h:body onload="getpages()">
-
-        <div class="modal fade" id="groupPagesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <h:body >
+        
+            
+        <div  class="modal fade" id="groupPagesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -30,37 +31,33 @@
                     <div class="modal-body edit_content">
                         <div class="form-group">
                             <label>#{msg['groupsModal.pages']}</label><h:outputText style="color:red" value="*" />
-                            <h:selectManyMenu  style="height: 200px"  value="#{userData.groupBean.pagesList}"  class="form-control" id="pagesList" >
+                            <h:selectManyMenu  style="height: 200px"  value="#{pagesBean.selectedPages}"  class="form-control" id="pagesList" >
                                 <f:selectItems  value="#{pagesBean.pagesList}" var="plist" itemValue="#{plist.id}" itemLabel="#{plist.name}" />
 
                             </h:selectManyMenu>
+                             
+                            
+                            
+                            
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">#{msg['groupsModal.close']}</button>
 
-                        <h:commandButton type="button" class="btn btn-primary" immediate="true" value="#{msg['groupsModal.save_changes']}" onclick="saveGroupPages()" ></h:commandButton>
+                        <h:commandButton type="button" class="btn btn-primary"  value="#{msg['groupsModal.save_changes']}" onclick="saveGroupPages()" ></h:commandButton>
                     </div>
                 </div>
             </div>
             <script>
 
 
-                $(document).ready(function () {
+                
 
-                    
-                    
-
-
-                });
-
-                function getpages() {
-                    
-                   
-                }
+                
 
 
 
+            
 
                 function saveGroupPages() {
                     var pagesIds = [];
@@ -103,34 +100,12 @@
 
             });
             
-            $(document).on("mousedown", "[data-toggle='modal']", function () {
-                
-                 $.ajax({
-                    
-                        url: '#{facesContext.externalContext.requestContextPath}/GetGroupPages',
-                        data: {
-                            groupId: $groupId
-                            
-                        }
-                    }).done(function (result) {
-                      var items = result;
-                      var pagesIds = [];
-                      $.each(items, function (i, item) {
-                          pagesIds.push("1");
-                      });
-                      $("#pagesList").val(pagesIds);
-                    });
-                
-                
-            });
+            
             
 
 
         </script>
-        <script>
-
-
-        </script>
+       
 
     </h:body>
 </html>

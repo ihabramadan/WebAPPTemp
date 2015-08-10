@@ -23,7 +23,17 @@ public class PagesBean {
     String name;
     String description;
     List pagesList;
+    List selectedPages;
 
+    public List getSelectedPages() {
+        return selectedPages;
+    }
+
+    public void setSelectedPages(List selectedPages) {
+        this.selectedPages = selectedPages;
+    }
+
+    
     public List getPagesList() {
         return pagesList;
     }

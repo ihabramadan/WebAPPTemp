@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+          
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>UserModal</title>
+
+
+
+
+
+        <!-- Include the plugin's CSS and JS: -->
+
+        <title>Users</title>
+    </h:head>
+
+
+
+
+
+        
+            
+        <div  class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="userModalLabel"></h4>
+                    </div>
+                    <div class="modal-body edit_content">
+                        <div class="form-group">
+                            <label>#{msg['userModal.user']}</label><h:outputText style="color:red" value="*" />
+                            <h:form id="addSuccess1">
+                            <div class="form-group" >
+                                <h:message for="addSuccess1" class="form-control-messages alertLogin alert-success"/>
+                            </div>
+                        </h:form>
+                        <h:form id="addError1">
+                            <div class="form-group" >
+                                <h:message for="addError1" class="form-control-messages alertLogin alert-danger"/>
+                            </div>
+                        </h:form>
+                        <h:form id="errorMsg1">
+                            
+                            <h:messages  rendered="#{facesContext.validationFailed }" layout="table" class="form-control-messages alertLogin alert-danger"/>
+                        </h:form>
+                            <h:form id="UserForm">
+                            
+                            <div class="form-group" >
+                                
+                            </div>
+                                    <label >#{msg['users.user_name']}</label><h:outputText style="color:red" value="*" />
+                                
+                                    <h:inputText value="#{ajaxUser.userBean.username}" class="form-control" required="true" requiredMessage="#{msg['users.user_name_required']}" ></h:inputText>
+                                
+                                    <label>#{msg['users.first_name']}</label><h:outputText style="color:red" value="*" />
+                                
+                                    <h:inputText value="#{ajaxUser.userBean.firstname}" class="form-control" required="true" requiredMessage="#{msg['users.first_name_required']}" ></h:inputText>
+                                    
+                            <div class="form-group">    
+                                <label>#{msg['users.last_name']}</label><h:outputText style="color:red" value="*" />
+                                <h:inputText value="#{ajaxUser.userBean.lastname}" class="form-control" required="true" requiredMessage="#{msg['users.last_name_required']}" ></h:inputText>
+                            </div>
+                            <div class="form-group">
+                                <label>#{msg['users.phone']}</label>
+                                <h:inputText value="#{ajaxUser.userBean.phone}" class="form-control"></h:inputText>
+                            </div>
+                            <div class="form-group">
+                                <label>#{msg['users.email']}</label>
+                                <h:inputText value="#{ajaxUser.userBean.email}" class="form-control" validatorMessage="#{msg['users.invalid_email']}" >                                    
+                                    <!--<f:validateRegex pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" />-->
+                                    <f:validateRegex pattern="^$|^.*@.*\..*$" />
+                                </h:inputText>
+                            </div>
+                                   <div class="form-group">
+                                <label>#{msg['users.group']}</label><h:outputText style="color:red" value="*" />
+                                <h:selectOneMenu value="#{ajaxUser.userBean.mainGroup.id}"  class="form-control" id="groupsMenu">
+                                    <f:selectItems value="#{groupsBean.groupsList}" var="glist" itemValue="#{glist.id}" itemLabel="#{glist.groupname}"/>
+                                    
+                                </h:selectOneMenu>
+                            </div> 
+                            <div class="form-group">
+                                <label>#{msg['users.password']}</label><h:outputText style="color:red" value="*" />
+                                <h:inputSecret value="#{ajaxUser.userBean.password}" id="password" class="form-control" required="true" validatorMessage="#{msg['users.invalid_password']}" requiredMessage="#{msg['users.password_required']}" >
+                                <f:validateRegex pattern="((?=.*[a-z]).{6,})" />
+                                </h:inputSecret>
+                            </div>
+                                    <f:event listener="#{userData.validatePassword}"  type="postValidate"/>
+                            <div class="form-group">
+                                <label>#{msg['users.confirm_password']}</label><h:outputText style="color:red" value="*" />
+                                <h:inputSecret value="#{userData.userConfirmPassword}" id="confirmPassword" class="form-control"></h:inputSecret>
+                            </div>
+                                    <div class="form-group">
+                                        <h:commandButton class='btn btn-primary' id="addButton"  actionListener="#{userData.addUser()}" value="#{msg['users.add_user']}"></h:commandButton>
+                                    </div>
+                        </h:form> 
+                            
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">#{msg['groupsModal.close']}</button>
+
+                        <h:commandButton type="button" class="btn btn-primary"  value="#{msg['groupsModal.save_changes']}"  ></h:commandButton>
+                    </div>
+                </div>
+            </div>
+     
+        </div>
+     
+       
+
+
+</html>
+

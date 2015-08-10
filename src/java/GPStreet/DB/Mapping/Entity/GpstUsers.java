@@ -19,8 +19,22 @@ public class GpstUsers  implements java.io.Serializable {
      private String firstname;
      private String lastname;
      private Set<GpstGroups> gpstGroupses = new HashSet(0);
+     private GpstGroups mainGroup;
 
     public GpstUsers() {
+    }
+
+    public GpstGroups getMainGroup() {
+        
+        if(gpstGroupses.toArray().length > 0)
+            return (GpstGroups)gpstGroupses.toArray()[0];
+        else 
+            return null;
+        
+    }
+
+    public void setMainGroup(GpstGroups mainGroup) {
+        this.mainGroup = mainGroup;
     }
 
 	

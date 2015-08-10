@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.log4j.Logger;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.servlet.ServletException;
@@ -38,7 +39,9 @@ public class SaveGroupPages extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        Logger logger = Logger.getLogger(SaveGroupPages.class);
         try (PrintWriter out = response.getWriter()) {
+            try{
                 int groupId = Integer.parseInt(request.getParameter("groupId"));
             String groupPages= request.getParameter("pagesIds");
             List<Integer> pagesIds = new ArrayList<>();
@@ -53,7 +56,9 @@ public class SaveGroupPages extends HttpServlet {
             ManageGroups mg;
             mg = new ManageGroups();
             Integer newGroupId = mg.addGroupPages(groupId, pagesIds);
-            
+            }catch(Exception e){
+                logger.error(e.getMessage());
+            }
             
             
             

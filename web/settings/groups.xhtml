@@ -3,8 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
-      xmlns:p="http://primefaces.org/ui"
+      
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
@@ -102,7 +101,7 @@
                 </div>
             </div> 
             <ui:include src="groupPagesModal.xhtml"/>
-
+            
 
 
 
@@ -179,7 +178,7 @@
                     $.each(items, function (i, item) {
 
                         $('.groupsList').append('<tr> <td> ' + item.groupname + '</td>' + '<td> '
-                                + item.groupdesc + '</td> <td><button id="'+ item.id + '" type="button" groupName="'+item.groupname+ '" data-toggle="modal" data-target="#groupPagesModal"   onclick=""  value="' + item.id + '"  class="btn btn-primary">'
+                                + item.groupdesc + '</td> <td><button id="'+ item.id + '" type="button" groupName="'+item.groupname+ '" data-toggle="modal"    onclick="showModal('+item.id+')"  value="' + item.id + '"  class="btn btn-primary">'
                                 + '#{msg['groups.pages']}' + '</button></td><td><button id="deleteBtn" type="button"   onclick="deleteGroup( ' + item.id + ')" class="btn btn-danger">'
                                 + '#{msg['groups.delete']}' + '</button> </td></tr>');
 
@@ -189,8 +188,33 @@
                 });
             }
             bindGroups();
-
-
+           
+            function getpages(groupId) {
+                
+                 $.ajax({
+                    
+                        url: '#{facesContext.externalContext.requestContextPath}/GetGroupPages',
+                        data: {
+                            groupId: groupId
+                            
+                        },
+                                dataType: 'json'
+                    }).done(function (result) {
+                      var items = result;
+                      var pagesIds = [];
+                      $.each(items, function (i, item) {
+                          pagesIds.push(item.id);
+                      });
+                      $("#pagesList").val(pagesIds);
+                    });
+                
+                
+            }
+            function showModal(gId){
+            
+                getpages(gId);
+                $('#groupPagesModal').modal('show');  
+            }
 
             
 

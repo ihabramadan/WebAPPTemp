@@ -14,6 +14,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.apache.log4j.Logger;
 
 /**
  *
@@ -33,6 +34,7 @@ public class GetGroupPages extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        Logger logger = Logger.getLogger(GetGroupPages.class);
         try (PrintWriter out = response.getWriter()) {
             int groupId = Integer.parseInt(request.getParameter("groupId"));
             ManageGroups mg = new ManageGroups();
@@ -40,6 +42,9 @@ public class GetGroupPages extends HttpServlet {
             String json = new Gson().toJson(group.getGpstPageses());
             out.write(json);
             
+        }
+        catch(Exception e){
+            logger.error(e.getMessage());
         }
     }
 
