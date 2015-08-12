@@ -235,6 +235,9 @@ a.fa.fa-flask.fa-fw {
 .fa-times:before {
   content: "\f00d";
 }
+.fa-pluse:before {
+  content: "\271A";
+}
 .fa-search-plus:before {
   content: "\f00e";
 }

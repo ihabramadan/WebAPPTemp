@@ -30,8 +30,13 @@
                         <h4 class="modal-title" id="userModalLabel"></h4>
                     </div>
                     <div class="modal-body edit_content">
+                        <div class="panel panel-default">
+                    <div class="panel-heading">
+                        #{msg['users.add_user']}
+                    </div>
+                            <div class="panel-body">
                         <div class="form-group">
-                            <label>#{msg['userModal.user']}</label><h:outputText style="color:red" value="*" />
+                            <label>#{msg['userModal.user']}</label>
                             <h:form id="addSuccess1">
                             <div class="form-group" >
                                 <h:message for="addSuccess1" class="form-control-messages alertLogin alert-success"/>
@@ -99,6 +104,8 @@
                             
                             
                             
+                        </div>
+                    </div>
                         </div>
                     </div>
                     <div class="modal-footer">

@@ -89,9 +89,24 @@
             </div>
             
             <div class="col-lg-6">
+                
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        #{msg['users.all_users']}
+                        <table  style="width:100%">
+                            <tbody >
+                        <tr >
+                            <td >
+                                #{msg['users.all_users']}
+                            </td>
+                            <td align="right">
+                                <h:form>
+                                    <button type="button" title="Add" class='btn  btn-circle btn-lg' onclick="showUserModal(1)"   actionListener="#{userBean.deleteUser(usersList.id)}" ><i class="fa fa-pluse"></i></button>
+                                </h:form>
+                            </td>
+                            
+                        </tr>
+                                </tbody>
+                        </table>
                     </div>
                     <div class="panel-body">
                         <h:form id="success">
