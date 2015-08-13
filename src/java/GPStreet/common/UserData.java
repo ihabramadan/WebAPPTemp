@@ -7,9 +7,11 @@ package GPStreet.common;
 
 import GPStreet.BB.GroupsBean;
 import GPStreet.BB.PagesBean;
+import GPStreet.BB.UserBean;
 import GPStreet.DAO.UserDAO;
 import GPStreet.DB.Managers.ManageGroups;
 import GPStreet.DB.Mapping.Entity.GpstGroups;
+import GPStreet.DB.Mapping.Entity.GpstUsers;
 import GPStreet.EJB.StartupBean;
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
@@ -25,6 +27,7 @@ import javax.faces.component.UIComponent;
 import javax.faces.component.UIInput;
 import javax.faces.context.FacesContext;
 import javax.faces.event.ActionEvent;
+import javax.faces.event.AjaxBehaviorEvent;
 import javax.faces.event.ComponentSystemEvent;
 import javax.faces.event.ValueChangeEvent;
 import javax.faces.validator.ValidatorException;
@@ -204,6 +207,19 @@ public class UserData implements Serializable {
         }
     }
 
+    public final void handleEvent(final AjaxBehaviorEvent event) {
+    //get the member from the FacesContext.
+    FacesContext context = FacesContext.getCurrentInstance();
+        GpstUsers userBean;
+    userBean = context.getApplication().evaluateExpressionGet(context, "#{usersList}", GpstUsers.class);
+    this.userName  =  userBean.getUsername();
+    this.password = userBean.getPassword();
+    this.userFirstName = userBean.getFirstname();
+    this.userLastName = userBean.getLastname();
+    this.userPhone = userBean.getPhone();
+    
+    
+  }
     public void linkLocalChanged(ActionEvent e) {
         String newLocalValue = e.getComponent().getId();
         FacesContext context = FacesContext.getCurrentInstance();
