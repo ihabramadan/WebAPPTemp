@@ -100,8 +100,11 @@
                             </td>
                             <td align="right">
                                 <h:form>
-                                    <button type="button" title="Add" class='btn  btn-circle btn-lg' onclick="showUserModal(1)"   actionListener="#{userBean.deleteUser(usersList.id)}" ><i class="fa fa-pluse"></i></button>
-                                </h:form>
+                                <h:commandLink  class='btn  btn-circle btn-lg'   type="button"><i class="fa fa-pluse"></i>
+                                    <f:ajax  listener="#{userData.exitEditMode()}" onevent="showUserModal(0)" render=":UserForm" />
+                                    </h:commandLink>
+                                 </h:form>
+                                
                             </td>
                             
                         </tr>
@@ -202,7 +205,7 @@
                                     </f:facet>
 
                                     <h:commandButton  class='btn btn-primary' type="button"   value="#{msg['users.edit']}">
-                                        <f:ajax  listener="#{ajaxUser.handleEvent}" onevent="showUserModal(#{usersList.id})" render=":UserForm" />
+                                        <f:ajax  listener="#{userData.handleEvent}" onevent="showUserModal(#{usersList.id})" render=":UserForm" />
                                     </h:commandButton>
 
                                 </h:column>
@@ -229,6 +232,7 @@
         </div>
         <script>
             function showUserModal(uId){
+            
             
                 
                 $('#userModal').modal('show');  

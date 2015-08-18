@@ -61,7 +61,8 @@ public class UserData implements Serializable {
     String userConfirmPassword;
     GroupsBean groupBean;
     PagesBean pageBean;
-    //GpstGroups groupBean;
+    GpstGroups mainGroup;
+    boolean editMode;
 
     
     
@@ -74,9 +75,31 @@ public class UserData implements Serializable {
     
     @PostConstruct
     public void init() {
+        editMode = false;
         groupBean = new GroupsBean();
         pageBean =  new PagesBean();
+        mainGroup = new GpstGroups();
+        mainGroup.setId(1);
     }
+
+    public boolean isEditMode() {
+        return editMode;
+    }
+
+    public void setEditMode(boolean editMode) {
+        this.editMode = editMode;
+    }
+
+    
+    public GpstGroups getMainGroup() {
+        return mainGroup;
+    }
+
+    public void setMainGroup(GpstGroups mainGroup) {
+        this.mainGroup = mainGroup;
+    }
+    
+    
     public GroupsBean getGroupBean() {
         return groupBean;
     }
@@ -206,9 +229,21 @@ public class UserData implements Serializable {
             }
         }
     }
+    
+    public void exitEditMode(){
+        editMode = false;
+        this.userName  =  null;
+        this.password = null;
+        this.userFirstName = null;
+        this.userLastName = null;
+        this.userPhone = null;
+        this.userEmail = null;
+        this.mainGroup = null;
+    }
 
-    public final void handleEvent(final AjaxBehaviorEvent event) {
+    public  void handleEvent(final AjaxBehaviorEvent event) {
     //get the member from the FacesContext.
+        editMode = true;
     FacesContext context = FacesContext.getCurrentInstance();
         GpstUsers userBean;
     userBean = context.getApplication().evaluateExpressionGet(context, "#{usersList}", GpstUsers.class);
@@ -217,6 +252,8 @@ public class UserData implements Serializable {
     this.userFirstName = userBean.getFirstname();
     this.userLastName = userBean.getLastname();
     this.userPhone = userBean.getPhone();
+    this.userEmail = userBean.getEmail();
+    this.mainGroup = userBean.getMainGroup();
     
     
   }

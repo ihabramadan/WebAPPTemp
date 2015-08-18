@@ -58,47 +58,47 @@
                             </div>
                                     <label >#{msg['users.user_name']}</label><h:outputText style="color:red" value="*" />
                                 
-                                    <h:inputText value="#{ajaxUser.userBean.username}" class="form-control" required="true" requiredMessage="#{msg['users.user_name_required']}" ></h:inputText>
+                                    <h:inputText disabled="#{userData.editMode}" value="#{userData.userName}" class="form-control" required="true" requiredMessage="#{msg['users.user_name_required']}" ></h:inputText>
                                 
                                     <label>#{msg['users.first_name']}</label><h:outputText style="color:red" value="*" />
                                 
-                                    <h:inputText value="#{ajaxUser.userBean.firstname}" class="form-control" required="true" requiredMessage="#{msg['users.first_name_required']}" ></h:inputText>
+                                    <h:inputText value="#{userData.userFirstName}" class="form-control" required="true" requiredMessage="#{msg['users.first_name_required']}" ></h:inputText>
                                     
                             <div class="form-group">    
                                 <label>#{msg['users.last_name']}</label><h:outputText style="color:red" value="*" />
-                                <h:inputText value="#{ajaxUser.userBean.lastname}" class="form-control" required="true" requiredMessage="#{msg['users.last_name_required']}" ></h:inputText>
+                                <h:inputText value="#{userData.userLastName}" class="form-control" required="true" requiredMessage="#{msg['users.last_name_required']}" ></h:inputText>
                             </div>
                             <div class="form-group">
                                 <label>#{msg['users.phone']}</label>
-                                <h:inputText value="#{ajaxUser.userBean.phone}" class="form-control"></h:inputText>
+                                <h:inputText value="#{userData.userPhone}" class="form-control"></h:inputText>
                             </div>
                             <div class="form-group">
                                 <label>#{msg['users.email']}</label>
-                                <h:inputText value="#{ajaxUser.userBean.email}" class="form-control" validatorMessage="#{msg['users.invalid_email']}" >                                    
+                                <h:inputText value="#{userData.userEmail}" class="form-control" validatorMessage="#{msg['users.invalid_email']}" >                                    
                                     <!--<f:validateRegex pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" />-->
                                     <f:validateRegex pattern="^$|^.*@.*\..*$" />
                                 </h:inputText>
                             </div>
                                    <div class="form-group">
                                 <label>#{msg['users.group']}</label><h:outputText style="color:red" value="*" />
-                                <h:selectOneMenu value="#{ajaxUser.userBean.mainGroup.id}"  class="form-control" id="groupsMenu">
+                                <h:selectOneMenu value="#{userData.mainGroup.id}"  class="form-control" id="groupsMenu">
                                     <f:selectItems value="#{groupsBean.groupsList}" var="glist" itemValue="#{glist.id}" itemLabel="#{glist.groupname}"/>
                                     
                                 </h:selectOneMenu>
                             </div> 
                             <div class="form-group">
-                                <label>#{msg['users.password']}</label><h:outputText style="color:red" value="*" />
-                                <h:inputSecret value="#{ajaxUser.userBean.password}" id="password" class="form-control" required="true" validatorMessage="#{msg['users.invalid_password']}" requiredMessage="#{msg['users.password_required']}" >
+                                <h:outputText rendered="#{!userData.editMode}" value="#{msg['users.password']}"></h:outputText><h:outputText rendered="#{!userData.editMode}" style="color:red" value="*" />
+                                <h:inputSecret value="#{userData.password}" rendered="#{!userData.editMode}" id="password" class="form-control" required="true" validatorMessage="#{msg['users.invalid_password']}" requiredMessage="#{msg['users.password_required']}" >
                                 <f:validateRegex pattern="((?=.*[a-z]).{6,})" />
                                 </h:inputSecret>
                             </div>
                                     <f:event listener="#{userData.validatePassword}"  type="postValidate"/>
                             <div class="form-group">
-                                <label>#{msg['users.confirm_password']}</label><h:outputText style="color:red" value="*" />
-                                <h:inputSecret value="#{userData.userConfirmPassword}" id="confirmPassword" class="form-control"></h:inputSecret>
+                                <h:outputText rendered="#{!userData.editMode}" value="#{msg['users.confirm_password']}"></h:outputText><h:outputText rendered="#{!userData.editMode}" style="color:red" value="*" />
+                                <h:inputSecret  rendered="#{!userData.editMode}" value="#{userData.userConfirmPassword}" id="confirmPassword" class="form-control"></h:inputSecret>
                             </div>
                                     <div class="form-group">
-                                        <h:commandButton class='btn btn-primary' id="addButton"  actionListener="#{userData.addUser()}" value="#{msg['users.add_user']}"></h:commandButton>
+                                        <h:commandButton  rendered="#{!userData.editMode}" class='btn btn-primary' id="addButton"  actionListener="#{userData.addUser()}" value="#{msg['users.add_user']}"></h:commandButton>
                                     </div>
                         </h:form> 
                             
