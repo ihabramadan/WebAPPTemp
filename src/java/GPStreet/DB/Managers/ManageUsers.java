@@ -156,4 +156,38 @@ public class ManageUsers {
         }
         
     }
+    
+    public boolean updateUser(int userId,String userEmail,String userPhone,String userFirstName,String userLastName , int groupId){
+        GpstUsers user = null;
+        
+       
+
+        
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
+            
+            
+            user = (GpstUsers)session.get(GpstUsers.class,userId);
+            
+            tx = session.beginTransaction();
+            user.setEmail(userEmail);
+            user.setFirstname(userFirstName);
+            user.setPhone(userPhone);
+            user.setLastname(userLastName);
+            user.getGpstGroupses().clear();
+            user.getGpstGroupses().add(session.get(GpstGroups.class, groupId));
+            
+            session.save(user);
+            tx.commit();
+        } catch (HibernateException ex) {
+            if (tx != null) {
+                tx.rollback();
+                
+            }
+            FacesContext.getCurrentInstance().addMessage("addError", new FacesMessage(StartupBean.localRB.getString("users.database_error")));
+            logger.error(ex.getMessage());
+            return false;
+        }
+        return true;
+    }
 }

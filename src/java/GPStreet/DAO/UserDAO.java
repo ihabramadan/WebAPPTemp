@@ -47,20 +47,20 @@ public class UserDAO {
             userId = mu.addUser(userName, password, userEmail, userPhone, userFirstName, userLastName ,groupId);
             if(userId == null)
                 return false;
-            FacesContext.getCurrentInstance().addMessage("addSuccess", new FacesMessage(StartupBean.localRB.getString("users.user_added")));
+            FacesContext.getCurrentInstance().addMessage("addSuccess1", new FacesMessage(StartupBean.localRB.getString("users.user_added")));
                 return true;
             }
             else
             {
-                FacesContext.getCurrentInstance().addMessage("addError", new FacesMessage(StartupBean.localRB.getString("users.user_exists")));
+                FacesContext.getCurrentInstance().addMessage("addError1", new FacesMessage(StartupBean.localRB.getString("users.user_exists")));
                 return false;
             }
             
                 
                
-            
+                
         } catch (Exception ex) {
-            
+            FacesContext.getCurrentInstance().addMessage("error", new FacesMessage(StartupBean.localRB.getString("users.database_error")));
             return false;
         }
         
@@ -88,6 +88,20 @@ public class UserDAO {
             FacesContext.getCurrentInstance().addMessage("loginForm:submitBtn", new FacesMessage(StartupBean.localRB.getString("login.failed")));
             return null;
         }
+    }
+    
+    public static boolean saveChanges(int userId ,String userEmail,String userPhone,String userFirstName,String userLastName , int groupId){
+        ManageUsers mu = new ManageUsers();
+        boolean result = mu.updateUser(userId, userEmail, userPhone, userFirstName, userLastName, groupId);
+        if(result == false){
+            FacesContext.getCurrentInstance().addMessage("error", new FacesMessage(StartupBean.localRB.getString("users.database_error")));
+            return false;
+        }else{
+            FacesContext.getCurrentInstance().addMessage("success", new FacesMessage(StartupBean.localRB.getString("users.updated")));
+            return true;
+            
+        }
+            
     }
     
 }

@@ -36,7 +36,7 @@
                     </div>
                             <div class="panel-body">
                         <div class="form-group">
-                            <label>#{msg['userModal.user']}</label>
+                           
                             <h:form id="addSuccess1">
                             <div class="form-group" >
                                 <h:message for="addSuccess1" class="form-control-messages alertLogin alert-success"/>
@@ -98,8 +98,21 @@
                                 <h:inputSecret  rendered="#{!userData.editMode}" value="#{userData.userConfirmPassword}" id="confirmPassword" class="form-control"></h:inputSecret>
                             </div>
                                     <div class="form-group">
-                                        <h:commandButton  rendered="#{!userData.editMode}" class='btn btn-primary' id="addButton"  actionListener="#{userData.addUser()}" value="#{msg['users.add_user']}"></h:commandButton>
+                                        
                                     </div>
+                                    <div class="modal-footer">
+                        
+                        
+                    
+                                    <div class="form-group">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">#{msg['groupsModal.close']}</button>
+                                    <h:commandButton rendered="#{userData.editMode}" actionListener="#{userData.saveChanges()}" class="btn btn-primary"  value="#{msg['groupsModal.save_changes']}"  ></h:commandButton>
+                                    <h:commandButton  rendered="#{!userData.editMode}" class='btn btn-primary' id="addButton"  actionListener="#{userData.addUser()}" value="#{msg['users.add_user']}">
+                                        <f:ajax   render=":addError1 :addSuccess1 :errorMsg1 :form" execute="UserForm " listener="#{userBean.bindUsersList()}" />
+                                    </h:commandButton>
+                                    </div>
+                                        </div>
+                                    
                         </h:form> 
                             
                             
@@ -108,17 +121,17 @@
                     </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">#{msg['groupsModal.close']}</button>
-
-                        <h:commandButton type="button" class="btn btn-primary"  value="#{msg['groupsModal.save_changes']}"  ></h:commandButton>
-                    </div>
+                    
                 </div>
             </div>
      
         </div>
      
-       
+    <script>
+        function updateTable(){
+            
+        }
+    </script>
 
 
 </html>

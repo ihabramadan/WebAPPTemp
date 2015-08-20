@@ -25,6 +25,7 @@
             <file>file:/D:/Java/GPStreet/web/WEB-INF/web.xml</file>
             <file>file:/D:/Java/GPStreet/web/settings/groupPagesModal.xhtml</file>
             <file>file:/D:/Java/GPStreet/src/java/com/gpstreet/webservices/SaveLocation.java</file>
+            <file>file:/D:/Java/GPStreet/src/java/GPStreet/DB/Managers/ManageUsers.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/GPStreetCL.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/web/messages/Messages_ar.properties</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/web/messages/Messages_en.properties</file>

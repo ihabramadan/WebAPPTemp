@@ -52,6 +52,7 @@ public class UserData implements Serializable {
     public UserData() {
 
     }
+    int userId;
     String userName;
     String password;
     String userFirstName;
@@ -79,9 +80,18 @@ public class UserData implements Serializable {
         groupBean = new GroupsBean();
         pageBean =  new PagesBean();
         mainGroup = new GpstGroups();
-        mainGroup.setId(1);
+
     }
 
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    
     public boolean isEditMode() {
         return editMode;
     }
@@ -238,7 +248,8 @@ public class UserData implements Serializable {
         this.userLastName = null;
         this.userPhone = null;
         this.userEmail = null;
-        this.mainGroup = null;
+        this.mainGroup.setId(0);
+        this.userId = 0;
     }
 
     public  void handleEvent(final AjaxBehaviorEvent event) {
@@ -254,6 +265,7 @@ public class UserData implements Serializable {
     this.userPhone = userBean.getPhone();
     this.userEmail = userBean.getEmail();
     this.mainGroup = userBean.getMainGroup();
+    this.userId = userBean.getId();
     
     
   }
@@ -289,7 +301,7 @@ public class UserData implements Serializable {
 		FacesMessage msg = new FacesMessage(StartupBean.localRB.getString("users.confirm_password_not_matched"));
                 
 		//msg.setSeverity(FacesMessage.SEVERITY_ERROR);
-		fc.addMessage("addError", msg);
+		fc.addMessage("addError1", msg);
 		fc.renderResponse();
                 
               }
@@ -302,23 +314,41 @@ public class UserData implements Serializable {
     }
 
     void clear(){
-        this.userName = null;
+        //this.userName = null;
+        //this.userFirstName = null;
+        //this.userLastName = null;
+        //this.userPhone = null;
+        //this.userEmail =null;
+        //this.password = null;
+        //this.userConfirmPassword = null;
+        //this.groupBean = new GroupsBean();
+        
+        editMode = false;
+        this.userName  =  null;
+        this.password = null;
+        this.userConfirmPassword = null;
         this.userFirstName = null;
         this.userLastName = null;
         this.userPhone = null;
-        this.userEmail =null;
-        this.password = null;
-        this.userConfirmPassword = null;
-        this.groupBean = new GroupsBean();
+        this.userEmail = null;
+        this.mainGroup = new GpstGroups();
+        this.userId=0;
     }
     public void saveGroupPages(){
         ManageGroups mg = new ManageGroups();
             GpstGroups group = mg.getGroup(null,1);
         
     }
+    public void saveChanges(){
+        try{
+        UserDAO.saveChanges(this.userId, this.userEmail, this.userPhone, this.userFirstName, this.userLastName, this.mainGroup.getId());
+        }catch(Exception ex){
+            logger.error(ex.getMessage());
+        }
+    }
     public void addUser() {
         try {
-        boolean success = UserDAO.addUser(userName, password, userEmail, userPhone, userFirstName, userLastName ,groupBean.getId());
+        boolean success = UserDAO.addUser(userName, password, userEmail, userPhone, userFirstName, userLastName ,mainGroup.getId());
         if(success){
             clear();
         }
