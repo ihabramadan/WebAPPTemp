@@ -29,7 +29,7 @@ public class GpstUsers  implements java.io.Serializable {
         if(gpstGroupses.toArray().length > 0)
             return (GpstGroups)gpstGroupses.toArray()[0];
         else 
-            return null;
+            return new GpstGroups();
         
     }
 

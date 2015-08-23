@@ -48,11 +48,13 @@ public class UserDAO {
             if(userId == null)
                 return false;
             FacesContext.getCurrentInstance().addMessage("addSuccess1", new FacesMessage(StartupBean.localRB.getString("users.user_added")));
+            FacesContext.getCurrentInstance().addMessage("success", new FacesMessage(StartupBean.localRB.getString("users.user_added")));
                 return true;
             }
             else
             {
                 FacesContext.getCurrentInstance().addMessage("addError1", new FacesMessage(StartupBean.localRB.getString("users.user_exists")));
+                FacesContext.getCurrentInstance().addMessage("error", new FacesMessage(StartupBean.localRB.getString("users.user_exists")));
                 return false;
             }
             

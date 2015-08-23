@@ -108,7 +108,7 @@
                                     <button type="button" class="btn btn-default" data-dismiss="modal">#{msg['groupsModal.close']}</button>
                                     <h:commandButton rendered="#{userData.editMode}" actionListener="#{userData.saveChanges()}" class="btn btn-primary"  value="#{msg['groupsModal.save_changes']}"  ></h:commandButton>
                                     <h:commandButton  rendered="#{!userData.editMode}" class='btn btn-primary' id="addButton"  actionListener="#{userData.addUser()}" value="#{msg['users.add_user']}">
-                                        <f:ajax   render=":addError1 :addSuccess1 :errorMsg1 :form" execute="UserForm " listener="#{userBean.bindUsersList()}" />
+                                        <f:ajax   render=":addError1 :addSuccess1 :errorMsg1 :form" execute="UserForm "  listener="#{userBean.bindUsersList()}" />
                                     </h:commandButton>
                                     </div>
                                         </div>
@@ -129,7 +129,7 @@
      
     <script>
         function updateTable(){
-            
+            $(document).getElementById("usersTable").load();
         }
     </script>
 

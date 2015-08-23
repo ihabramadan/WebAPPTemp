@@ -24,15 +24,33 @@ public class GroupData {
     
     String groupName;
     String groupDesc;
+    boolean editMode;
+    
     private Logger logger = Logger.getLogger(GroupData.class);
     public String getGroupName() {
         return groupName;
     }
 
+    public void exitEditMode(){
+        editMode = false;
+        //this.groupName  =  null;
+        //this.groupDesc = null;
+        
+    }
+    
     public void setGroupName(String grouName) {
         this.groupName = grouName;
     }
 
+    public boolean isEditMode() {
+        return editMode;
+    }
+
+    public void setEditMode(boolean editMode) {
+        this.editMode = editMode;
+    }
+
+    
     public String getGroupDesc() {
         return groupDesc;
     }

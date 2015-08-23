@@ -42,8 +42,8 @@ public class ManageGroups {
             session = HibernateUtil.getSessionFactory().openSession();
            
             
-            group = new GpstGroups();
-            group.setId(id);
+            group = (GpstGroups)session.get(GpstGroups.class, id);
+            
             
             
             tx = session.beginTransaction();
