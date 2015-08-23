@@ -22,7 +22,7 @@
 
         
             
-        <div  class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div  class="modal fade " id="userModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -64,7 +64,7 @@
                                 
                                     <h:inputText value="#{userData.userFirstName}" class="form-control" required="true" requiredMessage="#{msg['users.first_name_required']}" ></h:inputText>
                                     
-                            <div class="form-group">    
+                            <div class="form-group " >    
                                 <label>#{msg['users.last_name']}</label><h:outputText style="color:red" value="*" />
                                 <h:inputText value="#{userData.userLastName}" class="form-control" required="true" requiredMessage="#{msg['users.last_name_required']}" ></h:inputText>
                             </div>
@@ -107,8 +107,8 @@
                                     <div class="form-group">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">#{msg['groupsModal.close']}</button>
                                     <h:commandButton rendered="#{userData.editMode}" actionListener="#{userData.saveChanges()}" class="btn btn-primary"  value="#{msg['groupsModal.save_changes']}"  ></h:commandButton>
-                                    <h:commandButton  rendered="#{!userData.editMode}" class='btn btn-primary' id="addButton"  actionListener="#{userData.addUser()}" value="#{msg['users.add_user']}">
-                                        <f:ajax   render=":addError1 :addSuccess1 :errorMsg1 :form" execute="UserForm "  listener="#{userBean.bindUsersList()}" />
+                                    <h:commandButton   rendered="#{!userData.editMode}" class='btn btn-primary' id="addButton"  actionListener="#{userData.addUser()}" value="#{msg['users.add_user']}">
+                                        
                                     </h:commandButton>
                                     </div>
                                         </div>
@@ -128,9 +128,8 @@
         </div>
      
     <script>
-        function updateTable(){
-            $(document).getElementById("usersTable").load();
-        }
+        
+       
     </script>
 
 

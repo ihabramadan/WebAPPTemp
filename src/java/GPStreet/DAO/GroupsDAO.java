@@ -79,7 +79,7 @@ public class GroupsDAO {
         if (allGroups != null) {
             if (allGroups.isEmpty()) {
                 FacesContext.getCurrentInstance().addMessage("errorMessage", new FacesMessage(StartupBean.localRB.getString("database.error")));
-                return null;
+                return allGroups;
             }
 
         }

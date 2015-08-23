@@ -39,7 +39,7 @@
 <div class="form-group" >
             <h:message id="addGroupModalSuccess" for="addGroupModalSuccess" class="form-control-messages alertLogin alert-success"/>
         </div>
-        <h:messages id="globalModalMessaged" rendered="#{facesContext.validationFailed }" layout="table" class="form-control-messages alertLogin alert-danger"/>
+        
         <div class="form-group" >
             <h:message id="addGroupModalError" for="addGroupModalError" class="form-control-messages alertLogin alert-danger"/>
         </div>
@@ -64,7 +64,7 @@
                                     <button type="button" class="btn btn-default" data-dismiss="modal">#{msg['groupsModal.close']}</button>
                                     
                                     <h:commandButton  class='btn btn-primary' id="addGroupButton"   onclick="AddGroup()" value="#{msg['groups.add_group']}">
-                                        <f:ajax  onevent="bindGroups()"  execute="txtGroupName txtGroupDesc" render=" txtGroupName :addGroupModalSuccess   :globalModalMessaged "  /> 
+                                        
                                     </h:commandButton>
                                 
                                     </div>
@@ -82,9 +82,7 @@
     </div>
 
     <script>
-        function updateTable() {
-            $(document).getElementById("usersTable").load();
-        }
+        
         
         
         function AddGroup() {
@@ -122,6 +120,8 @@
                     bindGroups();
                 });
             }
+            
+            
     </script>
 
 

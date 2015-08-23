@@ -43,7 +43,7 @@
                     <div class="form-group" >
             <h:message id="addGroupSuccess" for="addGroupSuccess" class="form-control-messages alertLogin alert-success"/>
         </div>
-        <h:messages id="globalMessaged" rendered="#{facesContext.validationFailed }" layout="table" class="form-control-messages alertLogin alert-danger"/>
+        
         <div class="form-group" >
             <h:message id="addGroupError" for="addGroupError" class="form-control-messages alertLogin alert-danger"/>
         </div>
@@ -133,7 +133,7 @@
 
                     var items = result;
                     $('.groupsList').html("");
-
+                    
                     $.each(items, function (i, item) {
 
                         $('.groupsList').append('<tr> <td> ' + item.groupname + '</td>' + '<td> '
@@ -144,6 +144,7 @@
 
 
                     });
+                    
                 });
             }
             bindGroups();
