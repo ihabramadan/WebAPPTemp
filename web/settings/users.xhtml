@@ -28,7 +28,7 @@
                             </td>
                             <td align="right">
                                 <h:form>
-                                <h:commandLink  class='btn  btn-circle btn-lg'   type="button"><i class="fa fa-pluse"></i>
+                                    <h:commandLink  class='btn  btn-circle btn-lg'  title="#{msg['users.add_user']}" type="button"><i class="fa fa-pluse"></i>
                                     <f:ajax  listener="#{userData.exitEditMode()}" onevent="showUserModal(0)" render=":UserForm" />
                                     </h:commandLink>
                                  </h:form>
@@ -176,27 +176,7 @@
             
             
             
-            function bindUsers() {
-                $.ajax({
-                    url: '#{facesContext.externalContext.requestContextPath}/GetAllUsers',
-                    dataType: 'json'
-                }).done(function (result) {
-
-                    var items = result;
-                    $('.groupsList').html("");
-
-                    $.each(items, function (i, item) {
-
-                        $('.groupsList').append('<tr> <td> ' + item.groupname + '</td>' + '<td> '
-                                + item.groupdesc + '</td> <td><button id="' + item.id + '" type="button" groupName="' + item.groupname + '" data-toggle="modal"    onclick="showModal(' + item.id + ')"  value="' + item.id + '"  class="btn btn-primary">'
-                                + '#{msg['groups.pages']}' + '</button></td><td><button id="deleteBtn" type="button"   onclick="deleteGroup( ' + item.id + ')" class="btn btn-danger">'
-                                + '#{msg['groups.delete']}' + '</button> </td></tr>');
-
-
-
-                    });
-                });
-            }
+            
             
             
         </script>

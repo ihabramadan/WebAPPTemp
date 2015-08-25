@@ -110,9 +110,7 @@ public class ManageUsers {
             session = HibernateUtil.getSessionFactory().openSession();
             Set<GpstGroups> groupSet = new HashSet();
             GpstGroups defaultGroup = (GpstGroups)session.get(GpstGroups.class, groupId);
-            Set<GpstPages> pagesSet = new HashSet();
-            pagesSet.add(page);
-            defaultGroup.setGpstPageses(pagesSet);
+            
             groupSet.add(defaultGroup);
             
             user = new GpstUsers(userName, password, email, phone, firstName, lastName,groupSet);

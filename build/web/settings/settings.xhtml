@@ -12,7 +12,7 @@
     <h:body id="body" >
         
         <div >
-            <h1 class="page-header">#{msg['settings.settings']}
+            <h1 class="page-header" style="display : #{userBean.isAuthorized('settings.xhtml') ? 'block' : 'none'} ">#{msg['settings.settings']}
                 
             </h1>
             
