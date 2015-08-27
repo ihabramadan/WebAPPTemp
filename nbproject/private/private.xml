@@ -11,6 +11,7 @@
             <file>file:/D:/Java/GPStreet/src/java/hibernate2.reveng.xml</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/common/AjaxUser.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/DB/Managers/ManagePages.java</file>
+            <file>file:/D:/Java/GPStreet/src/java/GPStreet/common/Constants.java</file>
             <file>file:/D:/Java/GPStreet/src/java/hibernate.reveng.xml</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/DB/Managers/ManageGroups.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/BB/PagesBean.java</file>
@@ -33,6 +34,7 @@
             <file>file:/D:/Java/GPStreet/src/java/hibernate1.reveng.xml</file>
             <file>file:/D:/Java/GPStreet/src/java/com/gpstreet/webservices/ISaveLocation.java</file>
             <file>file:/D:/Java/GPStreet/src/java/com/gpstreet/mapmodels/DashboardModel.java</file>
+            <file>file:/D:/Java/GPStreet/src/java/com/gpstreet/geo/GeoUtils.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/common/UserData.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/Servlets/GetGroupPages.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/BB/UserBean.java</file>
@@ -44,6 +46,7 @@
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/DAO/GroupsDAO.java</file>
             <file>file:/D:/Java/GPStreet/web/welcomePrimefaces.xhtml</file>
             <file>file:/D:/Java/GPStreet/src/java/hibernate3.reveng.xml</file>
+            <file>file:/D:/Java/GPStreet/src/java/com/gpstreet/mapmodels/MapUtiles.java</file>
             <file>file:/D:/Java/GPStreet/web/settings/groupModal.xhtml</file>
             <file>file:/D:/Java/GPStreet/src/java/com/gpstreet/location/LocationUtils.java</file>
             <file>file:/D:/Java/GPStreet/web/WEB-INF/sun-jaxws.xml</file>

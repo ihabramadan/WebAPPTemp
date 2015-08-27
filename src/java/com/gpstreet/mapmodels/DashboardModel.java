@@ -63,7 +63,7 @@ public class DashboardModel {
         
         //Polyline
         Polyline polyline = MapUtiles.createPolyline(gpstTrackers , 5 , "#FF9900" , 0.7);
-         
+        
         
         //Basic marker
         for(GpstTracker tracker : gpstTrackers ){
