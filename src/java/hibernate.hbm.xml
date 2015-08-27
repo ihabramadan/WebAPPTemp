@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
+    <class name="GpstState" table="gpst_state"/>
+    <class name="GpstTracker" table="gpst_tracker"/>
+    <class name="GpstLocations" table="gpst_locations"/>
   <class name="GpstUsers" table="gpst_users"/>
   <class name="GpstGroups" table="gpst_groups"/>
   <class name="GpstUserHasGroup" table="gpst_user_has_groups"/>

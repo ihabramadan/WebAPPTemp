@@ -15,12 +15,13 @@ import javax.faces.bean.ManagedBean;
  * @author iramadan
  */
 @ManagedBean
-public class Constants {
+public  class Constants {
     private  final String arabicCode="ar";
     private  final String englishCode="en";
     //public static final ResourceBundle LOCAL_RB = ResourceBundle.getBundle("Messages",CommonBB.getLocal());
     private final String arabic = "عربى";
     private final String english = "English";
+    public final static String dateFormat = "dd-MM-yyyy HH:mm:ss";
 
     
 

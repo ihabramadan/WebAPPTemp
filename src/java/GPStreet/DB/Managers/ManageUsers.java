@@ -155,6 +155,29 @@ public class ManageUsers {
         
     }
     
+    public GpstUsers getUser(int userId){
+        
+        GpstUsers user = null;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
+            
+            
+            user = (GpstUsers)session.get(GpstUsers.class , userId);
+            
+           
+            if(user == null)
+                return null;
+            else
+                return user;
+            
+        } catch (HibernateException ex) {
+           
+            logger.error(ex.getMessage());
+            return null;
+        }
+        
+    }
+    
     public boolean updateUser(int userId,String userEmail,String userPhone,String userFirstName,String userLastName , int groupId){
         GpstUsers user = null;
         

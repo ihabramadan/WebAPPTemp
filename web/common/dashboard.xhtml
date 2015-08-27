@@ -9,33 +9,33 @@
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
-        
+
         <title>Dashboard</title>
     </h:head>
     <h:body >
         <div >
             <h1 class="page-header" style="display : #{userBean.isAuthorized('dashboard.xhtml') ? 'block' : 'none'} ">#{msg['dashboard.dashboard']}
-                
+
             </h1>
-            
+
         </div>
-        
-         <c:if test="#{userBean.isAuthorized('dashboard.xhtml')}">
-             <div class="panel panel-default">
-                 <div class="panel-heading">
-        
-                     </div>
-                 
-                 <div class="panel-body">
-                     <f:view contentType="text/html" >
-            
-            <p:gmap center="30.228890, 31.103906" zoom="10" type="MAP"
-                    style="width:600px;height:400px" />
-            
-        </f:view>
-                 </div>
-             </div>
-         </c:if>
+
+        <c:if test="#{userBean.isAuthorized('dashboard.xhtml')}">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+
+                </div>
+
+                <div class="panel-body" >
+                    <f:view contentType="text/html"  >
+
+                        <p:gmap center="#{dashboardModel.midPoint.lat}, #{dashboardModel.midPoint.lng}" zoom="10" type="MAP"
+                                style="width:auto;height:700px" model="#{dashboardModel.dbModel}" />
+
+                    </f:view>
+                </div>
+            </div>
+        </c:if>
     </h:body>
 
 </html>
