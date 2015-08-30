@@ -6,7 +6,7 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
-        <script src="http://maps.google.com/maps/api/js?sensor=false" 
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYBJ4rlCiAH6kUOR4kVlGb6BHx7HJ-ZQ8" 
         type="text/javascript"></script>
         
         <title>GPStreet</title>
@@ -309,9 +309,9 @@
                         <!--end search section-->
                     </li>
                     <li class="selected">
-                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                        
                         <h:form >
-                             <h:commandLink actionListener="#{userBean.setPage('dashboard.xhtml')}" class="fa fa-dashboard fa-fw">Dashboard</h:commandLink>
+                            <h:commandLink actionListener="#{userBean.setPage('dashboard.xhtml')}" style="padding: 20px 15px; font-size: medium;text-decoration: none;" class="fa fa-dashboard fa-fw">&nbsp;#{msg['dashboard.dashboard']}</h:commandLink>
                          </h:form>
                     </li>
                     <li>

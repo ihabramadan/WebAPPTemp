@@ -59,6 +59,7 @@ public class MapUtiles {
                 result.setStrokeColor(strokeColor);
                 result.setStrokeOpacity(strokeOpacity);
                 result.getPaths().addAll(coords);
+                
             } catch (Exception ex) {
                 logger.error(ex.getMessage());
             }

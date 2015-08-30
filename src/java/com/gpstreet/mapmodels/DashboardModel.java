@@ -7,12 +7,11 @@ package com.gpstreet.mapmodels;
 
 import GPStreet.DB.Managers.ManageTracker;
 import GPStreet.DB.Managers.ManageUsers;
-import GPStreet.DB.Mapping.Entity.GpstState;
+
 import GPStreet.DB.Mapping.Entity.GpstTracker;
 import GPStreet.common.Constants;
 import com.gpstreet.geo.GeoUtils;
-import com.mchange.v1.util.MapUtils;
-import java.text.DateFormat;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -20,7 +19,9 @@ import java.util.Date;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
 import org.apache.log4j.Logger;
+import org.primefaces.event.map.OverlaySelectEvent;
 import org.primefaces.model.map.DefaultMapModel;
 import org.primefaces.model.map.LatLng;
 import org.primefaces.model.map.MapModel;
@@ -32,20 +33,22 @@ import org.primefaces.model.map.Polyline;
  * @author ihab.ramadan
  */
 @ManagedBean
+@ViewScoped
 public class DashboardModel {
     private MapModel dbModel;
     Logger logger = Logger.getLogger(ManageUsers.class);
     private LatLng midPoint;
+    private Marker selectedMarker;
     
     @PostConstruct
     public void init() {
         Date date =  new Date();
         try{
         dbModel =new DefaultMapModel();
-        String dateStr = new Date().toString();
+        String dateStr = "25-08-2015 05:05:25";
         
         
-        SimpleDateFormat dateFormat  =  new SimpleDateFormat(Constants.dateFormat);
+        SimpleDateFormat dateFormat  =  new SimpleDateFormat(new Constants().dateFormat);
         date = dateFormat.parse(dateStr);
         }catch(ParseException ex){
             logger.error(ex.getMessage());
@@ -68,11 +71,18 @@ public class DashboardModel {
         //Basic marker
         for(GpstTracker tracker : gpstTrackers ){
             
-            dbModel.addOverlay(MapUtiles.createMarker(tracker, null));
+            dbModel.addOverlay(MapUtiles.createMarker(tracker, MapUtiles.MAPICON_MAN));
         }
         dbModel.addOverlay(polyline);
         
     }
+
+    public Marker getSelectedMarker() {
+        return selectedMarker;
+    }
+
+    
+    
     public MapModel getDbModel() {
         return dbModel;
     }
@@ -87,6 +97,9 @@ public class DashboardModel {
 
     public void setMidPoint(LatLng midPoint) {
         this.midPoint = midPoint;
+    }
+    public void onMarkerSelect(OverlaySelectEvent event){
+        selectedMarker =  (Marker) event.getOverlay();
     }
     
     

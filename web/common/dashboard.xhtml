@@ -30,12 +30,49 @@
                     <f:view contentType="text/html"  >
 
                         <p:gmap center="#{dashboardModel.midPoint.lat}, #{dashboardModel.midPoint.lng}" zoom="10" type="MAP"
-                                style="width:auto;height:700px" model="#{dashboardModel.dbModel}" />
+                                style="width:auto;height:700px" model="#{dashboardModel.dbModel}" >
+                            <p:ajax event="overlaySelect" listener="#{dashboardModel.onMarkerSelect}" />
+                        <p:gmapInfoWindow id="infoWindow">
+                            <p:outputPanel >
+                                <table cellspacing="10" >
+                                    <tr>
+                                        <td ><label>#{msg['dashboard.agent_name']}: </label></td>
+                                        <td ><h:outputText  value="#{dashboardModel.selectedMarker.title}"/></td>
+                                    </tr>
+                                    <tr>
+                                        
+                                <td><label>#{msg['dashboard.date']}: </label></td>
+                                <td ><h:outputText  value="#{dashboardModel.selectedMarker.data.date}">
+                                        <f:convertDateTime pattern="#{constants.dateFormat}" />
+                                    </h:outputText>
+                                </td>
+                                </tr>
+                                    <tr>
+                                        
+                                <td ><label>#{msg['dashboard.lat']}: </label></td>
+                                <td ><h:outputText  value="#{dashboardModel.selectedMarker.latlng.lat}"/></td>
+                                </tr>
+                                    <tr>                                        
+                                        <td   ><label>#{msg['dashboard.lng']}: </label></td>
+                                        <td ><h:outputText  value="#{dashboardModel.selectedMarker.latlng.lng}"/></td>
+                                </tr>
+                                </table>
+                            </p:outputPanel>
+                        </p:gmapInfoWindow>
+                        </p:gmap>
 
                     </f:view>
                 </div>
             </div>
         </c:if>
+        
+        <script>
+            function addArrow(){
+                var lineSymbol = {
+    path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW
+    };
+            }
+        </script>
     </h:body>
 
 </html>

@@ -21,7 +21,11 @@ public  class Constants {
     //public static final ResourceBundle LOCAL_RB = ResourceBundle.getBundle("Messages",CommonBB.getLocal());
     private final String arabic = "عربى";
     private final String english = "English";
-    public final static String dateFormat = "dd-MM-yyyy HH:mm:ss";
+    public final  String dateFormat = "dd-MM-yyyy HH:mm:ss";
+
+    public  String getDateFormat() {
+        return dateFormat;
+    }
 
     
 
