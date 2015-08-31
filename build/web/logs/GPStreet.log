@@ -1238,3 +1238,815 @@
 [http-listener-1(4)] 2015-08-30 19:57:37,612 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
 [http-listener-1(4)] 2015-08-30 19:57:39,465 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
 [http-listener-1(4)] 2015-08-30 19:57:39,471 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(3)] 2015-08-31 12:10:48,975 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(3)] 2015-08-31 12:10:49,044 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(3)] 2015-08-31 12:10:49,094 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(3)] 2015-08-31 12:10:49,101 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(3)] 2015-08-31 12:10:49,253 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(3)] 2015-08-31 12:10:49,254 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(3)] 2015-08-31 12:10:49,576 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(3)] 2015-08-31 12:10:49,654 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(3)] 2015-08-31 12:10:49,929 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(3)] 2015-08-31 12:10:49,952 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(3)] 2015-08-31 12:10:49,965 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(3)] 2015-08-31 12:10:50,043 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(3)] 2015-08-31 12:10:50,056 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(3)] 2015-08-31 12:10:50,113 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(3)] 2015-08-31 12:10:50,958 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(3)] 2015-08-31 12:10:50,964 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(3)] 2015-08-31 12:10:50,965 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(3)] 2015-08-31 12:10:50,965 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(3)] 2015-08-31 12:10:50,973 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(3)] 2015-08-31 12:10:51,760 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(3)] 2015-08-31 12:10:52,164 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(3)] 2015-08-31 12:10:52,212 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(3)] 2015-08-31 12:10:54,857 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(3)] 2015-08-31 12:10:54,865 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(1)] 2015-08-31 12:16:09,721 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(1)] 2015-08-31 12:16:09,753 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(1)] 2015-08-31 12:16:09,761 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(1)] 2015-08-31 12:16:09,767 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(1)] 2015-08-31 12:16:09,851 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(1)] 2015-08-31 12:16:09,851 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(1)] 2015-08-31 12:16:09,928 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(1)] 2015-08-31 12:16:09,966 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(1)] 2015-08-31 12:16:10,003 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(1)] 2015-08-31 12:16:10,013 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(1)] 2015-08-31 12:16:10,062 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(1)] 2015-08-31 12:16:10,307 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(1)] 2015-08-31 12:16:10,317 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(1)] 2015-08-31 12:16:10,331 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(1)] 2015-08-31 12:16:10,675 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(1)] 2015-08-31 12:16:10,680 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(1)] 2015-08-31 12:16:10,681 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(1)] 2015-08-31 12:16:10,682 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(1)] 2015-08-31 12:16:10,688 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(1)] 2015-08-31 12:16:10,785 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(1)] 2015-08-31 12:16:11,142 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(1)] 2015-08-31 12:16:11,171 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(1)] 2015-08-31 12:16:12,985 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(1)] 2015-08-31 12:16:12,991 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 12:48:27,159 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(4)] 2015-08-31 12:48:27,193 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(4)] 2015-08-31 12:48:27,204 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(4)] 2015-08-31 12:48:27,209 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(4)] 2015-08-31 12:48:27,299 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(4)] 2015-08-31 12:48:27,300 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(4)] 2015-08-31 12:48:27,411 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(4)] 2015-08-31 12:48:27,454 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(4)] 2015-08-31 12:48:27,604 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(4)] 2015-08-31 12:48:27,627 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(4)] 2015-08-31 12:48:27,643 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(4)] 2015-08-31 12:48:27,782 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(4)] 2015-08-31 12:48:27,796 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(4)] 2015-08-31 12:48:27,804 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(4)] 2015-08-31 12:48:28,213 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(4)] 2015-08-31 12:48:28,222 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(4)] 2015-08-31 12:48:28,224 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(4)] 2015-08-31 12:48:28,224 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(4)] 2015-08-31 12:48:28,232 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(4)] 2015-08-31 12:48:28,316 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(4)] 2015-08-31 12:48:28,593 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(4)] 2015-08-31 12:48:28,617 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(4)] 2015-08-31 12:48:30,732 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 12:48:30,740 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(1)] 2015-08-31 12:49:02,890 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 62.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(1)] 2015-08-31 12:49:02,896 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 71.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(1)] 2015-08-31 13:07:42,072 - org.hibernate.engine.jdbc.spi.SqlExceptionHelper - WARN - SQL Error: 1040, SQLState: 08004
+[http-listener-1(1)] 2015-08-31 13:07:42,072 - org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR - Data source rejected establishment of connection,  message from server: "Too many connections"
+[http-listener-1(1)] 2015-08-31 13:07:42,098 - org.hibernate.event.internal.DefaultLoadEventListener - INFO - HHH000327: Error performing load command : org.hibernate.exception.JDBCConnectionException: Error calling Driver#connect
+[http-listener-1(1)] 2015-08-31 13:07:42,099 - GPStreet.DB.Managers.ManageUsers - ERROR - Error calling Driver#connect
+[http-listener-1(2)] 2015-08-31 13:07:50,563 - org.hibernate.engine.jdbc.spi.SqlExceptionHelper - WARN - SQL Error: 1040, SQLState: 08004
+[http-listener-1(2)] 2015-08-31 13:07:50,564 - org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR - Data source rejected establishment of connection,  message from server: "Too many connections"
+[http-listener-1(2)] 2015-08-31 13:07:50,565 - GPStreet.DB.Managers.ManageUsers - ERROR - Error calling Driver#connect
+[http-listener-1(2)] 2015-08-31 13:07:50,570 - org.hibernate.engine.jdbc.spi.SqlExceptionHelper - WARN - SQL Error: 1040, SQLState: 08004
+[http-listener-1(2)] 2015-08-31 13:07:50,570 - org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR - Data source rejected establishment of connection,  message from server: "Too many connections"
+[http-listener-1(2)] 2015-08-31 13:07:50,571 - GPStreet.DB.Managers.ManageGroups - ERROR - Error calling Driver#connect
+[http-listener-1(2)] 2015-08-31 13:07:50,575 - org.hibernate.engine.jdbc.spi.SqlExceptionHelper - WARN - SQL Error: 1040, SQLState: 08004
+[http-listener-1(2)] 2015-08-31 13:07:50,576 - org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR - Data source rejected establishment of connection,  message from server: "Too many connections"
+[http-listener-1(2)] 2015-08-31 13:07:50,576 - GPStreet.DB.Managers.ManagePages - ERROR - Error calling Driver#connect
+[http-listener-1(2)] 2015-08-31 13:07:50,606 - org.hibernate.engine.jdbc.spi.SqlExceptionHelper - WARN - SQL Error: 1040, SQLState: 08004
+[http-listener-1(2)] 2015-08-31 13:07:50,607 - org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR - Data source rejected establishment of connection,  message from server: "Too many connections"
+[http-listener-1(2)] 2015-08-31 13:07:50,607 - GPStreet.DB.Managers.ManageUsers - ERROR - Error calling Driver#connect
+[http-listener-1(5)] 2015-08-31 13:26:10,428 - org.hibernate.engine.jdbc.spi.SqlExceptionHelper - WARN - SQL Error: 1040, SQLState: 08004
+[http-listener-1(5)] 2015-08-31 13:26:10,429 - org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR - Data source rejected establishment of connection,  message from server: "Too many connections"
+[http-listener-1(5)] 2015-08-31 13:26:10,430 - org.hibernate.event.internal.DefaultLoadEventListener - INFO - HHH000327: Error performing load command : org.hibernate.exception.JDBCConnectionException: Error calling Driver#connect
+[http-listener-1(5)] 2015-08-31 13:26:10,447 - GPStreet.DB.Managers.ManageUsers - ERROR - Error calling Driver#connect
+[http-listener-1(3)] 2015-08-31 13:26:20,642 - org.hibernate.engine.jdbc.spi.SqlExceptionHelper - WARN - SQL Error: 1040, SQLState: 08004
+[http-listener-1(3)] 2015-08-31 13:26:20,663 - org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR - Data source rejected establishment of connection,  message from server: "Too many connections"
+[http-listener-1(3)] 2015-08-31 13:26:20,663 - GPStreet.DB.Managers.ManageUsers - ERROR - Error calling Driver#connect
+[http-listener-1(2)] 2015-08-31 13:26:22,643 - org.hibernate.engine.jdbc.spi.SqlExceptionHelper - WARN - SQL Error: 1040, SQLState: 08004
+[http-listener-1(2)] 2015-08-31 13:26:22,643 - org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR - Data source rejected establishment of connection,  message from server: "Too many connections"
+[http-listener-1(2)] 2015-08-31 13:26:22,644 - GPStreet.DB.Managers.ManageUsers - ERROR - Error calling Driver#connect
+[http-listener-1(2)] 2015-08-31 13:29:57,358 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(2)] 2015-08-31 13:29:57,416 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(2)] 2015-08-31 13:29:57,427 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(2)] 2015-08-31 13:29:57,434 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(2)] 2015-08-31 13:29:57,552 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(2)] 2015-08-31 13:29:57,552 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(2)] 2015-08-31 13:29:57,723 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(2)] 2015-08-31 13:29:57,818 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(2)] 2015-08-31 13:29:57,995 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(2)] 2015-08-31 13:29:58,025 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(2)] 2015-08-31 13:29:58,061 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(2)] 2015-08-31 13:29:58,092 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(2)] 2015-08-31 13:29:58,116 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(2)] 2015-08-31 13:29:58,142 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(2)] 2015-08-31 13:29:58,727 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(2)] 2015-08-31 13:29:58,734 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(2)] 2015-08-31 13:29:58,735 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(2)] 2015-08-31 13:29:58,735 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(2)] 2015-08-31 13:29:58,749 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(2)] 2015-08-31 13:29:59,071 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(2)] 2015-08-31 13:29:59,492 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(2)] 2015-08-31 13:29:59,524 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(2)] 2015-08-31 13:30:01,944 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(2)] 2015-08-31 13:30:01,956 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(2)] 2015-08-31 14:10:56,582 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(2)] 2015-08-31 14:10:56,651 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(2)] 2015-08-31 14:10:56,661 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(2)] 2015-08-31 14:10:56,674 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(2)] 2015-08-31 14:10:56,788 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(2)] 2015-08-31 14:10:56,788 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(2)] 2015-08-31 14:10:56,897 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(2)] 2015-08-31 14:10:56,941 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(2)] 2015-08-31 14:10:56,993 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(2)] 2015-08-31 14:10:57,014 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(2)] 2015-08-31 14:10:57,033 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(2)] 2015-08-31 14:10:57,058 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(2)] 2015-08-31 14:10:57,089 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(2)] 2015-08-31 14:10:57,115 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(2)] 2015-08-31 14:10:57,559 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(2)] 2015-08-31 14:10:57,564 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(2)] 2015-08-31 14:10:57,564 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(2)] 2015-08-31 14:10:57,565 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(2)] 2015-08-31 14:10:57,593 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(2)] 2015-08-31 14:10:57,713 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(2)] 2015-08-31 14:10:58,072 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(2)] 2015-08-31 14:10:58,108 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(2)] 2015-08-31 14:11:00,023 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(2)] 2015-08-31 14:11:00,032 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 14:41:50,151 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(4)] 2015-08-31 14:41:50,213 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(4)] 2015-08-31 14:41:50,229 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(4)] 2015-08-31 14:41:50,238 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(4)] 2015-08-31 14:41:50,338 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(4)] 2015-08-31 14:41:50,339 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(4)] 2015-08-31 14:41:50,465 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(4)] 2015-08-31 14:41:50,513 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(4)] 2015-08-31 14:41:50,598 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(4)] 2015-08-31 14:41:50,641 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(4)] 2015-08-31 14:41:50,655 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(4)] 2015-08-31 14:41:50,700 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(4)] 2015-08-31 14:41:50,713 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(4)] 2015-08-31 14:41:50,779 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(4)] 2015-08-31 14:41:51,154 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(4)] 2015-08-31 14:41:51,160 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(4)] 2015-08-31 14:41:51,162 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(4)] 2015-08-31 14:41:51,162 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(4)] 2015-08-31 14:41:51,167 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(4)] 2015-08-31 14:41:51,281 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(4)] 2015-08-31 14:41:51,550 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(4)] 2015-08-31 14:41:51,571 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(4)] 2015-08-31 14:41:53,375 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 14:41:53,380 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(5)] 2015-08-31 14:49:11,132 - org.hibernate.engine.jdbc.spi.SqlExceptionHelper - WARN - SQL Error: 1040, SQLState: 08004
+[http-listener-1(5)] 2015-08-31 14:49:11,133 - org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR - Data source rejected establishment of connection,  message from server: "Too many connections"
+[http-listener-1(5)] 2015-08-31 14:49:11,148 - org.hibernate.event.internal.DefaultLoadEventListener - INFO - HHH000327: Error performing load command : org.hibernate.exception.JDBCConnectionException: Error calling Driver#connect
+[http-listener-1(5)] 2015-08-31 14:49:11,148 - GPStreet.DB.Managers.ManageUsers - ERROR - Error calling Driver#connect
+[http-listener-1(2)] 2015-08-31 15:07:23,332 - org.hibernate.engine.jdbc.spi.SqlExceptionHelper - WARN - SQL Error: 1040, SQLState: 08004
+[http-listener-1(2)] 2015-08-31 15:07:23,339 - org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR - Data source rejected establishment of connection,  message from server: "Too many connections"
+[http-listener-1(2)] 2015-08-31 15:07:23,339 - org.hibernate.event.internal.DefaultLoadEventListener - INFO - HHH000327: Error performing load command : org.hibernate.exception.JDBCConnectionException: Error calling Driver#connect
+[http-listener-1(2)] 2015-08-31 15:07:23,358 - GPStreet.DB.Managers.ManageUsers - ERROR - Error calling Driver#connect
+[http-listener-1(5)] 2015-08-31 15:07:29,132 - org.hibernate.engine.jdbc.spi.SqlExceptionHelper - WARN - SQL Error: 1040, SQLState: 08004
+[http-listener-1(5)] 2015-08-31 15:07:29,171 - org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR - Data source rejected establishment of connection,  message from server: "Too many connections"
+[http-listener-1(5)] 2015-08-31 15:07:29,172 - GPStreet.DB.Managers.ManageUsers - ERROR - Error calling Driver#connect
+[http-listener-1(2)] 2015-08-31 15:08:47,767 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(2)] 2015-08-31 15:08:47,821 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(2)] 2015-08-31 15:08:47,829 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(2)] 2015-08-31 15:08:47,836 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(2)] 2015-08-31 15:08:47,925 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(2)] 2015-08-31 15:08:47,925 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(2)] 2015-08-31 15:08:48,039 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(2)] 2015-08-31 15:08:48,088 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(2)] 2015-08-31 15:08:48,133 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(2)] 2015-08-31 15:08:48,147 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(2)] 2015-08-31 15:08:48,157 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(2)] 2015-08-31 15:08:48,187 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(2)] 2015-08-31 15:08:48,202 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(2)] 2015-08-31 15:08:48,210 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(2)] 2015-08-31 15:08:48,690 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(2)] 2015-08-31 15:08:48,696 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(2)] 2015-08-31 15:08:48,698 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(2)] 2015-08-31 15:08:48,698 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(2)] 2015-08-31 15:08:48,711 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(2)] 2015-08-31 15:08:48,813 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(2)] 2015-08-31 15:08:49,091 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(2)] 2015-08-31 15:08:49,113 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(2)] 2015-08-31 15:08:50,959 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(2)] 2015-08-31 15:08:50,966 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 16:03:34,262 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(4)] 2015-08-31 16:03:34,337 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(4)] 2015-08-31 16:03:34,344 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(4)] 2015-08-31 16:03:34,484 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(4)] 2015-08-31 16:03:34,590 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(4)] 2015-08-31 16:03:34,591 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(4)] 2015-08-31 16:03:34,735 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(4)] 2015-08-31 16:03:34,847 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(4)] 2015-08-31 16:03:34,891 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(4)] 2015-08-31 16:03:34,923 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(4)] 2015-08-31 16:03:34,932 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(4)] 2015-08-31 16:03:34,950 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(4)] 2015-08-31 16:03:34,961 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(4)] 2015-08-31 16:03:34,977 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(4)] 2015-08-31 16:03:35,508 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(4)] 2015-08-31 16:03:35,513 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(4)] 2015-08-31 16:03:35,513 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(4)] 2015-08-31 16:03:35,515 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(4)] 2015-08-31 16:03:35,524 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(4)] 2015-08-31 16:03:35,640 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(4)] 2015-08-31 16:03:35,965 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(4)] 2015-08-31 16:03:35,989 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(4)] 2015-08-31 16:03:37,927 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 16:03:37,934 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(2)] 2015-08-31 16:05:15,966 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(2)] 2015-08-31 16:05:15,999 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(2)] 2015-08-31 16:05:16,008 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(2)] 2015-08-31 16:05:16,015 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(2)] 2015-08-31 16:05:16,100 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(2)] 2015-08-31 16:05:16,100 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(2)] 2015-08-31 16:05:16,172 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(2)] 2015-08-31 16:05:16,215 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(2)] 2015-08-31 16:05:16,243 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(2)] 2015-08-31 16:05:16,251 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(2)] 2015-08-31 16:05:16,284 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(2)] 2015-08-31 16:05:16,299 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(2)] 2015-08-31 16:05:16,309 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(2)] 2015-08-31 16:05:16,321 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(2)] 2015-08-31 16:05:17,122 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(2)] 2015-08-31 16:05:17,126 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(2)] 2015-08-31 16:05:17,126 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(2)] 2015-08-31 16:05:17,127 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(2)] 2015-08-31 16:05:17,135 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(2)] 2015-08-31 16:05:17,239 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(2)] 2015-08-31 16:05:17,520 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(2)] 2015-08-31 16:05:17,543 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(2)] 2015-08-31 16:05:19,180 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(2)] 2015-08-31 16:05:19,187 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(3)] 2015-08-31 16:13:49,393 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(3)] 2015-08-31 16:13:49,429 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(3)] 2015-08-31 16:13:49,604 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(3)] 2015-08-31 16:13:49,617 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(3)] 2015-08-31 16:13:49,715 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(3)] 2015-08-31 16:13:49,718 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(3)] 2015-08-31 16:13:49,894 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(3)] 2015-08-31 16:13:49,947 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(3)] 2015-08-31 16:13:50,754 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(3)] 2015-08-31 16:13:50,924 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(3)] 2015-08-31 16:13:51,033 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(3)] 2015-08-31 16:13:51,067 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(3)] 2015-08-31 16:13:51,091 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(3)] 2015-08-31 16:13:51,220 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(3)] 2015-08-31 16:13:51,654 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(3)] 2015-08-31 16:13:51,658 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(3)] 2015-08-31 16:13:51,659 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(3)] 2015-08-31 16:13:51,660 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(3)] 2015-08-31 16:13:51,670 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(3)] 2015-08-31 16:13:52,048 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(3)] 2015-08-31 16:13:52,494 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(3)] 2015-08-31 16:13:52,563 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(4)] 2015-08-31 16:14:13,205 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 16:14:13,296 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(3)] 2015-08-31 16:40:46,932 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(3)] 2015-08-31 16:40:46,965 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(3)] 2015-08-31 16:40:46,973 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(3)] 2015-08-31 16:40:46,980 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(3)] 2015-08-31 16:40:47,123 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(3)] 2015-08-31 16:40:47,124 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(3)] 2015-08-31 16:40:47,228 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(3)] 2015-08-31 16:40:47,267 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(3)] 2015-08-31 16:40:47,314 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(3)] 2015-08-31 16:40:47,331 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(3)] 2015-08-31 16:40:47,350 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(3)] 2015-08-31 16:40:47,389 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(3)] 2015-08-31 16:40:47,408 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(3)] 2015-08-31 16:40:47,416 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(3)] 2015-08-31 16:40:47,754 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(3)] 2015-08-31 16:40:47,759 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(3)] 2015-08-31 16:40:47,761 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(3)] 2015-08-31 16:40:47,762 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(3)] 2015-08-31 16:40:47,769 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(3)] 2015-08-31 16:40:47,846 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(3)] 2015-08-31 16:40:48,115 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(3)] 2015-08-31 16:40:48,139 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(3)] 2015-08-31 16:40:49,921 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(3)] 2015-08-31 16:40:49,928 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(2)] 2015-08-31 16:46:34,894 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(2)] 2015-08-31 16:46:34,930 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(2)] 2015-08-31 16:46:34,939 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(2)] 2015-08-31 16:46:34,945 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(2)] 2015-08-31 16:46:35,031 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(2)] 2015-08-31 16:46:35,032 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(2)] 2015-08-31 16:46:35,100 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(2)] 2015-08-31 16:46:35,138 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(2)] 2015-08-31 16:46:35,167 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(2)] 2015-08-31 16:46:35,177 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(2)] 2015-08-31 16:46:35,186 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(2)] 2015-08-31 16:46:35,196 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(2)] 2015-08-31 16:46:35,206 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(2)] 2015-08-31 16:46:35,231 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(2)] 2015-08-31 16:46:35,568 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(2)] 2015-08-31 16:46:35,573 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(2)] 2015-08-31 16:46:35,574 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(2)] 2015-08-31 16:46:35,574 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(2)] 2015-08-31 16:46:35,591 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(2)] 2015-08-31 16:46:35,678 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(2)] 2015-08-31 16:46:35,961 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(2)] 2015-08-31 16:46:35,985 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(2)] 2015-08-31 16:46:37,753 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(2)] 2015-08-31 16:46:37,759 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(5)] 2015-08-31 16:48:00,988 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(5)] 2015-08-31 16:48:01,018 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(5)] 2015-08-31 16:48:01,026 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(5)] 2015-08-31 16:48:01,033 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(5)] 2015-08-31 16:48:01,114 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(5)] 2015-08-31 16:48:01,115 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(5)] 2015-08-31 16:48:01,193 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(5)] 2015-08-31 16:48:01,246 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(5)] 2015-08-31 16:48:01,278 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(5)] 2015-08-31 16:48:01,288 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(5)] 2015-08-31 16:48:01,296 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(5)] 2015-08-31 16:48:01,307 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(5)] 2015-08-31 16:48:01,318 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(5)] 2015-08-31 16:48:01,327 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(5)] 2015-08-31 16:48:01,692 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(5)] 2015-08-31 16:48:01,697 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(5)] 2015-08-31 16:48:01,698 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(5)] 2015-08-31 16:48:01,699 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(5)] 2015-08-31 16:48:01,706 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(5)] 2015-08-31 16:48:01,795 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(5)] 2015-08-31 16:48:02,200 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(5)] 2015-08-31 16:48:02,224 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(5)] 2015-08-31 16:48:03,796 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(5)] 2015-08-31 16:48:03,804 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(3)] 2015-08-31 16:49:47,602 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(3)] 2015-08-31 16:49:47,637 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(3)] 2015-08-31 16:49:47,644 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(3)] 2015-08-31 16:49:47,651 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(3)] 2015-08-31 16:49:47,737 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(3)] 2015-08-31 16:49:47,737 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(3)] 2015-08-31 16:49:47,820 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(3)] 2015-08-31 16:49:47,858 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(3)] 2015-08-31 16:49:47,896 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(3)] 2015-08-31 16:49:47,905 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(3)] 2015-08-31 16:49:47,921 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(3)] 2015-08-31 16:49:47,938 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(3)] 2015-08-31 16:49:47,951 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(3)] 2015-08-31 16:49:47,962 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(3)] 2015-08-31 16:49:48,309 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(3)] 2015-08-31 16:49:48,316 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(3)] 2015-08-31 16:49:48,317 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(3)] 2015-08-31 16:49:48,319 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(3)] 2015-08-31 16:49:48,325 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(3)] 2015-08-31 16:49:48,400 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(3)] 2015-08-31 16:49:48,669 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(3)] 2015-08-31 16:49:48,693 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(3)] 2015-08-31 16:49:50,363 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(3)] 2015-08-31 16:49:50,369 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 16:50:21,429 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(4)] 2015-08-31 16:50:21,468 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(4)] 2015-08-31 16:50:21,483 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(4)] 2015-08-31 16:50:21,494 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(4)] 2015-08-31 16:50:21,593 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(4)] 2015-08-31 16:50:21,593 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(4)] 2015-08-31 16:50:21,672 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(4)] 2015-08-31 16:50:21,717 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(4)] 2015-08-31 16:50:21,742 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(4)] 2015-08-31 16:50:21,750 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(4)] 2015-08-31 16:50:21,758 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(4)] 2015-08-31 16:50:21,766 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(4)] 2015-08-31 16:50:21,776 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(4)] 2015-08-31 16:50:21,784 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(4)] 2015-08-31 16:50:22,268 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(4)] 2015-08-31 16:50:22,273 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(4)] 2015-08-31 16:50:22,275 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(4)] 2015-08-31 16:50:22,275 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(4)] 2015-08-31 16:50:22,286 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(4)] 2015-08-31 16:50:22,367 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(4)] 2015-08-31 16:50:22,656 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(4)] 2015-08-31 16:50:22,681 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(4)] 2015-08-31 16:50:24,273 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 16:50:24,279 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(1)] 2015-08-31 16:51:21,207 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(1)] 2015-08-31 16:51:21,238 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(1)] 2015-08-31 16:51:21,245 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(1)] 2015-08-31 16:51:21,252 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(1)] 2015-08-31 16:51:21,332 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(1)] 2015-08-31 16:51:21,332 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(1)] 2015-08-31 16:51:21,399 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(1)] 2015-08-31 16:51:21,437 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(1)] 2015-08-31 16:51:21,464 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(1)] 2015-08-31 16:51:21,472 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(1)] 2015-08-31 16:51:21,481 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(1)] 2015-08-31 16:51:21,489 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(1)] 2015-08-31 16:51:21,499 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(1)] 2015-08-31 16:51:21,506 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(1)] 2015-08-31 16:51:21,827 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(1)] 2015-08-31 16:51:21,833 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(1)] 2015-08-31 16:51:21,834 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(1)] 2015-08-31 16:51:21,834 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(1)] 2015-08-31 16:51:21,841 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(1)] 2015-08-31 16:51:21,921 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(1)] 2015-08-31 16:51:22,199 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(1)] 2015-08-31 16:51:22,226 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(1)] 2015-08-31 16:51:23,930 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(1)] 2015-08-31 16:51:23,936 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 17:39:30,046 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(4)] 2015-08-31 17:39:30,251 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(4)] 2015-08-31 17:39:30,282 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(4)] 2015-08-31 17:39:30,294 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(4)] 2015-08-31 17:39:30,415 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(4)] 2015-08-31 17:39:30,419 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(4)] 2015-08-31 17:39:30,574 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(4)] 2015-08-31 17:39:30,711 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(4)] 2015-08-31 17:39:30,768 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(4)] 2015-08-31 17:39:30,777 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(4)] 2015-08-31 17:39:30,786 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(4)] 2015-08-31 17:39:30,814 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(4)] 2015-08-31 17:39:30,822 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(4)] 2015-08-31 17:39:30,837 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(4)] 2015-08-31 17:39:31,242 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(4)] 2015-08-31 17:39:31,247 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(4)] 2015-08-31 17:39:31,252 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(4)] 2015-08-31 17:39:31,252 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(4)] 2015-08-31 17:39:31,258 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(4)] 2015-08-31 17:39:31,448 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(4)] 2015-08-31 17:39:31,760 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(4)] 2015-08-31 17:39:31,784 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(4)] 2015-08-31 17:39:33,813 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 17:39:33,819 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(5)] 2015-08-31 18:06:42,661 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(5)] 2015-08-31 18:06:42,699 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(5)] 2015-08-31 18:06:42,709 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(5)] 2015-08-31 18:06:42,715 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(5)] 2015-08-31 18:06:42,833 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(5)] 2015-08-31 18:06:42,833 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(5)] 2015-08-31 18:06:42,977 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(5)] 2015-08-31 18:06:43,044 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(5)] 2015-08-31 18:06:43,291 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(5)] 2015-08-31 18:06:43,311 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(5)] 2015-08-31 18:06:43,336 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(5)] 2015-08-31 18:06:43,352 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(5)] 2015-08-31 18:06:43,367 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(5)] 2015-08-31 18:06:43,378 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(5)] 2015-08-31 18:06:43,917 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(5)] 2015-08-31 18:06:43,923 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(5)] 2015-08-31 18:06:43,924 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(5)] 2015-08-31 18:06:43,924 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(5)] 2015-08-31 18:06:43,933 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(5)] 2015-08-31 18:06:44,368 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(5)] 2015-08-31 18:06:44,741 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(5)] 2015-08-31 18:06:44,773 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(5)] 2015-08-31 18:06:46,977 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(5)] 2015-08-31 18:06:46,985 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(5)] 2015-08-31 18:17:02,462 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(5)] 2015-08-31 18:17:02,516 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(5)] 2015-08-31 18:17:02,532 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(5)] 2015-08-31 18:17:02,541 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(5)] 2015-08-31 18:17:02,717 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(5)] 2015-08-31 18:17:02,717 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(5)] 2015-08-31 18:17:02,827 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(5)] 2015-08-31 18:17:02,872 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(5)] 2015-08-31 18:17:02,933 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(5)] 2015-08-31 18:17:02,948 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(5)] 2015-08-31 18:17:02,967 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(5)] 2015-08-31 18:17:02,981 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(5)] 2015-08-31 18:17:03,008 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(5)] 2015-08-31 18:17:03,021 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(5)] 2015-08-31 18:17:03,581 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(5)] 2015-08-31 18:17:03,586 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(5)] 2015-08-31 18:17:03,587 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(5)] 2015-08-31 18:17:03,587 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(5)] 2015-08-31 18:17:03,594 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(5)] 2015-08-31 18:17:03,691 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(5)] 2015-08-31 18:17:04,035 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(5)] 2015-08-31 18:17:04,059 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(5)] 2015-08-31 18:17:05,965 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(5)] 2015-08-31 18:17:05,974 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(2)] 2015-08-31 18:26:13,165 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(2)] 2015-08-31 18:26:13,196 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(2)] 2015-08-31 18:26:13,204 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(2)] 2015-08-31 18:26:13,210 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(2)] 2015-08-31 18:26:13,296 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(2)] 2015-08-31 18:26:13,298 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(2)] 2015-08-31 18:26:13,393 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(2)] 2015-08-31 18:26:13,436 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(2)] 2015-08-31 18:26:13,472 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(2)] 2015-08-31 18:26:13,484 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(2)] 2015-08-31 18:26:13,498 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(2)] 2015-08-31 18:26:13,510 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(2)] 2015-08-31 18:26:13,521 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(2)] 2015-08-31 18:26:13,534 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(2)] 2015-08-31 18:26:13,940 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(2)] 2015-08-31 18:26:13,945 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(2)] 2015-08-31 18:26:13,946 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(2)] 2015-08-31 18:26:13,948 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(2)] 2015-08-31 18:26:13,956 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(2)] 2015-08-31 18:26:14,152 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(2)] 2015-08-31 18:26:14,454 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(2)] 2015-08-31 18:26:14,479 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(2)] 2015-08-31 18:26:16,062 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(2)] 2015-08-31 18:26:16,068 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 18:46:41,503 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(4)] 2015-08-31 18:46:41,539 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(4)] 2015-08-31 18:46:41,556 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(4)] 2015-08-31 18:46:41,563 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(4)] 2015-08-31 18:46:41,655 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(4)] 2015-08-31 18:46:41,655 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(4)] 2015-08-31 18:46:41,746 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(4)] 2015-08-31 18:46:41,795 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(4)] 2015-08-31 18:46:41,843 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(4)] 2015-08-31 18:46:41,855 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(4)] 2015-08-31 18:46:41,868 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(4)] 2015-08-31 18:46:41,894 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(4)] 2015-08-31 18:46:41,908 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(4)] 2015-08-31 18:46:41,926 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(4)] 2015-08-31 18:46:42,241 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(4)] 2015-08-31 18:46:42,249 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(4)] 2015-08-31 18:46:42,252 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(4)] 2015-08-31 18:46:42,252 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(4)] 2015-08-31 18:46:42,259 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(4)] 2015-08-31 18:46:42,350 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(4)] 2015-08-31 18:46:42,622 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(4)] 2015-08-31 18:46:42,644 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(4)] 2015-08-31 18:46:44,272 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 18:46:44,279 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(5)] 2015-08-31 19:19:04,662 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(5)] 2015-08-31 19:19:04,873 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(5)] 2015-08-31 19:19:04,887 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(5)] 2015-08-31 19:19:04,906 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(5)] 2015-08-31 19:19:05,053 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(5)] 2015-08-31 19:19:05,053 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(5)] 2015-08-31 19:19:05,146 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(5)] 2015-08-31 19:19:05,216 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(5)] 2015-08-31 19:19:05,267 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(5)] 2015-08-31 19:19:05,287 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(5)] 2015-08-31 19:19:05,296 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(5)] 2015-08-31 19:19:05,384 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(5)] 2015-08-31 19:19:05,432 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(5)] 2015-08-31 19:19:05,481 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(5)] 2015-08-31 19:19:05,881 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(5)] 2015-08-31 19:19:05,887 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(5)] 2015-08-31 19:19:05,891 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(5)] 2015-08-31 19:19:05,891 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(5)] 2015-08-31 19:19:05,898 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(5)] 2015-08-31 19:19:06,020 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(5)] 2015-08-31 19:19:06,390 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(5)] 2015-08-31 19:19:06,413 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(5)] 2015-08-31 19:19:08,190 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(5)] 2015-08-31 19:19:08,197 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(1)] 2015-08-31 19:33:06,901 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(1)] 2015-08-31 19:33:06,936 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(1)] 2015-08-31 19:33:06,950 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(1)] 2015-08-31 19:33:06,956 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(1)] 2015-08-31 19:33:07,047 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(1)] 2015-08-31 19:33:07,047 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(1)] 2015-08-31 19:33:07,156 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(1)] 2015-08-31 19:33:07,209 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(1)] 2015-08-31 19:33:07,255 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(1)] 2015-08-31 19:33:07,275 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(1)] 2015-08-31 19:33:07,288 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(1)] 2015-08-31 19:33:07,315 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(1)] 2015-08-31 19:33:07,360 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(1)] 2015-08-31 19:33:07,407 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(1)] 2015-08-31 19:33:07,795 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(1)] 2015-08-31 19:33:07,801 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(1)] 2015-08-31 19:33:07,802 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(1)] 2015-08-31 19:33:07,803 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(1)] 2015-08-31 19:33:07,810 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(1)] 2015-08-31 19:33:07,927 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(1)] 2015-08-31 19:33:08,221 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(1)] 2015-08-31 19:33:08,244 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(1)] 2015-08-31 19:33:10,023 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(1)] 2015-08-31 19:33:10,029 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(3)] 2015-08-31 19:46:38,067 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(3)] 2015-08-31 19:46:38,104 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(3)] 2015-08-31 19:46:38,117 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(3)] 2015-08-31 19:46:38,123 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(3)] 2015-08-31 19:46:38,205 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(3)] 2015-08-31 19:46:38,206 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(3)] 2015-08-31 19:46:38,324 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(3)] 2015-08-31 19:46:38,383 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(3)] 2015-08-31 19:46:38,425 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(3)] 2015-08-31 19:46:38,439 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(3)] 2015-08-31 19:46:38,452 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(3)] 2015-08-31 19:46:38,477 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(3)] 2015-08-31 19:46:38,488 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(3)] 2015-08-31 19:46:38,496 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(3)] 2015-08-31 19:46:38,864 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(3)] 2015-08-31 19:46:38,868 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(3)] 2015-08-31 19:46:38,869 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(3)] 2015-08-31 19:46:38,871 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(3)] 2015-08-31 19:46:38,877 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(3)] 2015-08-31 19:46:38,984 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(3)] 2015-08-31 19:46:39,271 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(3)] 2015-08-31 19:46:39,295 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(3)] 2015-08-31 19:46:40,897 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(3)] 2015-08-31 19:46:40,902 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(3)] 2015-08-31 19:50:01,143 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(3)] 2015-08-31 19:50:01,184 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(3)] 2015-08-31 19:50:01,197 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(3)] 2015-08-31 19:50:01,209 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(3)] 2015-08-31 19:50:01,318 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(3)] 2015-08-31 19:50:01,326 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(3)] 2015-08-31 19:50:01,517 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(3)] 2015-08-31 19:50:01,611 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(3)] 2015-08-31 19:50:01,758 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(3)] 2015-08-31 19:50:01,774 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(3)] 2015-08-31 19:50:01,788 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(3)] 2015-08-31 19:50:01,809 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(3)] 2015-08-31 19:50:01,821 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(3)] 2015-08-31 19:50:01,834 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(3)] 2015-08-31 19:50:02,381 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(3)] 2015-08-31 19:50:02,387 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(3)] 2015-08-31 19:50:02,388 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(3)] 2015-08-31 19:50:02,388 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(3)] 2015-08-31 19:50:02,396 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(3)] 2015-08-31 19:50:02,796 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(3)] 2015-08-31 19:50:03,210 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(3)] 2015-08-31 19:50:03,241 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(3)] 2015-08-31 19:50:05,814 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(3)] 2015-08-31 19:50:05,822 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 19:54:05,184 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(4)] 2015-08-31 19:54:05,220 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(4)] 2015-08-31 19:54:05,236 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(4)] 2015-08-31 19:54:05,241 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(4)] 2015-08-31 19:54:05,344 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(4)] 2015-08-31 19:54:05,345 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(4)] 2015-08-31 19:54:05,447 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(4)] 2015-08-31 19:54:05,486 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(4)] 2015-08-31 19:54:05,518 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(4)] 2015-08-31 19:54:05,534 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(4)] 2015-08-31 19:54:05,549 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(4)] 2015-08-31 19:54:05,560 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(4)] 2015-08-31 19:54:05,582 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(4)] 2015-08-31 19:54:05,591 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(4)] 2015-08-31 19:54:05,944 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(4)] 2015-08-31 19:54:05,950 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(4)] 2015-08-31 19:54:05,950 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(4)] 2015-08-31 19:54:05,951 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(4)] 2015-08-31 19:54:05,960 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(4)] 2015-08-31 19:54:06,087 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(4)] 2015-08-31 19:54:06,371 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(4)] 2015-08-31 19:54:06,407 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(4)] 2015-08-31 19:54:08,199 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 19:54:08,209 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 19:54:21,548 - GPStreet.DB.Managers.ManageUsers - ERROR - Unparseable date: ""
+[http-listener-1(3)] 2015-08-31 19:54:57,968 - GPStreet.DB.Managers.ManageUsers - ERROR - Unparseable date: "31-08-2015 18:54"
+[http-listener-1(4)] 2015-08-31 19:56:17,493 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(4)] 2015-08-31 19:56:17,525 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(4)] 2015-08-31 19:56:17,537 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(4)] 2015-08-31 19:56:17,543 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(4)] 2015-08-31 19:56:17,628 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(4)] 2015-08-31 19:56:17,628 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(4)] 2015-08-31 19:56:17,697 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(4)] 2015-08-31 19:56:17,742 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(4)] 2015-08-31 19:56:17,780 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(4)] 2015-08-31 19:56:17,813 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(4)] 2015-08-31 19:56:17,825 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(4)] 2015-08-31 19:56:17,837 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(4)] 2015-08-31 19:56:17,851 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(4)] 2015-08-31 19:56:17,861 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(4)] 2015-08-31 19:56:18,248 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(4)] 2015-08-31 19:56:18,256 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(4)] 2015-08-31 19:56:18,257 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(4)] 2015-08-31 19:56:18,257 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(4)] 2015-08-31 19:56:18,265 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(4)] 2015-08-31 19:56:18,356 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(4)] 2015-08-31 19:56:18,625 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(4)] 2015-08-31 19:56:18,646 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(4)] 2015-08-31 19:56:20,525 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 19:56:20,531 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 19:57:06,073 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(4)] 2015-08-31 19:57:06,111 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(4)] 2015-08-31 19:57:06,124 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(4)] 2015-08-31 19:57:06,130 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(4)] 2015-08-31 19:57:06,225 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(4)] 2015-08-31 19:57:06,226 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(4)] 2015-08-31 19:57:06,302 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(4)] 2015-08-31 19:57:06,350 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(4)] 2015-08-31 19:57:06,383 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(4)] 2015-08-31 19:57:06,397 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(4)] 2015-08-31 19:57:06,410 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(4)] 2015-08-31 19:57:06,420 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(4)] 2015-08-31 19:57:06,430 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(4)] 2015-08-31 19:57:06,438 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(4)] 2015-08-31 19:57:06,825 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(4)] 2015-08-31 19:57:06,828 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(4)] 2015-08-31 19:57:06,829 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(4)] 2015-08-31 19:57:06,829 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(4)] 2015-08-31 19:57:06,834 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(4)] 2015-08-31 19:57:06,922 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(4)] 2015-08-31 19:57:07,181 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(4)] 2015-08-31 19:57:07,203 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(4)] 2015-08-31 19:57:08,743 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 19:57:08,750 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(3)] 2015-08-31 19:58:04,414 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(3)] 2015-08-31 19:58:04,445 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(3)] 2015-08-31 19:58:04,453 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(3)] 2015-08-31 19:58:04,458 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(3)] 2015-08-31 19:58:04,548 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(3)] 2015-08-31 19:58:04,548 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(3)] 2015-08-31 19:58:04,630 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(3)] 2015-08-31 19:58:04,692 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(3)] 2015-08-31 19:58:04,725 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(3)] 2015-08-31 19:58:04,745 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(3)] 2015-08-31 19:58:04,760 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(3)] 2015-08-31 19:58:04,770 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(3)] 2015-08-31 19:58:04,783 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(3)] 2015-08-31 19:58:04,794 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(3)] 2015-08-31 19:58:05,146 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(3)] 2015-08-31 19:58:05,152 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(3)] 2015-08-31 19:58:05,153 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(3)] 2015-08-31 19:58:05,153 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(3)] 2015-08-31 19:58:05,160 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(3)] 2015-08-31 19:58:05,243 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(3)] 2015-08-31 19:58:05,509 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(3)] 2015-08-31 19:58:05,532 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(3)] 2015-08-31 19:58:07,148 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(3)] 2015-08-31 19:58:07,162 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 20:10:15,012 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(4)] 2015-08-31 20:10:15,066 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(4)] 2015-08-31 20:10:15,080 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(4)] 2015-08-31 20:10:15,095 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(4)] 2015-08-31 20:10:15,353 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(4)] 2015-08-31 20:10:15,354 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(4)] 2015-08-31 20:10:15,479 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(4)] 2015-08-31 20:10:15,536 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(4)] 2015-08-31 20:10:15,589 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(4)] 2015-08-31 20:10:15,605 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(4)] 2015-08-31 20:10:15,638 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(4)] 2015-08-31 20:10:15,680 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(4)] 2015-08-31 20:10:15,719 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(4)] 2015-08-31 20:10:15,761 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(4)] 2015-08-31 20:10:16,179 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(4)] 2015-08-31 20:10:16,184 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(4)] 2015-08-31 20:10:16,185 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(4)] 2015-08-31 20:10:16,185 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(4)] 2015-08-31 20:10:16,195 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(4)] 2015-08-31 20:10:16,277 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(4)] 2015-08-31 20:10:16,595 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(4)] 2015-08-31 20:10:16,619 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(4)] 2015-08-31 20:10:18,441 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 20:10:18,447 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 20:20:46,894 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(4)] 2015-08-31 20:20:46,926 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(4)] 2015-08-31 20:20:46,934 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(4)] 2015-08-31 20:20:46,940 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(4)] 2015-08-31 20:20:47,023 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(4)] 2015-08-31 20:20:47,023 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(4)] 2015-08-31 20:20:47,108 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(4)] 2015-08-31 20:20:47,148 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(4)] 2015-08-31 20:20:47,195 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(4)] 2015-08-31 20:20:47,206 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(4)] 2015-08-31 20:20:47,223 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(4)] 2015-08-31 20:20:47,246 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(4)] 2015-08-31 20:20:47,260 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(4)] 2015-08-31 20:20:47,278 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(4)] 2015-08-31 20:20:47,627 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(4)] 2015-08-31 20:20:47,631 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(4)] 2015-08-31 20:20:47,632 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(4)] 2015-08-31 20:20:47,633 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(4)] 2015-08-31 20:20:47,646 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(4)] 2015-08-31 20:20:47,726 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(4)] 2015-08-31 20:20:47,983 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(4)] 2015-08-31 20:20:48,005 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(4)] 2015-08-31 20:20:49,531 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(4)] 2015-08-31 20:20:49,538 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(2)] 2015-08-31 20:21:05,170 - GPStreet.DB.Managers.ManageUsers - ERROR - Unparseable date: ""
+[http-listener-1(1)] 2015-08-31 20:28:01,948 - GPStreet.DB.Managers.ManageUsers - ERROR - Unparseable date: ""
+[http-listener-1(3)] 2015-08-31 20:29:30,868 - org.hibernate.annotations.common.Version - INFO - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[http-listener-1(3)] 2015-08-31 20:29:30,900 - org.hibernate.Version - INFO - HHH000412: Hibernate Core {4.3.1.Final}
+[http-listener-1(3)] 2015-08-31 20:29:30,910 - org.hibernate.cfg.Environment - INFO - HHH000206: hibernate.properties not found
+[http-listener-1(3)] 2015-08-31 20:29:30,918 - org.hibernate.cfg.Environment - INFO - HHH000021: Bytecode provider name : javassist
+[http-listener-1(3)] 2015-08-31 20:29:31,000 - org.hibernate.cfg.Configuration - INFO - HHH000043: Configuring from resource: /hibernate.cfg.xml
+[http-listener-1(3)] 2015-08-31 20:29:31,000 - org.hibernate.cfg.Configuration - INFO - HHH000040: Configuration resource: /hibernate.cfg.xml
+[http-listener-1(3)] 2015-08-31 20:29:31,132 - org.hibernate.internal.util.xml.DTDEntityResolver - WARN - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[http-listener-1(3)] 2015-08-31 20:29:31,171 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml
+[http-listener-1(3)] 2015-08-31 20:29:31,220 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstState.hbm.xml
+[http-listener-1(3)] 2015-08-31 20:29:31,238 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml
+[http-listener-1(3)] 2015-08-31 20:29:31,249 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml
+[http-listener-1(3)] 2015-08-31 20:29:31,271 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml
+[http-listener-1(3)] 2015-08-31 20:29:31,284 - org.hibernate.cfg.Configuration - INFO - HHH000221: Reading mappings from resource: GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml
+[http-listener-1(3)] 2015-08-31 20:29:31,311 - org.hibernate.cfg.Configuration - INFO - HHH000041: Configured SessionFactory: null
+[http-listener-1(3)] 2015-08-31 20:29:31,707 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - WARN - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[http-listener-1(3)] 2015-08-31 20:29:31,712 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/gpstreet?useUnicode=yes&characterEncoding=UTF-8]
+[http-listener-1(3)] 2015-08-31 20:29:31,744 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000046: Connection properties: {user=root, password=****}
+[http-listener-1(3)] 2015-08-31 20:29:31,745 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000006: Autocommit mode: false
+[http-listener-1(3)] 2015-08-31 20:29:31,752 - org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - INFO - HHH000115: Hibernate connection pool size: 20 (min=1)
+[http-listener-1(3)] 2015-08-31 20:29:31,842 - org.hibernate.dialect.Dialect - INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[http-listener-1(3)] 2015-08-31 20:29:32,118 - org.hibernate.engine.transaction.internal.TransactionFactoryInitiator - INFO - HHH000399: Using default transaction strategy (direct JDBC transactions)
+[http-listener-1(3)] 2015-08-31 20:29:32,141 - org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory - INFO - HHH000397: Using ASTQueryTranslatorFactory
+[http-listener-1(3)] 2015-08-31 20:29:33,850 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 59.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(3)] 2015-08-31 20:29:33,856 - org.hibernate.hql.internal.ast.HqlSqlWalker - WARN - [DEPRECATION] Encountered positional parameter near line 1, column 76.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+[http-listener-1(2)] 2015-08-31 20:29:50,247 - GPStreet.DB.Managers.ManageUsers - ERROR - Unparseable date: ""

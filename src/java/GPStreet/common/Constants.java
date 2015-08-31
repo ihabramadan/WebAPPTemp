@@ -21,10 +21,15 @@ public  class Constants {
     //public static final ResourceBundle LOCAL_RB = ResourceBundle.getBundle("Messages",CommonBB.getLocal());
     private final String arabic = "عربى";
     private final String english = "English";
-    public final  String dateFormat = "dd-MM-yyyy HH:mm:ss";
+    public final  String dateFormat = "dd-MM-yyyy HH:mm";
+    public final String dateTimePickerFormat="d-m-Y H:i";
 
     public  String getDateFormat() {
         return dateFormat;
+    }
+
+    public String getDateTimePickerFormat() {
+        return dateTimePickerFormat;
     }
 
     

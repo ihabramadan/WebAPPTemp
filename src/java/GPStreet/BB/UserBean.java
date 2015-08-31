@@ -21,6 +21,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
@@ -49,16 +50,29 @@ public class UserBean {
     String userPhone;
     
     List<GpstUsers> usersList;
+    
+    List<GpstUsers> selectedUsers;
   
     
     private UIComponent submitBtn;
     private boolean loggedIn;
     Logger logger = Logger.getLogger(UserBean.class);
 
-    
-    
-    
+    @PostConstruct
+    public void init(){
+       
+    }
 
+    public List<GpstUsers> getSelectedUsers() {
+        return selectedUsers;
+    }
+
+    public void setSelectedUsers(List<GpstUsers> selectedUsers) {
+        this.selectedUsers = selectedUsers;
+    }
+
+    
+    
     public List<GpstUsers> getUsersList() {
         return usersList;
     }
@@ -169,7 +183,7 @@ public class UserBean {
             return hash; //step 6
           }
     
-    public void bindUsersList(){
+    public void bindUsersList(){        
         List<GpstUsers> allUsers = UserDAO.getAllUsers();
         if(allUsers != null){
             setUsersList(allUsers);
