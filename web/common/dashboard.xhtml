@@ -23,7 +23,19 @@
         <c:if test="#{userBean.isAuthorized('dashboard.xhtml')}">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h:form  >
+                    
+                </div>
+
+                <div class="panel-body" >
+
+
+
+
+
+
+
+                    <div >
+<h:form  >
                         <h:outputLabel value="#{msg['dashboard.select_user']}" for="startpicker" />
                         <h:selectManyMenu  value="#{dashboardModel.selectedUsers}"   id="selectUsers"  style="width: 500px"   class="chosen-select form-control"  >
                             <f:selectItems  value="#{userBean.usersList}" var="ulist" itemValue="#{ulist.id}" itemLabel="#{ulist.firstname }  #{ulist.lastname}" />
@@ -43,19 +55,7 @@
                         <h:commandButton  class="btn btn-primary" value="refresh" actionListener="#{dashboardModel.doit()}" >
 
                         </h:commandButton>
-                    </h:form>
-
-                </div>
-
-                <div class="panel-body" >
-
-
-
-
-
-
-
-                    <div >
+                   
 
                         <f:view contentType="text/html"  >
 
@@ -92,6 +92,7 @@
                             </p:gmap>
 
                         </f:view>
+                         </h:form>
                     </div>   
 
 
