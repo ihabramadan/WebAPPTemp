@@ -152,22 +152,25 @@ public class DashboardModel {
         Polyline polyline = MapUtiles.createPolyline(gpstTrackers , 7 , "#FFFFFF" , 0.9);
         dbModel.addOverlay(polyline);
     }
-    public void doit(){
-        Date date =  new Date();
+    public void trackUsers(){
+        Date sDate =  new Date();
+        Date eDate = new Date();
         ManageTracker mt =  new ManageTracker();
          try{
         
-        String dateStr = startDate;
+        String startDateStr = startDate;
+        String endDateStr = endDate;
         
         
         SimpleDateFormat dateFormat  =  new SimpleDateFormat(new Constants().dateFormat);
-        date = dateFormat.parse(dateStr);
+        sDate = dateFormat.parse(startDateStr);
+        eDate = dateFormat.parse(endDateStr);
         }catch(ParseException ex){
             logger.error(ex.getMessage());
         }
          String  user = selectedUsers.get(0).toString();
          
-        List<GpstTracker> gpstTrackers = mt.getTracking(null,1 , Integer.parseInt(user), 0, 0, date,0 );
+        List<GpstTracker> gpstTrackers = mt.getTracking(null,1 , Integer.parseInt(user), 0, 0, sDate,0 );
         Polyline polyline = MapUtiles.createPolyline(gpstTrackers , 7 , "#000000" , 0.9);
         dbModel.addOverlay(polyline);
         
