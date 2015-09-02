@@ -38,7 +38,7 @@ public class ManageTracker {
         if(stateId != 0)
             cr.add(Restrictions.eq("gpstState.id", stateId));
         if(userId != 0)
-            cr.add(Restrictions.eq("userId", userId));
+            cr.add(Restrictions.eq("gpstUsers.id", userId));
         if(latitude != 0)
             cr.add(Restrictions.eq("latitude", latitude));
         if(longitude != 0)

@@ -1,5 +1,5 @@
 package GPStreet.DB.Mapping.Entity;
-// Generated Jun 3, 2015 3:06:16 PM by Hibernate Tools 3.6.0
+// Generated Sep 1, 2015 9:02:26 PM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -18,14 +18,15 @@ public class GpstUsers  implements java.io.Serializable {
      private String phone;
      private String firstname;
      private String lastname;
-     private Set<GpstGroups> gpstGroupses = new HashSet(0);
-     private GpstGroups mainGroup;
+     
+     private Set gpstGroupses = new HashSet(0);
+      private GpstGroups mainGroup;
 
     public GpstUsers() {
     }
 
     public GpstGroups getMainGroup() {
-        
+	
         if(gpstGroupses.toArray().length > 0)
             return (GpstGroups)gpstGroupses.toArray()[0];
         else 
@@ -41,13 +42,14 @@ public class GpstUsers  implements java.io.Serializable {
     public GpstUsers(String username) {
         this.username = username;
     }
-    public GpstUsers(String username, String password, String email, String phone, String firstname, String lastname, Set gpstGroupses) {
+    public GpstUsers(String username, String password, String email, String phone, String firstname, String lastname,  Set gpstGroupses) {
        this.username = username;
        this.password = password;
        this.email = email;
        this.phone = phone;
        this.firstname = firstname;
        this.lastname = lastname;
+       
        this.gpstGroupses = gpstGroupses;
     }
    
@@ -100,6 +102,7 @@ public class GpstUsers  implements java.io.Serializable {
     public void setLastname(String lastname) {
         this.lastname = lastname;
     }
+   
     public Set getGpstGroupses() {
         return this.gpstGroupses;
     }

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Aug 26, 2015 5:38:34 PM by Hibernate Tools 4.3.1 -->
+<!-- Generated Sep 1, 2015 9:02:26 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="GPStreet.DB.Mapping.Entity.GpstLocations" table="gpst_locations" catalog="gpstreet" optimistic-lock="version">
         <id name="id" type="java.lang.Integer">
@@ -20,5 +20,11 @@
         <property name="longitude" type="java.lang.Double">
             <column name="longitude" precision="22" scale="0" />
         </property>
+        <set name="gpstTrackers" table="gpst_tracker" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="location_id" />
+            </key>
+            <one-to-many class="GPStreet.DB.Mapping.Entity.GpstTracker" />
+        </set>
     </class>
 </hibernate-mapping>

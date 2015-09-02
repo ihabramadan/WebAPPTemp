@@ -5,6 +5,7 @@
         <group>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml</file>
+            <file>file:/D:/Java/GPStreet/web/WEB-INF/resources/assets/css/style.css</file>
             <file>file:/D:/Java/GPStreet/web/settings/users.xhtml</file>
             <file>file:/D:/Java/GPStreet/web/assets/chosen_v1.4.2/index.html</file>
             <file>file:/D:/Java/GPStreet/web/assets/chosen_v1.4.2/chosen.jquery.min.js</file>
@@ -56,12 +57,14 @@
             <file>file:/D:/Java/GPStreet/src/java/com/gpstreet/location/LocationUtils.java</file>
             <file>file:/D:/Java/GPStreet/web/WEB-INF/sun-jaxws.xml</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/Servlets/GetAllUsers.java</file>
+            <file>file:/D:/Java/GPStreet/src/java/hibernate4.reveng.xml</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/Servlets/SaveGroupPages.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/DB/Mapping/Entity/GpstPages.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/BB/GroupsBean.java</file>
             <file>file:/D:/Java/GPStreet/web/WEB-INF/web.xml</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/DB/Managers/ManageUsers.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml</file>
+            <file>file:/D:/Java/GPStreet/src/java/hibernate5.reveng.xml</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/GPStreetCL.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/BB/CommonBB.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/DB/Mapping/Entity/GpstTracker.java</file>

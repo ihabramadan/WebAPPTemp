@@ -72,6 +72,6 @@ public class MapUtiles {
     public static Marker createMarker(GpstTracker tracker , String markerIcon){
         ManageUsers mu = new ManageUsers();
         LatLng coord =  new LatLng(tracker.getLatitude(), tracker.getLongitude());
-        return new Marker(coord ,mu.getUser(tracker.getUserId()).getFirstname() + " " + mu.getUser(tracker.getUserId()).getLastname(),tracker, markerIcon);
+        return new Marker(coord ,mu.getUser(tracker.getGpstUsers().getId()).getFirstname() + " " + mu.getUser(tracker.getGpstUsers().getId()).getLastname(),tracker, markerIcon);
     }
 }

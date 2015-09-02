@@ -1,5 +1,5 @@
 package GPStreet.DB.Mapping.Entity;
-// Generated Aug 26, 2015 5:38:34 PM by Hibernate Tools 4.3.1
+// Generated Sep 1, 2015 9:02:26 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -11,8 +11,9 @@ public class GpstTracker  implements java.io.Serializable {
 
 
      private Integer id;
+     private GpstLocations gpstLocations;
      private GpstState gpstState;
-     private int userId;
+     private GpstUsers gpstUsers;
      private double latitude;
      private double longitude;
      private Date date;
@@ -20,20 +21,20 @@ public class GpstTracker  implements java.io.Serializable {
      private String notes;
 
     public GpstTracker() {
-        
     }
 
 	
-    public GpstTracker(GpstState gpstState, int userId, double latitude, double longitude, double deviceId) {
+    public GpstTracker(GpstState gpstState, GpstUsers gpstUsers, double latitude, double longitude, double deviceId) {
         this.gpstState = gpstState;
-        this.userId = userId;
+        this.gpstUsers = gpstUsers;
         this.latitude = latitude;
         this.longitude = longitude;
         this.deviceId = deviceId;
     }
-    public GpstTracker(GpstState gpstState, int userId, double latitude, double longitude, Date date, double deviceId, String notes) {
+    public GpstTracker(GpstLocations gpstLocations, GpstState gpstState, GpstUsers gpstUsers, double latitude, double longitude, Date date, double deviceId, String notes) {
+       this.gpstLocations = gpstLocations;
        this.gpstState = gpstState;
-       this.userId = userId;
+       this.gpstUsers = gpstUsers;
        this.latitude = latitude;
        this.longitude = longitude;
        this.date = date;
@@ -48,6 +49,13 @@ public class GpstTracker  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+    public GpstLocations getGpstLocations() {
+        return this.gpstLocations;
+    }
+    
+    public void setGpstLocations(GpstLocations gpstLocations) {
+        this.gpstLocations = gpstLocations;
+    }
     public GpstState getGpstState() {
         return this.gpstState;
     }
@@ -55,12 +63,12 @@ public class GpstTracker  implements java.io.Serializable {
     public void setGpstState(GpstState gpstState) {
         this.gpstState = gpstState;
     }
-    public int getUserId() {
-        return this.userId;
+    public GpstUsers getGpstUsers() {
+        return this.gpstUsers;
     }
     
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setGpstUsers(GpstUsers gpstUsers) {
+        this.gpstUsers = gpstUsers;
     }
     public double getLatitude() {
         return this.latitude;
