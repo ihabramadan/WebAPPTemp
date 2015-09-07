@@ -44,6 +44,8 @@ public class DashboardModel {
     private String startDate;
     private String endDate;
     private List selectedUsers;
+    private List selectedStates;
+    
     
     @PostConstruct
     public void init() {
@@ -82,6 +84,15 @@ public class DashboardModel {
         
     }
 
+    public List getSelectedStates() {
+        return selectedStates;
+    }
+
+    public void setSelectedStates(List selectedStates) {
+        this.selectedStates = selectedStates;
+    }
+
+    
     public String getStartDate() {
         return startDate;
     }
@@ -171,7 +182,13 @@ public class DashboardModel {
          String  user = selectedUsers.get(0).toString();
          
         List<GpstTracker> gpstTrackers = mt.getTracking(null,1 , Integer.parseInt(user), 0, 0, sDate,0 );
-        Polyline polyline = MapUtiles.createPolyline(gpstTrackers , 7 , "#000000" , 0.9);
+        Polyline polyline = MapUtiles.createPolyline(gpstTrackers , 7 , MapUtiles.GPST_COLORS.BLACK.toString() , 0.9);
+        dbModel.getMarkers().clear();
+        dbModel.getPolylines().clear();
+       for(GpstTracker tracker : gpstTrackers ){
+            
+            dbModel.addOverlay(MapUtiles.createMarker(tracker, MapUtiles.MAPICON_MAN));
+        }
         dbModel.addOverlay(polyline);
         
     }

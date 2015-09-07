@@ -8,10 +8,14 @@ package GPStreet.BB;
 
 import GPStreet.DAO.GroupsDAO;
 import GPStreet.DAO.UserDAO;
+import GPStreet.DB.Managers.ManageStates;
 import GPStreet.DB.Mapping.Entity.GpstGroups;
+import GPStreet.DB.Mapping.Entity.GpstState;
+import GPStreet.DB.Mapping.Entity.GpstUsers;
 import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
@@ -22,7 +26,7 @@ import javax.inject.Named;
  * @author iramadan
  */
 @Named(value = "commonBB")
-@ViewScoped
+@RequestScoped
 public class CommonBB {
 
     
@@ -31,7 +35,7 @@ public class CommonBB {
      */
     static ResourceBundle localRB = ResourceBundle.getBundle("Messages",FacesContext.getCurrentInstance().getViewRoot().getLocale());
     List<GpstGroups> gpstGroups;
-    
+    List<GpstState> allStatus;
     
     @SuppressWarnings("unchecked")
     public static <T> T findBean(String beanName) {
@@ -63,5 +67,21 @@ public class CommonBB {
     public static List<GpstGroups> getAllGroups(){
         return GroupsDAO.getAllGroups();
     }
+
+    public List<GpstState> getAllStatus() {
+        return allStatus;
+    }
+
+    public void setAllStatus(List<GpstState> allStatus) {
+        this.allStatus = allStatus;
+    }
     
+    
+    public void bindAllStatus(){
+        ManageStates ms =  new ManageStates();
+        List<GpstState> allStates = ms.getAllStates();
+        if(allStates != null){
+            setAllStatus(allStates);
+        }
+    }
 }

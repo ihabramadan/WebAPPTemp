@@ -10,6 +10,7 @@ import GPStreet.DAO.GroupsDAO;
 import GPStreet.DAO.UserDAO;
 import GPStreet.DB.Mapping.Entity.GpstGroups;
 import GPStreet.DB.Mapping.Entity.GpstPages;
+import GPStreet.DB.Mapping.Entity.GpstState;
 import GPStreet.DB.Mapping.Entity.GpstUsers;
 import GPStreet.EJB.StartupBean;
 import java.io.UnsupportedEncodingException;
@@ -63,6 +64,9 @@ public class UserBean {
        
     }
 
+    
+
+    
     public List<GpstUsers> getSelectedUsers() {
         return selectedUsers;
     }
@@ -189,6 +193,7 @@ public class UserBean {
             setUsersList(allUsers);
         }
     }
+    
     
     public Set<String> getUserPages(GpstUsers user){
          Set userGroup =  user.getGpstGroupses() ;

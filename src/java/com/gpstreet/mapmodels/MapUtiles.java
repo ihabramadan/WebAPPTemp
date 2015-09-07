@@ -23,7 +23,28 @@ import org.primefaces.model.map.Polyline;
 public class MapUtiles {
 
     static Logger logger = Logger.getLogger(MapUtiles.class);
-    public static String MAPICON_MAN = "http://maps.google.com/mapfiles/ms/micons/man.png"; 
+    public static String MAPICON_MAN = "http://maps.google.com/mapfiles/ms/micons/man.png";
+
+    public enum GPST_COLORS {
+
+        BLACK("#000000", 1),
+        WHITE("#FFFFFF", 2);
+        private String s;
+        private int code;
+
+        GPST_COLORS(String s, int code) {
+            this.s = s;
+            this.code = code;
+        }
+
+        public String toString() {
+            return s;
+        }
+
+        public int getCode() {
+            return code;
+        }
+    }
 
     public static List<LatLng> createCoord(List<GpstTracker> trackers) {
         List<LatLng> result = new ArrayList<>();
@@ -52,14 +73,14 @@ public class MapUtiles {
 
                 for (GpstTracker track : trackers) {
                     LatLng coord = new LatLng(track.getLatitude(), track.getLongitude());
-                    
+
                     coords.add(coord);
                 }
                 result.setStrokeWeight(strokeWeight);
                 result.setStrokeColor(strokeColor);
                 result.setStrokeOpacity(strokeOpacity);
                 result.getPaths().addAll(coords);
-                
+
             } catch (Exception ex) {
                 logger.error(ex.getMessage());
             }
@@ -69,9 +90,9 @@ public class MapUtiles {
         return result;
     }
 
-    public static Marker createMarker(GpstTracker tracker , String markerIcon){
+    public static Marker createMarker(GpstTracker tracker, String markerIcon) {
         ManageUsers mu = new ManageUsers();
-        LatLng coord =  new LatLng(tracker.getLatitude(), tracker.getLongitude());
-        return new Marker(coord ,mu.getUser(tracker.getGpstUsers().getId()).getFirstname() + " " + mu.getUser(tracker.getGpstUsers().getId()).getLastname(),tracker, markerIcon);
+        LatLng coord = new LatLng(tracker.getLatitude(), tracker.getLongitude());
+        return new Marker(coord, mu.getUser(tracker.getGpstUsers().getId()).getFirstname() + " " + mu.getUser(tracker.getGpstUsers().getId()).getLastname(), tracker, markerIcon);
     }
 }

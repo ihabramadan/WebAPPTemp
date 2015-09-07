@@ -56,5 +56,34 @@ public class ManageTracker {
         }
         return result;                                       
     }
-    
+    public List<GpstTracker> getTracking(Integer id , int stateId, int userId, double latitude, double longitude, Date sDate,Date eDate, double deviceId){
+        
+        List<GpstTracker> result;
+        try{
+        Criteria cr = session.createCriteria(GpstTracker.class);
+        if(id != null)
+        cr.add(Restrictions.eq("id", id));
+        if(stateId != 0)
+            cr.add(Restrictions.eq("gpstState.id", stateId));
+        if(userId != 0)
+            cr.add(Restrictions.eq("gpstUsers.id", userId));
+        if(latitude != 0)
+            cr.add(Restrictions.eq("latitude", latitude));
+        if(longitude != 0)
+            cr.add(Restrictions.eq("longitude", longitude));
+        if(sDate != null)
+            cr.add(Restrictions.ge("date", sDate));
+        if(eDate != null)
+            cr.add(Restrictions.le("date", eDate));
+        if(deviceId != 0)
+            cr.add(Restrictions.eq("deviceId", deviceId));
+        
+        cr.addOrder(Order.desc("date"));
+        result = cr.list();
+        }catch(HibernateException ex){
+            logger.error(ex.getMessage());
+            return null;
+        }
+        return result;                                       
+    }
 }
