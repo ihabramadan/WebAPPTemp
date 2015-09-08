@@ -35,7 +35,7 @@ public class CommonBB {
      */
     static ResourceBundle localRB = ResourceBundle.getBundle("Messages",FacesContext.getCurrentInstance().getViewRoot().getLocale());
     List<GpstGroups> gpstGroups;
-    List<GpstState> allStatus;
+    
     
     @SuppressWarnings("unchecked")
     public static <T> T findBean(String beanName) {
@@ -68,20 +68,8 @@ public class CommonBB {
         return GroupsDAO.getAllGroups();
     }
 
-    public List<GpstState> getAllStatus() {
-        return allStatus;
-    }
-
-    public void setAllStatus(List<GpstState> allStatus) {
-        this.allStatus = allStatus;
-    }
     
     
-    public void bindAllStatus(){
-        ManageStates ms =  new ManageStates();
-        List<GpstState> allStates = ms.getAllStates();
-        if(allStates != null){
-            setAllStatus(allStates);
-        }
-    }
+    
+   
 }
