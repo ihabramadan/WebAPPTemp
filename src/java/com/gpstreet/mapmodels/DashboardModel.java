@@ -11,7 +11,7 @@ import GPStreet.DB.Managers.ManageUsers;
 import GPStreet.DB.Mapping.Entity.GpstState;
 
 import GPStreet.DB.Mapping.Entity.GpstTracker;
-import GPStreet.DB.Mapping.Entity.GpstUsers;
+
 import GPStreet.common.Constants;
 import com.gpstreet.geo.GeoUtils;
 
@@ -197,18 +197,28 @@ public class DashboardModel {
         Polyline polyline = MapUtiles.createPolyline(gpstTrackers , 7 , MapUtiles.GPST_COLORS.BLACK.toString() , 0.9);
         dbModel.getMarkers().clear();
         dbModel.getPolylines().clear();
+        List<Marker> mapMarkers = new ArrayList<>();
        for(GpstTracker tracker : gpstTrackers ){
             
            if(tracker.getGpstState().getId() == 1){
-                dbModel.addOverlay(MapUtiles.createMarker(tracker, MapUtiles.MAPICON_CHECK_IN));
+                mapMarkers.add(MapUtiles.createMarker(tracker, MapUtiles.MAPICON_CHECK_IN));
            }
            else if(tracker.getGpstState().getId() == 2){
-               dbModel.addOverlay(MapUtiles.createMarker(tracker, MapUtiles.MAPICON_CHECK_OUT));
+               mapMarkers.add(MapUtiles.createMarker(tracker, MapUtiles.MAPICON_CHECK_OUT));
            }
            else
-               dbModel.addOverlay(MapUtiles.createMarker(tracker, null));
+               mapMarkers.add(MapUtiles.createMarker(tracker, null));
         }
-        dbModel.addOverlay(polyline);
+        PolyMark pm = new PolyMark();
+        pm = MapUtiles.spiderfyMarkers(mapMarkers);
+        //dbModel.getMarkers().clear();
+        for(Marker newMarker : pm.markers){
+            dbModel.addOverlay(newMarker);
+        }
+        for(Polyline p : pm.polylines){
+            dbModel.addOverlay(p);
+        }
+        //dbModel.addOverlay(polyline);
         }catch(Exception ex){
             logger.error(ex.getMessage());
         }

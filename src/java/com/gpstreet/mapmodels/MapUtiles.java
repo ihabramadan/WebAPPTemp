@@ -21,7 +21,7 @@ import org.primefaces.model.map.Polyline;
  * @author ihab.ramadan
  */
 public class MapUtiles {
-
+    
     static Logger logger = Logger.getLogger(MapUtiles.class);
     public static String MAPICON_MAN = "http://maps.google.com/mapfiles/ms/micons/man.png";
     public static String MAPICON_CHECK_IN="http://maps.google.com/mapfiles/ms/micons/green-dot.png";
@@ -96,5 +96,40 @@ public class MapUtiles {
         ManageUsers mu = new ManageUsers();
         LatLng coord = new LatLng(tracker.getLatitude(), tracker.getLongitude());
         return new Marker(coord, mu.getUser(tracker.getGpstUsers().getId()).getFirstname() + " " + mu.getUser(tracker.getGpstUsers().getId()).getLastname(), tracker, markerIcon);
+    }
+    
+    public static PolyMark spiderfyMarkers(List<Marker> orgMarkers){
+        PolyMark pm = new PolyMark();
+        List<Polyline> polyTracks = new ArrayList<>();
+        List<Marker> tmpMarkers = orgMarkers;
+        List<LatLng> latlngList1 = new ArrayList<>();
+        List<LatLng> latlngList2 = new ArrayList<>();
+        for(int i = 0 ; i < tmpMarkers.size(); i ++){            
+            for(int j = 0 ; j < tmpMarkers.size(); j++){
+                if(i != j){
+                if(Math.abs(tmpMarkers.get(i).getLatlng().getLat() - tmpMarkers.get(j).getLatlng().getLat()) <= .00001  && Math.abs(tmpMarkers.get(i).getLatlng().getLng() - tmpMarkers.get(j).getLatlng().getLng()) <= .00001 )
+                {
+                   
+                   
+                   LatLng orgLatLng = new LatLng(tmpMarkers.get(j).getLatlng().getLat(), tmpMarkers.get(j).getLatlng().getLng() );
+                   LatLng oldLatLng = new LatLng(tmpMarkers.get(i).getLatlng().getLat()+ (Math.random() -.5) / 1500, tmpMarkers.get(i).getLatlng().getLng() + (Math.random() -.5) / 1500);
+                   LatLng newLatLng = new LatLng(tmpMarkers.get(j).getLatlng().getLat()+ (Math.random() -.5) / 1500,tmpMarkers.get(j).getLatlng().getLng() + (Math.random() -.5) / 1500);
+                   latlngList1.add(orgLatLng);
+                   //2latlngList.add(oldLatLng);
+                   latlngList1.add(oldLatLng);
+                   latlngList2.add(orgLatLng);
+                   latlngList2.add(newLatLng);
+                   tmpMarkers.get(j).setLatlng(newLatLng);
+                   tmpMarkers.get(i).setLatlng(oldLatLng);
+                   polyTracks.add(new Polyline(latlngList1));
+                   polyTracks.add(new Polyline(latlngList2));
+                   
+                }
+            }
+        }
+        }
+        pm.markers = tmpMarkers;
+        pm.polylines = polyTracks;
+        return pm;
     }
 }

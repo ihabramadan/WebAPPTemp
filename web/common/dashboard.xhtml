@@ -23,7 +23,7 @@
         <c:if test="#{userBean.isAuthorized('dashboard.xhtml')}">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                   <h:outputLabel value="#{msg['dashboard.users_tracking']}" /> 
+                    <h:outputLabel value="#{msg['dashboard.users_tracking']}" /> 
                 </div>
 
                 <div class="panel-body" >
@@ -37,96 +37,88 @@
                     <div  >
                         <h:form  class="form-inline">
 
-                           <div class="panel panel-default">
-                               <div class="panel-heading">
-                                <div class="form-group">
-                                    <h:outputLabel value="#{msg['dashboard.select_user']} : " for="selectUsers" />
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="form-group">
+                                        <h:outputLabel value="#{msg['dashboard.select_user']} : " for="selectUsers" />
 
 
-                                    <h:selectManyMenu  value="#{dashboardModel.selectedUsers}"   id="selectUsers"   style="width: 500px"  class=" chosen-select"  >
-                                        
-                                        <f:selectItems  value="#{userBean.usersList}" var="ulist" itemValue="#{ulist.id}" itemLabel="#{ulist.firstname }  #{ulist.lastname}" />
+                                        <h:selectManyMenu  value="#{dashboardModel.selectedUsers}"   id="selectUsers"   style="width: 500px"  class=" chosen-select"  >
 
-                                    </h:selectManyMenu>
-                                </div>
-                                   <div class="form-group">
-                                       <h:outputLabel value="#{msg['dashboard.status']} : " for="selectedStatus" />
+                                            <f:selectItems  value="#{userBean.usersList}" var="ulist" itemValue="#{ulist.id}" itemLabel="#{ulist.firstname }  #{ulist.lastname}" />
+
+                                        </h:selectManyMenu>
+                                    </div>
+                                    <div class="form-group">
+                                        <h:outputLabel value="#{msg['dashboard.status']} : " for="selectedStatus" />
 
 
-                                       <h:selectManyMenu  value="#{dashboardModel.selectedStates}"   id="selectedStatus"   style="width: 500px"  class=" chosen-select"  >
-                                        
-                                           <f:selectItems  value="#{dashboardModel.allStates}" var="slist" itemValue="#{slist.id}" itemLabel="#{slist.name }" />
+                                        <h:selectManyMenu  value="#{dashboardModel.selectedStates}"   id="selectedStatus"   style="width: 500px"  class=" chosen-select"  >
 
-                                    </h:selectManyMenu>
-                                   </div>
+                                            <f:selectItems  value="#{dashboardModel.allStates}" var="slist" itemValue="#{slist.id}" itemLabel="#{slist.name }" />
 
-                                <div class="form-group">
-                                    <h:outputLabel value="#{msg['dashboard.start_date']} : " for="startpicker" />
-                                    <h:inputText  pt:placeholder="#{msg['dashboard.start_date']}" value="#{dashboardModel.startDate}" id="startpicker" class="datetimepicker form-control" />
-                                </div>
+                                        </h:selectManyMenu>
+                                    </div>
 
-                                <div class="form-group">
-                                    <h:outputLabel value="#{msg['dashboard.end_date']} : " for="endpicker" />
-                                    <h:inputText pt:placeholder="#{msg['dashboard.end_date']}" value="#{dashboardModel.endDate}" id="endpicker" class="datetimepicker form-control"/>
-                                </div>
+                                    <div class="form-group">
+                                        <h:outputLabel value="#{msg['dashboard.start_date']} : " for="startpicker" />
+                                        <h:inputText  pt:placeholder="#{msg['dashboard.start_date']}" value="#{dashboardModel.startDate}" id="startpicker" class="datetimepicker form-control" />
+                                    </div>
 
-                                <div class="form-group">
-                                    <h:commandButton  class="btn btn-primary" value="#{msg['dahsboard.track']}" actionListener="#{dashboardModel.trackUsers()}" >
+                                    <div class="form-group">
+                                        <h:outputLabel value="#{msg['dashboard.end_date']} : " for="endpicker" />
+                                        <h:inputText pt:placeholder="#{msg['dashboard.end_date']}" value="#{dashboardModel.endDate}" id="endpicker" class="datetimepicker form-control"/>
+                                    </div>
 
-                                    </h:commandButton>
-                                </div>
-                               </div>    
-                           </div>
-                            
-                            
-                                <f:view contentType="text/html"  >
+                                    <div class="form-group">
+                                        <h:commandButton  class="btn btn-primary" value="#{msg['dahsboard.track']}" actionListener="#{dashboardModel.trackUsers()}" >
 
-                                    <p:gmap center="#{dashboardModel.midPoint.lat}, #{dashboardModel.midPoint.lng}" zoom="10" type="MAP"
-                                            style="width:auto;height:500px" model="#{dashboardModel.dbModel}" widgetVar="dashboardgmap" id="dashboardgmap">
-                                        <p:ajax event="overlaySelect" listener="#{dashboardModel.onMarkerSelect}" />
-                                        <p:gmapInfoWindow id="infoWindow">
-                                            <p:outputPanel >
-                                                <table cellspacing="10" >
-                                                    <tr>
-                                                        <td ><label>#{msg['dashboard.agent_name']}: </label></td>
-                                                        <td ><h:outputText  value="#{dashboardModel.selectedMarker.title}"/></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td ><label>#{msg['dashboard.location']}: </label></td>
-                                                        <td ><h:outputText  value="#{dashboardModel.selectedMarker.data.gpstLocations.name}"/></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td ><label>#{msg['dashboard.select_states']}: </label></td>
-                                                        <td ><h:outputText  value="#{dashboardModel.selectedMarker.data.gpstState.name}"/></td>
-                                                    </tr>
-                                                    <tr>
+                                        </h:commandButton>
+                                    </div>
+                                </div>    
+                            </div>
 
-                                                        <td><label>#{msg['dashboard.date']}: </label></td>
-                                                        <td ><h:outputText  value="#{dashboardModel.selectedMarker.data.date}">
-                                                                <f:convertDateTime pattern="#{constants.dateFormat}" />
-                                                            </h:outputText>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-
-                                                        <td ><label>#{msg['dashboard.lat']}: </label></td>
-                                                        <td ><h:outputText  value="#{dashboardModel.selectedMarker.latlng.lat}"/></td>
-                                                    </tr>
-                                                    <tr>                                        
-                                                        <td   ><label>#{msg['dashboard.lng']}: </label></td>
-                                                        <td ><h:outputText  value="#{dashboardModel.selectedMarker.latlng.lng}"/></td>
-                                                    </tr>
-                                                </table>
-                                            </p:outputPanel>
-                                        </p:gmapInfoWindow>
-                                    </p:gmap>
-
-                                </f:view>
-                            
+                            <f:view contentType="text/html"  >
+                                <p:gmap center="#{dashboardModel.midPoint.lat}, #{dashboardModel.midPoint.lng}" zoom="10" type="MAP"
+                                        style="width:auto;height:500px" model="#{dashboardModel.dbModel}" widgetVar="dashboardgmap" id="dashboardgmap">
+                                    <p:ajax event="overlaySelect" listener="#{dashboardModel.onMarkerSelect}" />
+                                    <p:gmapInfoWindow id="infoWindow">
+                                        <p:outputPanel >
+                                            <table cellspacing="10" >
+                                                <tr>
+                                                    <td ><label>#{msg['dashboard.agent_name']}: </label></td>
+                                                    <td ><h:outputText  value="#{dashboardModel.selectedMarker.title}"/></td>
+                                                </tr>
+                                                <tr>
+                                                    <td ><label>#{msg['dashboard.location']}: </label></td>
+                                                    <td ><h:outputText  value="#{dashboardModel.selectedMarker.data.gpstLocations.name}"/></td>
+                                                </tr>
+                                                <tr>
+                                                    <td ><label>#{msg['dashboard.select_states']}: </label></td>
+                                                    <td ><h:outputText  value="#{dashboardModel.selectedMarker.data.gpstState.name}"/></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label>#{msg['dashboard.date']}: </label></td>
+                                                    <td ><h:outputText  value="#{dashboardModel.selectedMarker.data.date}">
+                                                            <f:convertDateTime pattern="#{constants.dateFormat}" />
+                                                        </h:outputText>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td ><label>#{msg['dashboard.lat']}: </label></td>
+                                                    <td ><h:outputText  value="#{dashboardModel.selectedMarker.latlng.lat}"/></td>
+                                                </tr>
+                                                <tr>                                        
+                                                    <td   ><label>#{msg['dashboard.lng']}: </label></td>
+                                                    <td ><h:outputText  value="#{dashboardModel.selectedMarker.latlng.lng}"/></td>
+                                                </tr>
+                                            </table>
+                                        </p:outputPanel>
+                                    </p:gmapInfoWindow>
+                                </p:gmap>
+                            </f:view>                            
                         </h:form>
                     </div>   
-
-
                 </div>
             </div>
         </c:if>
@@ -141,6 +133,8 @@
             //}
 
         </script>
+
+       
     </h:body>
 
 </html>
