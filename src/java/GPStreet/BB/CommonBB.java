@@ -68,20 +68,5 @@ public class CommonBB {
         return GroupsDAO.getAllGroups();
     }
 
-    public List<GpstState> getAllStatus() {
-        return allStatus;
-    }
-
-    public void setAllStatus(List<GpstState> allStatus) {
-        this.allStatus = allStatus;
-    }
-    
-    
-    public void bindAllStatus(){
-        ManageStates ms =  new ManageStates();
-        List<GpstState> allStates = ms.getAllStates();
-        if(allStates != null){
-            setAllStatus(allStates);
-        }
-    }
+   
 }

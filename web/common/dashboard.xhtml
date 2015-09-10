@@ -12,7 +12,7 @@
 
         <title>Dashboard</title>
     </h:head>
-    <h:body onload="#{commonBB.bindAllStatus()}">
+    <h:body onload="#{dashboardModel.bindAllStates()}">
         <div >
             <h1 class="page-header" style="display : #{userBean.isAuthorized('dashboard.xhtml') ? 'block' : 'none'} ">#{msg['dashboard.dashboard']}
 
@@ -55,7 +55,7 @@
 
                                        <h:selectManyMenu  value="#{dashboardModel.selectedStates}"   id="selectedStatus"   style="width: 500px"  class=" chosen-select"  >
                                         
-                                           <f:selectItems  value="#{commonBB.allStatus}" var="slist" itemValue="#{slist.id}" itemLabel="#{slist.name }" />
+                                           <f:selectItems  value="#{dashboardModel.allStates}" var="slist" itemValue="#{slist.id}" itemLabel="#{slist.name }" />
 
                                     </h:selectManyMenu>
                                    </div>
@@ -90,6 +90,14 @@
                                                     <tr>
                                                         <td ><label>#{msg['dashboard.agent_name']}: </label></td>
                                                         <td ><h:outputText  value="#{dashboardModel.selectedMarker.title}"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td ><label>#{msg['dashboard.location']}: </label></td>
+                                                        <td ><h:outputText  value="#{dashboardModel.selectedMarker.data.gpstLocations.name}"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td ><label>#{msg['dashboard.select_states']}: </label></td>
+                                                        <td ><h:outputText  value="#{dashboardModel.selectedMarker.data.gpstState.name}"/></td>
                                                     </tr>
                                                     <tr>
 

@@ -5,8 +5,10 @@
  */
 package com.gpstreet.mapmodels;
 
+import GPStreet.DB.Managers.ManageStates;
 import GPStreet.DB.Managers.ManageTracker;
 import GPStreet.DB.Managers.ManageUsers;
+import GPStreet.DB.Mapping.Entity.GpstState;
 
 import GPStreet.DB.Mapping.Entity.GpstTracker;
 import GPStreet.DB.Mapping.Entity.GpstUsers;
@@ -45,6 +47,7 @@ public class DashboardModel {
     private String endDate;
     private List selectedUsers;
     private List selectedStates;
+    private List<GpstState> allStates;
     
     
     @PostConstruct
@@ -164,6 +167,7 @@ public class DashboardModel {
         dbModel.addOverlay(polyline);
     }
     public void trackUsers(){
+        try{
         Date sDate =  new Date();
         Date eDate = new Date();
         ManageTracker mt =  new ManageTracker();
@@ -179,18 +183,51 @@ public class DashboardModel {
         }catch(ParseException ex){
             logger.error(ex.getMessage());
         }
-         String  user = selectedUsers.get(0).toString();
+         List<Integer> iListStates = new ArrayList<>();
+         for(int i = 0 ; i< selectedStates.size(); i++){
+             iListStates.add(Integer.parseInt(selectedStates.get(i).toString()));
+         }
+         List<Integer> iListUsers = new ArrayList<>();
+         for(int i = 0 ; i< selectedUsers.size(); i++){
+             iListUsers.add(Integer.parseInt(selectedUsers.get(i).toString()));
+         }
          
-        List<GpstTracker> gpstTrackers = mt.getTracking(null,1 , Integer.parseInt(user), 0, 0, sDate,0 );
+         
+        List<GpstTracker> gpstTrackers = mt.getTracking(null,iListStates,iListUsers , 0, 0, sDate,eDate,0 );
         Polyline polyline = MapUtiles.createPolyline(gpstTrackers , 7 , MapUtiles.GPST_COLORS.BLACK.toString() , 0.9);
         dbModel.getMarkers().clear();
         dbModel.getPolylines().clear();
        for(GpstTracker tracker : gpstTrackers ){
             
-            dbModel.addOverlay(MapUtiles.createMarker(tracker, MapUtiles.MAPICON_MAN));
+           if(tracker.getGpstState().getId() == 1){
+                dbModel.addOverlay(MapUtiles.createMarker(tracker, MapUtiles.MAPICON_CHECK_IN));
+           }
+           else if(tracker.getGpstState().getId() == 2){
+               dbModel.addOverlay(MapUtiles.createMarker(tracker, MapUtiles.MAPICON_CHECK_OUT));
+           }
+           else
+               dbModel.addOverlay(MapUtiles.createMarker(tracker, null));
         }
         dbModel.addOverlay(polyline);
+        }catch(Exception ex){
+            logger.error(ex.getMessage());
+        }
         
     }
+     public List<GpstState> getAllStates() {
+        return allStates;
+    }
+
+    public void setAllStates(List<GpstState> allStates) {
+        this.allStates = allStates;
+    }
     
+    
+    public void bindAllStates(){
+        ManageStates ms =  new ManageStates();
+        List<GpstState> allStates = ms.getAllStates();
+        if(allStates != null){
+            setAllStates(allStates);
+        }
+    }
 }

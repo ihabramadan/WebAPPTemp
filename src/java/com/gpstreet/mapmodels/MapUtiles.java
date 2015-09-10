@@ -24,6 +24,8 @@ public class MapUtiles {
 
     static Logger logger = Logger.getLogger(MapUtiles.class);
     public static String MAPICON_MAN = "http://maps.google.com/mapfiles/ms/micons/man.png";
+    public static String MAPICON_CHECK_IN="http://maps.google.com/mapfiles/ms/micons/green-dot.png";
+    public static String MAPICON_CHECK_OUT="http://maps.google.com/mapfiles/ms/micons/red-dot.png";
 
     public enum GPST_COLORS {
 
