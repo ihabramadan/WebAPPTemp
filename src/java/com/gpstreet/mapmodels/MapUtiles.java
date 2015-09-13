@@ -26,6 +26,15 @@ public class MapUtiles {
     public static String MAPICON_MAN = "http://maps.google.com/mapfiles/ms/micons/man.png";
     public static String MAPICON_CHECK_IN="http://maps.google.com/mapfiles/ms/micons/green-dot.png";
     public static String MAPICON_CHECK_OUT="http://maps.google.com/mapfiles/ms/micons/red-dot.png";
+    
+    public enum GPST_STATES{
+        CHECK_IN (1),
+        CHECK_OUT(2) ;
+        int code;
+         GPST_STATES(int num){
+            this.code = num;
+        }
+    }
 
     public enum GPST_COLORS {
 
@@ -102,10 +111,13 @@ public class MapUtiles {
         PolyMark pm = new PolyMark();
         List<Polyline> polyTracks = new ArrayList<>();
         List<Marker> tmpMarkers = orgMarkers;
-        List<LatLng> latlngList1 = new ArrayList<>();
-        List<LatLng> latlngList2 = new ArrayList<>();
-        for(int i = 0 ; i < tmpMarkers.size(); i ++){            
+        
+       
+        for(int i = 0 ; i < tmpMarkers.size(); i ++){        
+            List<LatLng> latlngList1 = new ArrayList<>();
+            List<LatLng> latlngList2 = new ArrayList<>();
             for(int j = 0 ; j < tmpMarkers.size(); j++){
+                
                 if(i != j){
                 if(Math.abs(tmpMarkers.get(i).getLatlng().getLat() - tmpMarkers.get(j).getLatlng().getLat()) <= .00001  && Math.abs(tmpMarkers.get(i).getLatlng().getLng() - tmpMarkers.get(j).getLatlng().getLng()) <= .00001 )
                 {

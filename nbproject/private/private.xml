@@ -43,8 +43,10 @@
             <file>file:/D:/Java/GPStreet/src/java/hibernate6.reveng.xml</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/common/UserData.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/Servlets/GetGroupPages.java</file>
+            <file>file:/D:/Java/GPStreet/src/java/GPStreet/DB/Managers/ManageStates.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/BB/UserBean.java</file>
             <file>file:/D:/Java/GPStreet/web/settings/groups.xhtml</file>
+            <file>file:/D:/Java/GPStreet/.git/config</file>
             <file>file:/D:/Java/GPStreet/web/settings/userModal.xhtml</file>
             <file>file:/D:/Java/GPStreet/web/assets/chosen_v1.4.2/index.proto.html</file>
             <file>file:/D:/Java/GPStreet/web/common/index.xhtml</file>
@@ -66,10 +68,12 @@
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/DB/Managers/ManageUsers.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml</file>
             <file>file:/D:/Java/GPStreet/src/java/hibernate5.reveng.xml</file>
+            <file>file:/D:/Java/GPStreet/src/java/com/gpstreet/mapmodels/PolyMark.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/GPStreetCL.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/BB/CommonBB.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/DB/Mapping/Entity/GpstTracker.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/web/messages/Messages_ar.properties</file>
+            <file>file:/D:/Java/GPStreet/web/assets/img/SSMTlogo.png</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/common/AuthenticationFilter.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/DB/Mapping/Entity/GpstLocations.java</file>
             <file>file:/D:/Java/GPStreet/web/settings/settings.xhtml</file>

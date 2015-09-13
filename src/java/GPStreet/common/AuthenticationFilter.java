@@ -27,6 +27,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.apache.log4j.Logger;
 
 /**
  *
@@ -34,16 +35,18 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebFilter("/common/*")
 public class AuthenticationFilter implements Filter {
-
+    static Logger logger = Logger.getLogger(AuthenticationFilter.class);
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
 
     }
 
     @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException  {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
+        try{       
+            
         res.setContentType("text/html;charset=utf-8");
         req.setCharacterEncoding("UTF-8");
         if (!req.getRequestURI().endsWith("login.xhtml") ) {
@@ -54,6 +57,13 @@ public class AuthenticationFilter implements Filter {
             
         }
         chain.doFilter(request, response);
+        }catch(IOException ex){
+            logger.error(ex.getMessage());
+            ((HttpServletResponse) response).sendRedirect(req.getContextPath() + "/common/login.xhtml");
+        }catch(ServletException ex){
+            logger.error(ex.getMessage());
+            ((HttpServletResponse) response).sendRedirect(req.getContextPath() + "/common/login.xhtml");
+        }
     }
 
     @Override

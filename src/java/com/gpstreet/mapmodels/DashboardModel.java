@@ -52,6 +52,8 @@ public class DashboardModel {
     
     @PostConstruct
     public void init() {
+       
+       
         Date date =  new Date();
         try{
         dbModel =new DefaultMapModel();
@@ -149,6 +151,15 @@ public class DashboardModel {
         selectedMarker =  (Marker) event.getOverlay();
     }
     
+    private void clear(){
+        
+        this.endDate = null;
+        this.startDate = null;
+        
+        this.selectedUsers = null;
+        this.selectedUsers = null;
+        
+    }
     public void valueChanged(ValueChangeEvent event) {
         Date date =  new Date();
         ManageTracker mt =  new ManageTracker();
@@ -171,10 +182,12 @@ public class DashboardModel {
         Date sDate =  new Date();
         Date eDate = new Date();
         ManageTracker mt =  new ManageTracker();
-         try{
-        
         String startDateStr = startDate;
         String endDateStr = endDate;
+        if(!"".equals(startDateStr)){
+         try{
+        
+        
         
         
         SimpleDateFormat dateFormat  =  new SimpleDateFormat(new Constants().dateFormat);
@@ -183,6 +196,7 @@ public class DashboardModel {
         }catch(ParseException ex){
             logger.error(ex.getMessage());
         }
+         }
          List<Integer> iListStates = new ArrayList<>();
          for(int i = 0 ; i< selectedStates.size(); i++){
              iListStates.add(Integer.parseInt(selectedStates.get(i).toString()));
@@ -194,16 +208,18 @@ public class DashboardModel {
          
          
         List<GpstTracker> gpstTrackers = mt.getTracking(null,iListStates,iListUsers , 0, 0, sDate,eDate,0 );
-        Polyline polyline = MapUtiles.createPolyline(gpstTrackers , 7 , MapUtiles.GPST_COLORS.BLACK.toString() , 0.9);
-        dbModel.getMarkers().clear();
-        dbModel.getPolylines().clear();
+        //Polyline polyline = MapUtiles.createPolyline(gpstTrackers , 7 , MapUtiles.GPST_COLORS.BLACK.toString() , 0.9);
+        if(dbModel != null){
+            dbModel.getMarkers().clear();
+            dbModel.getPolylines().clear();
+        }
         List<Marker> mapMarkers = new ArrayList<>();
        for(GpstTracker tracker : gpstTrackers ){
             
-           if(tracker.getGpstState().getId() == 1){
+           if(tracker.getGpstState().getId() == MapUtiles.GPST_STATES.CHECK_IN.code){
                 mapMarkers.add(MapUtiles.createMarker(tracker, MapUtiles.MAPICON_CHECK_IN));
            }
-           else if(tracker.getGpstState().getId() == 2){
+           else if(tracker.getGpstState().getId() == MapUtiles.GPST_STATES.CHECK_IN.code){
                mapMarkers.add(MapUtiles.createMarker(tracker, MapUtiles.MAPICON_CHECK_OUT));
            }
            else
@@ -222,6 +238,7 @@ public class DashboardModel {
         }catch(Exception ex){
             logger.error(ex.getMessage());
         }
+        
         
     }
      public List<GpstState> getAllStates() {
