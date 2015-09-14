@@ -24,7 +24,7 @@ import org.hibernate.Transaction;
 public class ManageStates {
     Logger logger = Logger.getLogger(ManagePages.class);
     Transaction tx = null;
-    Session session = HibernateUtil.getSessionFactory().openSession();
+    Session session = HibernateUtil.getGlobalSession();
     GpstState state = null;
     
     public List<GpstState> getAllStates(){

@@ -31,9 +31,9 @@ public class ManageUsers {
 
     Logger logger = Logger.getLogger(ManageUsers.class);
     Transaction tx = null;
-    Session session = HibernateUtil.getSessionFactory().openSession();
+    Session session = HibernateUtil.getGlobalSession();
     GpstUsers user = null;
-    
+
     
     
     public List<GpstUsers> listALLUsers(){
@@ -80,7 +80,7 @@ public class ManageUsers {
     public boolean deleteUser(int userId){
         
         try {
-            session = HibernateUtil.getSessionFactory().openSession();
+            session = HibernateUtil.getGlobalSession();
             user = new GpstUsers( );
             user.setId(userId);
             tx = session.beginTransaction();
@@ -107,7 +107,7 @@ public class ManageUsers {
 
         Integer userId = null;
         try {
-            session = HibernateUtil.getSessionFactory().openSession();
+            session = HibernateUtil.getGlobalSession();
             Set<GpstGroups> groupSet = new HashSet();
             GpstGroups defaultGroup = (GpstGroups)session.get(GpstGroups.class, groupId);
             
@@ -133,7 +133,7 @@ public class ManageUsers {
         Integer userId = null;
         GpstUsers user = null;
         try {
-            session = HibernateUtil.getSessionFactory().openSession();
+            session = HibernateUtil.getGlobalSession();
             
             
             Query query = session.createQuery("from GpstUsers where username = ?");
@@ -159,7 +159,7 @@ public class ManageUsers {
         
         GpstUsers user = null;
         try {
-            session = HibernateUtil.getSessionFactory().openSession();
+            session = HibernateUtil.getGlobalSession();
             
             
             user = (GpstUsers)session.get(GpstUsers.class , userId);
@@ -185,7 +185,7 @@ public class ManageUsers {
 
         
         try {
-            session = HibernateUtil.getSessionFactory().openSession();
+            session = HibernateUtil.getGlobalSession();
             
             
             user = (GpstUsers)session.get(GpstUsers.class,userId);

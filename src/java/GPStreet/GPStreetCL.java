@@ -7,6 +7,7 @@
 package GPStreet;
 
 
+import GPStreet.DB.HibernateUtil;
 import GPStreet.EJB.StartupBean;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -18,6 +19,7 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.ServletException;
 import org.apache.log4j.Logger;
+import org.hibernate.Session;
 
 
 /**

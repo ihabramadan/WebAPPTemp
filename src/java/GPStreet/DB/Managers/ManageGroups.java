@@ -32,14 +32,14 @@ import org.jboss.weld.util.collections.ArraySet;
 public class ManageGroups {
     Logger logger = Logger.getLogger(ManageGroups.class);
     Transaction tx = null;
-    Session session = HibernateUtil.getSessionFactory().openSession();
+    Session session = HibernateUtil.getGlobalSession();
     GpstGroups group = null;
     
     
     
     public boolean deleteGroup(int id){
         try {
-            session = HibernateUtil.getSessionFactory().openSession();
+            session = HibernateUtil.getGlobalSession();
            
             
             group = (GpstGroups)session.get(GpstGroups.class, id);
@@ -67,7 +67,7 @@ public class ManageGroups {
 
         Integer groupId = null;
         try {
-            session = HibernateUtil.getSessionFactory().openSession();
+            session = HibernateUtil.getGlobalSession();
            
             
             group = new GpstGroups(groupName, groupDesc , null);
@@ -95,7 +95,7 @@ public class ManageGroups {
         
         
         try {
-            session = HibernateUtil.getSessionFactory().openSession();
+            session = HibernateUtil.getGlobalSession();
            
             for(Integer page : pagesIds){
             groupPages.add((GpstPages)session.get(GpstPages.class, page));
@@ -123,7 +123,7 @@ public class ManageGroups {
         Integer groupId = null;
         GpstGroups group = null;
         try {
-            session = HibernateUtil.getSessionFactory().openSession();
+            session = HibernateUtil.getGlobalSession();
             
             
             Query query = session.createQuery("from GpstGroups where groupname = ?");
@@ -148,7 +148,7 @@ public class ManageGroups {
         Integer groupId = null;
         GpstGroups group = null;
         try {
-            session = HibernateUtil.getSessionFactory().openSession();
+            session = HibernateUtil.getGlobalSession();
             
             
             Query query = session.createQuery("from GpstGroups where groupname = ? or id= ?");

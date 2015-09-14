@@ -25,7 +25,7 @@ import org.hibernate.criterion.Restrictions;
 public class ManageTracker {
     Logger logger = Logger.getLogger(ManageUsers.class);
     Transaction tx = null;
-    Session session = HibernateUtil.getSessionFactory().openSession();
+    Session session = HibernateUtil.getGlobalSession();
 
     
     public List<GpstTracker> getTracking(Integer id , int stateId, int userId, double latitude, double longitude, Date date, double deviceId){

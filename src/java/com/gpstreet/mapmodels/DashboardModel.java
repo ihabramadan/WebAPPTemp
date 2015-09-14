@@ -61,6 +61,8 @@ public class DashboardModel {
         
         
         SimpleDateFormat dateFormat  =  new SimpleDateFormat(new Constants().dateFormat);
+        startDate = dateFormat.format(date);
+        endDate = dateFormat.format(date);
         date = dateFormat.parse(dateStr);
         }catch(ParseException ex){
             logger.error(ex.getMessage());
@@ -219,7 +221,7 @@ public class DashboardModel {
            if(tracker.getGpstState().getId() == MapUtiles.GPST_STATES.CHECK_IN.code){
                 mapMarkers.add(MapUtiles.createMarker(tracker, MapUtiles.MAPICON_CHECK_IN));
            }
-           else if(tracker.getGpstState().getId() == MapUtiles.GPST_STATES.CHECK_IN.code){
+           else if(tracker.getGpstState().getId() == MapUtiles.GPST_STATES.CHECK_OUT.code){
                mapMarkers.add(MapUtiles.createMarker(tracker, MapUtiles.MAPICON_CHECK_OUT));
            }
            else

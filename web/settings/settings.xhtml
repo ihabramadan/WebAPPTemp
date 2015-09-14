@@ -9,7 +9,7 @@
         
         <title>#{msg['settings.settings']}</title>
     </h:head>
-    <h:body id="body" >
+    <h:body id="body" onload="#{pagesBean.bindPages()} #{userBean.bindUsersList()} #{groupsBean.bindGroups()} " >
         
         <div >
             <h1 class="page-header" style="display : #{userBean.isAuthorized('settings.xhtml') ? 'block' : 'none'} ">#{msg['settings.settings']}

@@ -30,7 +30,7 @@ public class ManagePages {
     
     Logger logger = Logger.getLogger(ManagePages.class);
     Transaction tx = null;
-    Session session = HibernateUtil.getSessionFactory().openSession();
+    Session session = HibernateUtil.getGlobalSession();
     GpstPages page = null;
     
     
@@ -47,6 +47,8 @@ public class ManagePages {
         } catch (HibernateException ex) {             
             logger.error(ex.getMessage());
             return null;
+        }finally{
+            
         }        
             return pages;
     }
