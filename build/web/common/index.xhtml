@@ -312,23 +312,16 @@
                         </div>
                         <!--end search section-->
                     </li>
-                    <li class="selected">
+                    <li >
                         
                         <h:form >
-                            <h:commandLink actionListener="#{userBean.setPage('dashboard.xhtml')}" style="padding: 20px 15px; font-size: medium;text-decoration: none;" class="fa fa-dashboard fa-fw">&nbsp;#{msg['dashboard.dashboard']}</h:commandLink>
+                            <h:commandLink actionListener="#{userBean.setPage('dbMapView.xhtml')}" style="padding: 20px 15px; font-size: medium;text-decoration: none;" class="fa fa-dashboard fa-fw">&nbsp;#{msg['dashboard.dashboard']}</h:commandLink>
                          </h:form>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="welcomePrimefaces.xhtml">Flot Charts</a>
-                            </li>
-                            <li>
-                                <a href="welcomePrimefaces.xhtml">Morris Charts</a>
-                            </li>
-                        </ul>
-                        <!-- second-level-items -->
+                        <h:form >
+                            <h:commandLink actionListener="#{userBean.setPage('track.xhtml')}"  style="padding: 20px 15px; font-size: medium;text-decoration: none;" class="fa fa-dashboard fa-fw">&nbsp;#{msg['trackusers.track_users']}</h:commandLink>
+                         </h:form>
                     </li>
                      <li>
                          <h:form >
@@ -461,9 +454,13 @@
     }
     
     
+    
     jQuery('.datetimepicker').datetimepicker({
         format:'#{constants.dateTimePickerFormat}'
     });
+    
+    
+    
   </script>
     </h:body>
 </html>

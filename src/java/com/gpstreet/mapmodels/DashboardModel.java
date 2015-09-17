@@ -48,6 +48,7 @@ public class DashboardModel {
     private List selectedUsers;
     private List selectedStates;
     private List<GpstState> allStates;
+    private List<GpstTracker> searchedTreakcers;
     
     
     @PostConstruct
@@ -91,6 +92,15 @@ public class DashboardModel {
         
     }
 
+    public List<GpstTracker> getSearchedTreakcers() {
+        return searchedTreakcers;
+    }
+
+    public void setSearchedTreakcers(List<GpstTracker> searchedTreakcers) {
+        this.searchedTreakcers = searchedTreakcers;
+    }
+
+    
     public List getSelectedStates() {
         return selectedStates;
     }
@@ -210,6 +220,7 @@ public class DashboardModel {
          
          
         List<GpstTracker> gpstTrackers = mt.getTracking(null,iListStates,iListUsers , 0, 0, sDate,eDate,0 );
+        setSearchedTreakcers(gpstTrackers);
         //Polyline polyline = MapUtiles.createPolyline(gpstTrackers , 7 , MapUtiles.GPST_COLORS.BLACK.toString() , 0.9);
         if(dbModel != null){
             dbModel.getMarkers().clear();

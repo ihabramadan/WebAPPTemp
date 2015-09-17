@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+
+        <title>Track</title>
+    </h:head>
+    <h:body onload="#{dashboardModel.bindAllStates()} #{userBean.bindUsersList()}">
+        <div >
+            <h1 class="page-header" style="display : #{userBean.isAuthorized('track.xhtml') ? 'block' : 'none'} ">#{msg['trackusers.track_users']}
+
+            </h1>
+
+        </div>
+
+        <c:if test="#{userBean.isAuthorized('track.xhtml')}">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h:outputLabel value="#{msg['track.users_tracking']}" /> 
+                </div>
+
+                <div class="panel-body" >
+
+
+
+
+
+
+
+                    <div  >
+                        <h:form  class="form-inline">
+                            <h:messages class="form-control-messages alertLogin alert-danger"/>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="form-group">
+                                        <h:outputLabel value="#{msg['track.select_user']} : " for="selectUsers" />
+
+
+                                        <h:selectManyMenu  value="#{dashboardModel.selectedUsers}"   id="selectUsers"   style="width: 500px"  class=" chosen-select"  >
+
+                                            <f:selectItems  value="#{userBean.usersList}" var="ulist" itemValue="#{ulist.id}" itemLabel="#{ulist.firstname }  #{ulist.lastname}" />
+
+                                        </h:selectManyMenu>
+                                    </div>
+                                    <div class="form-group">
+                                        <h:outputLabel value="#{msg['track.status']} : " for="selectedStatus" />
+
+
+                                        <h:selectManyMenu  value="#{dashboardModel.selectedStates}"   id="selectedStatus"   style="width: 500px"  class=" chosen-select"  >
+
+                                            <f:selectItems  value="#{dashboardModel.allStates}" var="slist" itemValue="#{slist.id}" itemLabel="#{slist.name }" />
+
+                                        </h:selectManyMenu>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <h:outputLabel value="#{msg['track.start_date']} : " for="startpicker" />
+                                        <h:inputText  pt:placeholder="#{msg['track.start_date']}" value="#{dashboardModel.startDate}" id="startpicker" class="datetimepicker form-control" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <h:outputLabel value="#{msg['track.end_date']} : " for="endpicker" />
+                                        <h:inputText pt:placeholder="#{msg['track.end_date']}" value="#{dashboardModel.endDate}" id="endpicker" class="datetimepicker form-control"/>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <h:commandButton type="submit"  class="btn btn-primary" value="#{msg['track.track']}" actionListener="#{dashboardModel.trackUsers()}" >
+
+                                        </h:commandButton>
+                                    </div>
+                                </div>    
+                            </div>
+
+                            <ui:include src="dashboard_1.xhtml"/>
+                                                      
+                        </h:form>
+                    </div>   
+                </div>
+            </div>
+        </c:if>
+
+        <script>
+
+            $("#selectUsers").attr("data-placeholder", "#{msg['track.select_user']}");
+            //var gmap = PF('dashboardgmap')._render();
+            //for(var i in gmap.markers)
+            //{
+            //    alert("hi");
+            //}
+
+        </script>
+
+       
+    </h:body>
+
+</html>
+

@@ -7,6 +7,8 @@
 package GPStreet.common;
 
 import GPStreet.BB.CommonBB;
+import com.gpstreet.mapmodels.MapUtiles;
+
 import java.util.ResourceBundle;
 import javax.faces.bean.ManagedBean;
 
@@ -23,7 +25,37 @@ public  class Constants {
     private final String english = "English";
     public final  String dateFormat = "dd-MM-yyyy HH:mm";
     public final String dateTimePickerFormat="d-m-Y H:i";
+    private String mapIconCheckIn=MapUtiles.MAPICON_CHECK_IN;
+    private String mapIconCheckOut=MapUtiles.MAPICON_CHECK_OUT;
+    private String mapIconMan=MapUtiles.MAPICON_MAN;
 
+    public String getMapIconCheckOut() {
+        return mapIconCheckOut;
+    }
+
+    public void setMapIconCheckOut(String mapIconCheckOut) {
+        this.mapIconCheckOut = mapIconCheckOut;
+    }
+
+    public String getMapIconMan() {
+        return mapIconMan;
+    }
+
+    public void setMapIconMan(String mapIconMan) {
+        this.mapIconMan = mapIconMan;
+    }
+    
+    
+    public String getMapIconCheckIn() {
+        return mapIconCheckIn;
+    }
+
+    public void setMapIconCheckIn(String mapIconCheckIn) {
+        this.mapIconCheckIn = mapIconCheckIn;
+    }
+
+    
+    
     public  String getDateFormat() {
         return dateFormat;
     }
