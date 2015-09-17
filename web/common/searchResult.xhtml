@@ -18,9 +18,9 @@
 
         <div class="col-lg-12">
             <ul class="nav nav-tabs">
-                <li  class="active" ><a href="#mapView" data-toggle="tab"><strong>#{msg['trackusers.map_view']}</strong></a>
+                <li  class="active" ><a href="#mapView" data-toggle="tab"><strong>#{msg['track.map_view']}</strong></a>
                 </li>
-                <li><a href="#listView" data-toggle="tab"><strong>#{msg['trackusers.list_view=']}</strong></a>
+                <li><a href="#listView" data-toggle="tab"><strong>#{msg['track.list_view']}</strong></a>
                 </li>                                
             </ul>
             <div class="tab-content" >
@@ -39,30 +39,30 @@
                                                     <p:outputPanel >
                                                         <table cellspacing="10" >
                                                             <tr>
-                                                                <td ><label>#{msg['dashboard.agent_name']}: </label></td>
+                                                                <td ><label>#{msg['track.agent_name']}: </label></td>
                                                                 <td ><h:outputText  value="#{dashboardModel.selectedMarker.title}"/></td>
                                                             </tr>
                                                             <tr>
-                                                                <td ><label>#{msg['dashboard.location']}: </label></td>
+                                                                <td ><label>#{msg['track.location']}: </label></td>
                                                                 <td ><h:outputText  value="#{dashboardModel.selectedMarker.data.gpstLocations.name}"/></td>
                                                             </tr>
                                                             <tr>
-                                                                <td ><label>#{msg['dashboard.state']}: </label></td>
+                                                                <td ><label>#{msg['track.state']}: </label></td>
                                                                 <td ><h:outputText  value="#{dashboardModel.selectedMarker.data.gpstState.name}"/></td>
                                                             </tr>
                                                             <tr>
-                                                                <td><label>#{msg['dashboard.date']}: </label></td>
+                                                                <td><label>#{msg['track.date']}: </label></td>
                                                                 <td ><h:outputText  value="#{dashboardModel.selectedMarker.data.date}">
                                                                         <f:convertDateTime pattern="#{constants.dateFormat}" />
                                                                     </h:outputText>
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td ><label>#{msg['dashboard.lat']}: </label></td>
+                                                                <td ><label>#{msg['track.lat']}: </label></td>
                                                                 <td ><h:outputText  value="#{dashboardModel.selectedMarker.latlng.lat}"/></td>
                                                             </tr>
                                                             <tr>                                        
-                                                                <td   ><label>#{msg['dashboard.lng']}: </label></td>
+                                                                <td   ><label>#{msg['track.lng']}: </label></td>
                                                                 <td ><h:outputText  value="#{dashboardModel.selectedMarker.latlng.lng}"/></td>
                                                             </tr>
                                                         </table>
@@ -86,7 +86,7 @@
 
                                     <f:facet name="header" >
 
-                                        <h:outputText value="#{msg['dashboard.user']}"/>
+                                        <h:outputText value="#{msg['track.user']}"/>
 
                                     </f:facet>
 
@@ -100,7 +100,7 @@
 
                                     <f:facet name="header" >
 
-                                        <h:outputText value="#{msg['dashboard.location']}"/>
+                                        <h:outputText value="#{msg['track.location']}"/>
 
                                     </f:facet>
 
@@ -111,7 +111,7 @@
 
                                     <f:facet name="header" >
 
-                                        <h:outputText value="#{msg['dashboard.state']}"/>
+                                        <h:outputText value="#{msg['track.state']}"/>
 
                                     </f:facet>
 
@@ -127,7 +127,7 @@
 
                                     <f:facet name="header" >
 
-                                        <h:outputText value="#{msg['dashboard.date']}"/>
+                                        <h:outputText value="#{msg['track.date']}"/>
 
                                     </f:facet>
 
@@ -140,7 +140,7 @@
 
                                     <f:facet name="header" >
 
-                                        <h:outputText value="#{msg['dashboard.lat']}"/>
+                                        <h:outputText value="#{msg['track.lat']}"/>
 
                                     </f:facet>
 
@@ -151,7 +151,7 @@
 
                                     <f:facet name="header" >
 
-                                        <h:outputText value="#{msg['dashboard.lng']}"/>
+                                        <h:outputText value="#{msg['track.lng']}"/>
 
                                     </f:facet>
 

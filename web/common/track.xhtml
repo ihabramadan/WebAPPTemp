@@ -15,7 +15,7 @@
     </h:head>
     <h:body onload="#{dashboardModel.bindAllStates()} #{userBean.bindUsersList()}">
         <div >
-            <h1 class="page-header" style="display : #{userBean.isAuthorized('track.xhtml') ? 'block' : 'none'} ">#{msg['trackusers.track_users']}
+            <h1 class="page-header" style="display : #{userBean.isAuthorized('track.xhtml') ? 'block' : 'none'} ">#{msg['track.track_users']}
 
             </h1>
 
@@ -79,7 +79,7 @@
                                 </div>    
                             </div>
 
-                            <ui:include src="dashboard_1.xhtml"/>
+                            <ui:include src="searchResult.xhtml"/>
                                                       
                         </h:form>
                     </div>   
