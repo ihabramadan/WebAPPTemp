@@ -25,14 +25,15 @@
             <file>file:/D:/Java/GPStreet/web/temp.html</file>
             <file>file:/D:/Java/GPStreet/web/assets/chosen_v1.4.2/chosen.jquery.js</file>
             <file>file:/D:/Java/GPStreet/src/java/hibernate8.hbm.xml</file>
-            <file>file:/D:/Java/GPStreet/web/common/dashboard.xhtml</file>
             <file>file:/D:/Java/GPStreet/web/login.xhtml</file>
             <file>file:/D:/Java/GPStreet/mydb/gpstreet_data.sql</file>
+            <file>file:/D:/Java/GPStreet/web/common/searchResult.xhtml</file>
             <file>file:/D:/Java/GPStreet/web/common/login.xhtml</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml</file>
             <file>file:/D:/Java/GPStreet/web/settings/groupPagesModal.xhtml</file>
             <file>file:/D:/Java/GPStreet/src/java/com/gpstreet/webservices/SaveLocation.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/DB/Mapping/Entity/GpstGroups.java</file>
+            <file>file:/D:/Java/GPStreet/src/java/GPStreet/web/messages/Messages_en.properties</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/Servlets/GetAllgroups.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/common/GroupData.java</file>
             <file>file:/D:/Java/GPStreet/src/java/hibernate1.reveng.xml</file>
@@ -48,6 +49,7 @@
             <file>file:/D:/Java/GPStreet/.git/config</file>
             <file>file:/D:/Java/GPStreet/web/settings/userModal.xhtml</file>
             <file>file:/D:/Java/GPStreet/web/assets/chosen_v1.4.2/index.proto.html</file>
+            <file>file:/D:/Java/GPStreet/web/common/track.xhtml</file>
             <file>file:/D:/Java/GPStreet/web/common/index.xhtml</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/DAO/UserDAO.java</file>
             <file>file:/D:/Java/GPStreet/src/java/hibernate.cfg.xml</file>
@@ -59,6 +61,7 @@
             <file>file:/D:/Java/GPStreet/src/java/com/gpstreet/location/LocationUtils.java</file>
             <file>file:/D:/Java/GPStreet/web/WEB-INF/sun-jaxws.xml</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/Servlets/GetAllUsers.java</file>
+            <file>file:/D:/Java/GPStreet/web/common/dbMapView.xhtml</file>
             <file>file:/D:/Java/GPStreet/src/java/hibernate4.reveng.xml</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/Servlets/SaveGroupPages.java</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/DB/Mapping/Entity/GpstPages.java</file>
@@ -74,6 +77,7 @@
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/web/messages/Messages_ar.properties</file>
             <file>file:/D:/Java/GPStreet/web/assets/img/SSMTlogo.png</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/common/AuthenticationFilter.java</file>
+            <file>file:/D:/Java/GPStreet/nbproject/build-impl.xml</file>
             <file>file:/D:/Java/GPStreet/src/java/GPStreet/DB/Mapping/Entity/GpstLocations.java</file>
             <file>file:/D:/Java/GPStreet/web/settings/settings.xhtml</file>
             <file>file:/D:/Java/GPStreet/src/java/hibernate3.hbm.xml</file>

@@ -111,8 +111,10 @@ public class GpstUsers  implements java.io.Serializable {
         this.gpstGroupses = gpstGroupses;
     }
 
-
-
+    @Override
+    public String toString(){
+     return  "User [id=" + id + ",userName="+username + ",mainGroup="+mainGroup+"]";
+    }
 
 }
 

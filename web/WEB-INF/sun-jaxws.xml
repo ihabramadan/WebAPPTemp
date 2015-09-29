@@ -10,4 +10,6 @@ and open the template in the editor.
     version='2.0'>
     <endpoint name='SaveLocation' implementation='com.gpstreet.webservices.SaveLocation'
         url-pattern='/services/SaveLocation' />
+    <endpoint name='GPStreetWS' implementation='com.gpstreet.webservices.GPStreetWS'
+        url-pattern='/services/GPStreetWS' />
 </endpoints>

@@ -57,7 +57,7 @@ public class UserBean {
     
     private UIComponent submitBtn;
     private boolean loggedIn;
-    Logger logger = Logger.getLogger(UserBean.class);
+    static Logger logger = Logger.getLogger(UserBean.class);
 
     @PostConstruct
     public void init(){
@@ -163,7 +163,7 @@ public class UserBean {
         this.password = encryptPass(password);
     }
     
-    public String encryptPass(String plainPassword){
+    public static String encryptPass(String plainPassword){
         MessageDigest md = null;
          try
             {

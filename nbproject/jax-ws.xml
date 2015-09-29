@@ -4,6 +4,9 @@
     <service name="SaveLocation">
       <implementation-class>com.gpstreet.webservices.SaveLocation</implementation-class>
     </service>
+    <service name="GPStreetWS">
+      <implementation-class>com.gpstreet.webservices.GPStreetWS</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>

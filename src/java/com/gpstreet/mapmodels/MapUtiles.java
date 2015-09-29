@@ -6,6 +6,7 @@
 package com.gpstreet.mapmodels;
 
 import GPStreet.DB.Managers.ManageUsers;
+import GPStreet.DB.Mapping.Entity.GpstLocations;
 import GPStreet.DB.Mapping.Entity.GpstTracker;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -28,6 +29,7 @@ public class MapUtiles {
     public static String MAPICON_MAN = "http://maps.google.com/mapfiles/ms/micons/man.png";
     public static String MAPICON_CHECK_IN="http://maps.google.com/mapfiles/ms/micons/green-dot.png";
     public static String MAPICON_CHECK_OUT="http://maps.google.com/mapfiles/ms/micons/red-dot.png";
+    public static String MAPICON_LOCATION="http://maps.google.com/mapfiles/ms/micons/road_shield1.png";
 
 
     
@@ -109,6 +111,12 @@ public class MapUtiles {
         ManageUsers mu = new ManageUsers();
         LatLng coord = new LatLng(tracker.getLatitude(), tracker.getLongitude());
         return new Marker(coord, mu.getUser(tracker.getGpstUsers().getId()).getFirstname() + " " + mu.getUser(tracker.getGpstUsers().getId()).getLastname(), tracker, markerIcon);
+    }
+    
+    public static Marker createMarker(GpstLocations location, String markerIcon) {
+        
+        LatLng coord = new LatLng(location.getLatitude(), location.getLongitude());
+        return new Marker(coord, location.getName(), location , markerIcon);
     }
     
     public static PolyMark spiderfyMarkers(List<Marker> orgMarkers){
