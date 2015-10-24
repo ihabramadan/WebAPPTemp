@@ -8,16 +8,19 @@ package com.gpstreet.mapmodels;
 import GPStreet.DB.Managers.ManageLocations;
 import GPStreet.DB.Managers.ManageUsers;
 import GPStreet.DB.Mapping.Entity.GpstLocations;
+import com.gpstreet.geo.GeoUtils;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import org.apache.log4j.Logger;
+import org.primefaces.event.map.OverlaySelectEvent;
 import org.primefaces.model.map.DefaultMapModel;
 import org.primefaces.model.map.LatLng;
 import org.primefaces.model.map.MapModel;
 import org.primefaces.model.map.Marker;
+import org.primefaces.model.map.Polyline;
 
 /**
  *
@@ -31,10 +34,16 @@ public class LocationsModel {
     Logger logger = Logger.getLogger(LocationsModel.class);
     private LatLng midPoint;
     private List<GpstLocations> allLocations;
+    private Marker selectedMarker;
+    
     @PostConstruct
     public void init(){
         locationModel = new DefaultMapModel();
         createLocationsMarkers();
+        if(allLocations != null || !allLocations.isEmpty()){
+            midPoint = GeoUtils.midLocations(allLocations);
+        }
+        
     }
     public MapModel getLocationModel() {
         return locationModel;
@@ -59,6 +68,20 @@ public class LocationsModel {
     public void setAllLocations(List<GpstLocations> allLocations) {
         this.allLocations = allLocations;
     }
+
+    public Marker getSelectedMarker() {
+        return selectedMarker;
+    }
+
+    public void setSelectedMarker(Marker selectedMarker) {
+        this.selectedMarker = selectedMarker;
+    }
+    
+    
+    
+    public void onMarkerSelect(OverlaySelectEvent event){
+        selectedMarker =  (Marker) event.getOverlay();
+    }
     public void bindAllLocations(){
         ManageLocations ms =  new ManageLocations();
         List<GpstLocations> allLocations = ms.getAllLocations();
@@ -72,17 +95,26 @@ public class LocationsModel {
         ManageLocations ml =  new ManageLocations();
         List<Marker> mapMarkers = new ArrayList<>();
         
-        List<GpstLocations> allLocations = null;
-        if(getAllLocations() == null)
-            setAllLocations(ml.getAllLocations());
-        allLocations = getAllLocations();
         
-        for(GpstLocations location : allLocations){
+        if(getAllLocations() == null || getAllLocations().isEmpty())
+            setAllLocations(ml.getAllLocations());
+        else
+            setAllLocations(getAllLocations());
+        
+        for(GpstLocations location : getAllLocations()){
             mapMarkers.add(MapUtiles.createMarker(location, MapUtiles.MAPICON_CHECK_OUT));
             
         }
-        for(Marker newMarker : mapMarkers){
+        
+        PolyMark pm = new PolyMark();
+        pm = MapUtiles.spiderfyMarkers(mapMarkers);
+        //dbModel.getMarkers().clear();
+        for(Marker newMarker : pm.markers){
+            
             locationModel.addOverlay(newMarker);
+        }
+        for(Polyline p : pm.polylines){
+            locationModel.addOverlay(p);
         }
         
     }
