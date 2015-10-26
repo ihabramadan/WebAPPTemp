@@ -7,7 +7,7 @@
 package GPStreet.DB.Managers;
 
 import GPStreet.DB.HibernateUtil;
-import GPStreet.DB.Mapping.Entity.GpstGroups;
+
 import GPStreet.DB.Mapping.Entity.GpstPages;
 import java.util.ArrayList;
 import java.util.Iterator;

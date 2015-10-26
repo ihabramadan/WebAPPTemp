@@ -7,9 +7,12 @@ package GPStreet.DB.Managers;
 
 import GPStreet.DB.HibernateUtil;
 import GPStreet.DB.Mapping.Entity.GpstLocations;
+import GPStreet.EJB.StartupBean;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -43,4 +46,30 @@ public class ManageLocations {
         }        
             return locations;
     }
+    public Integer addLocation(String name , String desc,double lat , double lng){
+        
+        GpstLocations location = null;
+        
+       
+
+        Integer locationId = null;
+        try {
+            session = HibernateUtil.getGlobalSession();
+            location = new GpstLocations(name,desc,lat,lng,null);
+            
+            tx = session.beginTransaction();
+            locationId = (int) session.save(location);
+            tx.commit();
+        } catch (HibernateException ex) {
+            if (tx != null) {
+                tx.rollback();
+                
+            }
+            //FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(StartupBean.localRB.getString("users.database_error")));
+            logger.error(ex.getMessage());
+            return null;
+        }
+        return locationId;
+    }
+    
 }

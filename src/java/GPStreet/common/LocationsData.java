@@ -6,6 +6,7 @@
 
 package GPStreet.common;
 
+import GPStreet.DB.Managers.ManageLocations;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -64,5 +65,10 @@ public class LocationsData {
         this.longitude = longitude;
     }
     
+    public void saveLocation(){
+        ManageLocations ml = new ManageLocations();
+        Integer locationId =null;
+        locationId = ml.addLocation(this.name, this.description, this.latitude, this.longitude);
+    }
     
 }

@@ -6,7 +6,7 @@
 package GPStreet.DB.Managers;
 
 import GPStreet.DB.HibernateUtil;
-import GPStreet.DB.Mapping.Entity.GpstState;
+
 import GPStreet.DB.Mapping.Entity.GpstTracker;
 import java.util.Date;
 import java.util.List;

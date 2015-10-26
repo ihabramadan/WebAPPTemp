@@ -36,15 +36,15 @@
                         </div>
                         <div class="panel-body">
                             <div class="form-group">
-<div class="form-group" >
-            <h:message id="addGroupModalSuccess" for="addGroupModalSuccess" class="form-control-messages alertLogin alert-success"/>
-        </div>
-        
-        <div class="form-group" >
-            <h:message id="addGroupModalError" for="addGroupModalError" class="form-control-messages alertLogin alert-danger"/>
-        </div>
-                                
-                                
+                                <div class="form-group" >
+                                    <h:message id="addGroupModalSuccess" for="addGroupModalSuccess" class="form-control-messages alertLogin alert-success"/>
+                                </div>
+
+                                <div class="form-group" >
+                                    <h:message id="addGroupModalError" for="addGroupModalError" class="form-control-messages alertLogin alert-danger"/>
+                                </div>
+
+
                                 <label >#{msg['groups.group_name']}</label><h:outputText style="color:red" value="*" />
                                 <div class="form-group">
                                     <h:inputText id="txtGroupName" value="#{groupData.groupName}" class="form-control" required="true" requiredMessage="#{msg['groups.group_name_required']}" ></h:inputText>
@@ -53,22 +53,22 @@
                                 <div class="form-group">
                                     <h:inputText id="txtGroupDesc" value="#{groupData.groupDesc}" class="form-control"  ></h:inputText>
                                 </div>
-                                
 
-                                
-<div class="modal-footer">
-                        
-                        
-                    
+
+
+                                <div class="modal-footer">
+
+
+
                                     <div class="form-group">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">#{msg['groupsModal.close']}</button>
-                                    
-                                    <h:commandButton  class='btn btn-primary' id="addGroupButton"   onclick="AddGroup()" value="#{msg['groups.add_group']}">
-                                        
-                                    </h:commandButton>
-                                
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">#{msg['groupsModal.close']}</button>
+
+                                        <h:commandButton  class='btn btn-primary' id="addGroupButton"   onclick="AddGroup()" value="#{msg['groups.add_group']}">
+
+                                        </h:commandButton>
+
                                     </div>
-                                        </div>
+                                </div>
 
 
                             </div>
@@ -82,46 +82,46 @@
     </div>
 
     <script>
-        
-        
-        
+
+
+
         function AddGroup() {
-                if ($('#txtGroupName').val() === "") {
-                    
-                    $("#addGroupModalError").text("#{msg['groups.group_name_required']}");
+            if ($('#txtGroupName').val() === "") {
+
+                $("#addGroupModalError").text("#{msg['groups.group_name_required']}");
+                $("#addGroupModalError").css("display", "block");
+                $("#addGroupModalError").attr("class", "alert alert-danger");
+                $("#addGroupModalSuccess").css("display", "none");
+                $("#globaModallMessaged").css("display", "none");
+                return false;
+            }
+            ;
+            $.ajax({
+                url: '#{facesContext.externalContext.requestContextPath}/AddGroup',
+                data: {
+                    groupName: document.getElementById('txtGroupName').value,
+                    groupDesc: document.getElementById('txtGroupDesc').value
+                }
+            }).done(function(result) {
+                if (result === "#{msg['groups.group_added']}") {
+                    $("#addGroupModalSuccess").text(result);
+                    $("#addGroupModalSuccess").css("display", "block");
+                    $("#addGroupModalSuccess").attr("class", "alert alert-success");
+                    $("#addGroupModalError").css("display", "none");
+                    $('#txtGroupName').val("");
+                    $('#txtGroupDesc').val("");
+                }
+                else {
+                    $("#addGroupModalError").text(result);
                     $("#addGroupModalError").css("display", "block");
                     $("#addGroupModalError").attr("class", "alert alert-danger");
-                    $("#addGroupModalSuccess").css("display", "none");
-                    $("#globaModallMessaged").css("display", "none");
-                    return false;
                 }
-                ;
-                $.ajax({
-                    url: '#{facesContext.externalContext.requestContextPath}/AddGroup',
-                    data: {
-                        groupName:document.getElementById('txtGroupName').value,
-                        groupDesc: document.getElementById('txtGroupDesc').value
-                    }
-                }).done(function (result) {
-                    if (result === "#{msg['groups.group_added']}") {
-                        $("#addGroupModalSuccess").text(result);
-                        $("#addGroupModalSuccess").css("display", "block");
-                        $("#addGroupModalSuccess").attr("class", "alert alert-success");
-                        $("#addGroupModalError").css("display", "none");
-                        $('#txtGroupName').val("");
-                        $('#txtGroupDesc').val("");
-                    }
-                    else {
-                        $("#addGroupModalError").text(result);
-                        $("#addGroupModalError").css("display", "block");
-                        $("#addGroupModalError").attr("class", "alert alert-danger");
-                    }
 
-                    bindGroups();
-                });
-            }
-            
-            
+                bindGroups();
+            });
+        }
+
+
     </script>
 
 
