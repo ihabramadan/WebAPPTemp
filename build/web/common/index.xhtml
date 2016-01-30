@@ -312,12 +312,7 @@
                         </div>
                         <!--end search section-->
                     </li>
-                    <li >
-                        
-                        <h:form style="display : #{userBean.isAuthorized('dashboard.xhtml') ? 'block' : 'none'} ">
-                            <h:commandLink actionListener="#{userBean.setPage('dbMapView.xhtml')}" style="padding: 20px 15px; font-size: medium;text-decoration: none;" class="fa fa-dashboard fa-fw">&nbsp;#{msg['dashboard.dashboard']}</h:commandLink>
-                         </h:form>
-                    </li>
+                    
                     <li>
                         <h:form style="display : #{userBean.isAuthorized('track.xhtml') ? 'block' : 'none'} ">
                             <h:commandLink actionListener="#{userBean.setPage('track.xhtml')}"  style="padding: 20px 15px; font-size: medium;text-decoration: none;" class="fa fa-dashboard fa-fw">&nbsp;#{msg['track.track_users']}</h:commandLink>
@@ -326,6 +321,11 @@
                      <li>
                          <h:form style="display : #{userBean.isAuthorized('locations.xhtml') ? 'block' : 'none'} ">
                              <h:commandLink actionListener="#{userBean.setPage('../locations/locations.xhtml')}" class="fa fa-flask fa-fw">&nbsp;#{msg['locations.locations']}</h:commandLink>
+                         </h:form>
+                    </li>
+                    <li>
+                         <h:form style="display : #{userBean.isAuthorized('myvisits') ? 'block' : 'none'} ">
+                             <h:commandLink actionListener="#{userBean.setPage('../visits/myvisits.xhtml')}" class="fa fa-flask fa-fw" >&nbsp;#{msg['visits.my_visits']}</h:commandLink>
                          </h:form>
                     </li>
                     <li>

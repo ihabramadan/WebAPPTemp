@@ -13,18 +13,6 @@
         <title>Dashboard</title>
     </h:head>
     <h:body>
-        <div class="panel-body" >
-        <div class="form-group">
-                                        <h:outputLabel value="#{msg['dashboard.select_user']} : " for="selectUsers" />
-
-
-                                        <h:selectManyMenu  value="#{dashboardModel.selectedUsers}"   id="selectUsers"   style="width: 500px"  class=" chosen-select"  >
-
-                                            <f:selectItems  value="#{userBean.usersList}" var="ulist" itemValue="#{ulist.id}" itemLabel="#{ulist.firstname }  #{ulist.lastname}" />
-
-                                        </h:selectManyMenu>
-                                    </div>
-        </div>
     </h:body>
 
 </html>

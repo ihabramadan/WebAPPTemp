@@ -8,7 +8,7 @@
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
     </h:head>
-    <div  class="modal fade" id="locationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div  class="modal fade" id="visitsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -18,14 +18,14 @@
                 <div class="modal-body edit_content">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            #{msg['locationsModal.locations']}
+                            #{msg['visits.visits']}
                         </div>
 
                         <div class="panel-body">
                             <div class="form-group">
                                 
                                 <h:form id="locationsModalform">
-                                    <label>#{msg['locationsModal.name']}</label><h:outputText style="color:red" value="*" />
+                                    <label>#{msg['visits.name']}</label><h:outputText style="color:red" value="*" />
                                     <div class="form-group">
                                         <h:inputText value="#{locationsData.name}" required="true" requiredMessage="#{msg['locationsModal.name_required']}" class="form-control"/>                            
                                     </div>

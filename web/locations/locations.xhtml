@@ -24,32 +24,36 @@
         <c:if test="#{userBean.isAuthorized('locations.xhtml')}">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h:outputLabel value="#{msg['track.users_tracking']}" /> 
+                    <h:outputLabel value="#{msg['locations.locations']}" /> 
                 </div>
 
                 <div class="panel-body" >
-
-
-
-
-
-
-
-                    <div  >
-                        <h:form  class="form-inline">
-           
-
-                            <ui:include src="searchResult.xhtml"/>
-                                                      
+                    <h:form id="locationMsg">
+                            
+                        <h:messages  layout="table" infoClass="form-control-messages alertLogin alert-success" errorClass="form-control-messages alertLogin alert-danger"/>
                         </h:form>
-                    </div>   
+                            <ui:include src="searchResult.xhtml"/>
+                            <ui:include src="locationModal.xhtml"/>
+                       
                 </div>
             </div>
         </c:if>
 
         
 
-       
+       <script>
+            function openLocationsModal(event){
+                
+                $("#locationModal").modal({'backdrop': "static"});
+                 //$('#locationsModalform:addedLat').val("ff") ;//
+                 document.getElementById('locationsModalform:addedLat').value = event.latLng.lat();;
+                 document.getElementById('locationsModalform:addedLng').value= event.latLng.lng();;
+            }
+            
+        
+    
+        </script>
+
     </h:body>
 
 </html>

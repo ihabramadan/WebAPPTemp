@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+
+        <title>Track</title>
+    </h:head>
+    <h:body onload="#{dashboardModel.bindAllStates()}">
+        <div >
+            <h1 class="page-header" style="display : #{userBean.isAuthorized('myvisits') ? 'block' : 'none'} ">#{msg['visits.my_visits']}
+
+            </h1>
+
+        </div>
+
+        <c:if test="#{userBean.isAuthorized('myvisits')}">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <table  style="width:100%">
+                            <tbody >
+                        <tr >
+                            <td >
+                                <h:outputLabel value="#{msg['visits.search_visits']}" /> 
+                            </td>
+                            <td align="right">
+                                <h:form>
+                                    <h:commandLink  class='btn  btn-circle btn-lg'  title="#{msg['users.add_user']}" type="button"><i class="fa fa-pluse"></i>
+                                    <f:ajax  listener="#{userData.exitEditMode()}" onevent="openVisitsModal(0)" render="" />
+                                    </h:commandLink>
+                                 </h:form>
+                                
+                            </td>
+                            
+                        </tr>
+                                </tbody>
+                        </table>
+                    
+                </div>
+
+                <div class="panel-body" >
+
+                    <div  >
+                        <h:form  class="form-inline">
+                            <h:messages class="form-control-messages alertLogin alert-danger"/>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    
+
+                                    <div class="form-group">
+                                        <h:outputLabel value="#{msg['visits.start_date']}  " for="startpicker" />
+                                        <h:inputText  pt:placeholder="#{msg['visits.start_date']}" value="#{visitsModel.startDate}" id="startpicker" class="datetimepicker form-control" />
+                                    </div>
+
+                                    <div
+                                        class="form-group">
+                                        <h:outputLabel value="#{msg['visits.end_date']}  " for="endpicker" />
+                                        <h:inputText pt:placeholder="#{msg['visits.end_date']}" value="#{visitsModel.endDate}" id="endpicker" class="datetimepicker form-control"/>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <h:commandButton type="submit"  class="btn btn-primary" value="#{msg['visits.search']}" actionListener="#{visitsModel.searchVisits()}" >
+
+                                        </h:commandButton>
+                                    </div>
+                                </div>    
+                            </div>
+
+                            <ui:include src="searchResult.xhtml"/>
+                            <ui:include src="visitsModal.xhtml"/>
+                                                      
+                        </h:form>
+                    </div>   
+                </div>
+            </div>
+        </c:if>
+
+        <script>
+            function openVisitsModal(event){
+                
+                $("#visitsModal").modal({'backdrop': "static"});
+               
+            }
+            
+
+        </script>
+
+       
+    </h:body>
+
+</html>
+

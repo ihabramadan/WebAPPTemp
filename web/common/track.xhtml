@@ -28,20 +28,13 @@
                 </div>
 
                 <div class="panel-body" >
-
-
-
-
-
-
-
-                    <div  >
+              <div  >
                         <h:form  class="form-inline">
                             <h:messages class="form-control-messages alertLogin alert-danger"/>
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <div class="form-group">
-                                        <h:outputLabel value="#{msg['track.select_user']} : " for="selectUsers" />
+                                        <h:outputLabel value="#{msg['track.select_user']}  " for="selectUsers" />
 
 
                                         <h:selectManyMenu  value="#{dashboardModel.selectedUsers}"   id="selectUsers"   style="width: 500px"  class=" chosen-select"  >
@@ -51,7 +44,7 @@
                                         </h:selectManyMenu>
                                     </div>
                                     <div class="form-group">
-                                        <h:outputLabel value="#{msg['track.status']} : " for="selectedStatus" />
+                                        <h:outputLabel value="#{msg['track.status']}  " for="selectedStatus" />
 
 
                                         <h:selectManyMenu  value="#{dashboardModel.selectedStates}"   id="selectedStatus"   style="width: 500px"  class=" chosen-select"  >
@@ -62,12 +55,12 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <h:outputLabel value="#{msg['track.start_date']} : " for="startpicker" />
+                                        <h:outputLabel value="#{msg['track.start_date']}  " for="startpicker" />
                                         <h:inputText  pt:placeholder="#{msg['track.start_date']}" value="#{dashboardModel.startDate}" id="startpicker" class="datetimepicker form-control" />
                                     </div>
 
                                     <div class="form-group">
-                                        <h:outputLabel value="#{msg['track.end_date']} : " for="endpicker" />
+                                        <h:outputLabel value="#{msg['track.end_date']}  " for="endpicker" />
                                         <h:inputText pt:placeholder="#{msg['track.end_date']}" value="#{dashboardModel.endDate}" id="endpicker" class="datetimepicker form-control"/>
                                     </div>
 
@@ -79,9 +72,10 @@
                                 </div>    
                             </div>
 
-                            <ui:include src="searchResult.xhtml"/>
+                            
                                                       
                         </h:form>
+                  <ui:include src="searchResult.xhtml"/>
                     </div>   
                 </div>
             </div>

@@ -7,17 +7,13 @@
 package GPStreet.BB;
 
 import GPStreet.DAO.GroupsDAO;
-import GPStreet.DAO.UserDAO;
-import GPStreet.DB.Managers.ManageStates;
 import GPStreet.DB.Mapping.Entity.GpstGroups;
 import GPStreet.DB.Mapping.Entity.GpstState;
-import GPStreet.DB.Mapping.Entity.GpstUsers;
 import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
-import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 
 

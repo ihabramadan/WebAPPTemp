@@ -13,9 +13,7 @@
 
         <title>Locations</title>
     </h:head>
-    <h:body >
-
-
+    <h:body onload="#{locationsModel.init()}">
 
         <div class="col-lg-12">
             <ul class="nav nav-tabs">
@@ -24,51 +22,63 @@
                 <li><a href="#listView" data-toggle="tab"><strong>#{msg['locations.map_list']}</strong></a>
                 </li>                                
             </ul>
+
             <div class="tab-content" >
                 <div class="tab-pane fade in active" id="mapView">
                     <div class="panel panel-default">                      
                         <div class="panel-body" >
-                            <div  >
-                                <h:form  class="form-inline">
-                                    <div class="panel panel-default">                                              
 
-                                        <f:view contentType="text/html"  >
-                                            <p:gmap center="#{locationsModel.midPoint.lat}, #{locationsModel.midPoint.lng}" zoom="10" type="MAP"
-                                                    onPointClick="openLocationsModal()"       style="width:auto;height:500px" model="#{locationsModel.locationModel}" widgetVar="dashboardgmap" id="dashboardgmap">
-                                                <p:ajax event="overlaySelect" listener="#{locationsModel.onMarkerSelect}" />
-                                                <p:gmapInfoWindow id="infoWindow">
-                                                    <p:outputPanel >
-                                                        <table cellspacing="10" >
-                                                            <tr>
-                                                                <td ><label>#{msg['locations.name']}: </label></td>
-                                                                <td ><h:outputText  value="#{locationsModel.selectedMarker.title}"/></td>
-                                                            </tr>                                                            
-                                                            <tr>
-                                                                <td ><label>#{msg['locations.lat']}: </label></td>
-                                                                <td ><h:outputText  value="#{locationsModel.selectedMarker.data.latitude}"/></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td><label>#{msg['locations.lng']}: </label></td>
-                                                                <td ><h:outputText  value="#{locationsModel.selectedMarker.data.longitude}"/>
-                                                                        
-                                                                </td>
-                                                            </tr>
-                                                            
-                                                        </table>
-                                                    </p:outputPanel>
-                                                </p:gmapInfoWindow>
-                                            </p:gmap>
-                                        </f:view>  
 
-                                    </div>
-                                </h:form>
-                            </div>   
+                            <h:form  id="locationForm" class="form-inline">
+                                <div class="panel panel-default">                                              
+
+                                    <f:view contentType="text/html"  >
+                                        <p:gmap center="#{locationsModel.midPoint.lat}, #{locationsModel.midPoint.lng}" zoom="10" type="MAP"
+                                                onPointClick="openLocationsModal(event)"       style="width:auto;height:500px" model="#{locationsModel.locationModel}" widgetVar="dashboardgmap" id="dashboardgmap">
+                                            <p:ajax event="overlaySelect" listener="#{locationsModel.onMarkerSelect}" />                                            
+                                            <p:gmapInfoWindow id="infoWindow">
+                                                <p:outputPanel >
+                                                    <table cellspacing="10" >
+                                                        <tr>
+                                                            <td ><label>#{msg['locations.name']}: </label></td>
+                                                            <td ><h:outputText  value="#{locationsModel.selectedMarker.title}"/></td>
+                                                        </tr>                                                            
+                                                        <tr>
+                                                            <td ><label>#{msg['locations.lat']}: </label></td>
+                                                            <td ><h:outputText  value="#{locationsModel.selectedMarker.data.latitude}"/></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><label>#{msg['locations.lng']}: </label></td>
+                                                            <td ><h:outputText  value="#{locationsModel.selectedMarker.data.longitude}"/>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <h:form>
+                                                                    <h:commandButton class='btn btn-danger' onclick="if (!confirm('#{msg['locations.you_sure']}'))
+                                                                                return false;"   actionListener="#{locationsData.deleteLocation(locationsModel.selectedMarker.data.id)}" value="#{msg['locations.delete']}"></h:commandButton>
+                                                                </h:form>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <h:inputHidden  value="#{locationsData.latitude}" />
+                                                    <h:inputHidden  value="#{locationsData.longitude}" />
+                                                </p:outputPanel>
+                                            </p:gmapInfoWindow>
+                                        </p:gmap>
+                                    </f:view>  
+
+                                </div>
+                            </h:form>
+
                         </div>
                     </div>
                 </div>
                 <div class="tab-pane fade in" id="listView">
                     <div class="panel panel-default"> 
                         <div class="panel-body" style="overflow:scroll;height:552px">
+
                             <h:dataTable  value="#{locationsModel.allLocations}" var="locationsList"  class="table table-striped table-bordered table-hover" id='trackersTable'>
 
                                 <h:column>
@@ -82,9 +92,9 @@
                                     <h:outputText id="userName" value="#{locationsList.name}"/>
 
                                 </h:column>
-                                
-                                
-                                
+
+
+
                                 <h:column>
 
                                     <f:facet name="header" >
@@ -105,26 +115,35 @@
                                     </f:facet>
 
                                     <h:outputText id="firstName" value="#{locationsList.longitude}"/>
-                                    
-                                    
+
+
                                 </h:column>
-                                
+                                <h:column>
+
+                                    <f:facet name="header" >
+
+                                        <h:outputText value="#{msg['locations.delete']}"/>
+
+                                    </f:facet>
+                                    <h:form>
+                                        <h:commandButton class='btn btn-danger' onclick="if (!confirm('#{msg['locations.you_sure']}'))
+                                                    return false;"   actionListener="#{locationsData.deleteLocation(locationsList.id.intValue())}" value="#{msg['locations.delete']}"></h:commandButton>
+                                    </h:form>
+
+                                </h:column>
                             </h:dataTable>
+
                         </div>
+                    </div>
+
                 </div>
-                    
             </div>
-        </div>
+
         </div>
 
 
-        <ui:include src="locationModal.xhtml"/>
-        
-        <script>
-            function openLocationsModal(){
-                $("#locationModal").modal();
-            }
-        </script>
+
+
 
     </h:body>
 

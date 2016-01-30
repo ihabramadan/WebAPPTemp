@@ -7,7 +7,6 @@ package GPStreet.common;
 
 import GPStreet.BB.GroupsBean;
 import GPStreet.BB.PagesBean;
-import GPStreet.BB.UserBean;
 import GPStreet.DAO.UserDAO;
 import GPStreet.DB.Managers.ManageGroups;
 import GPStreet.DB.Mapping.Entity.GpstGroups;
@@ -346,6 +345,9 @@ public class UserData implements Serializable {
             logger.error(ex.getMessage());
         }
     }
+    
+    
+    
     public void addUser() {
         try {
         boolean success = UserDAO.addUser(userName, password, userEmail, userPhone, userFirstName, userLastName ,mainGroup.getId());

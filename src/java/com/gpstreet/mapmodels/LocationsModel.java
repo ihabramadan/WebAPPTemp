@@ -35,6 +35,9 @@ public class LocationsModel {
     private LatLng midPoint;
     private List<GpstLocations> allLocations;
     private Marker selectedMarker;
+    private LatLng addedMarkerLatLng;
+
+    
     
     @PostConstruct
     public void init(){
@@ -49,6 +52,14 @@ public class LocationsModel {
         return locationModel;
     }
 
+    public LatLng getAddedMarkerLatLng() {
+        return addedMarkerLatLng;
+    }
+
+    public void setAddedMarkerLatLng(LatLng addedMarkerLatLng) {
+        this.addedMarkerLatLng = addedMarkerLatLng;
+    }
+    
     public void setLocationModel(MapModel locationModel) {
         this.locationModel = locationModel;
     }
@@ -118,5 +129,7 @@ public class LocationsModel {
         }
         
     }
+    
+    
     
 }

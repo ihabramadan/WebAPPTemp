@@ -7,6 +7,7 @@ package GPStreet.DB.Managers;
 
 import GPStreet.DB.HibernateUtil;
 import GPStreet.DB.Mapping.Entity.GpstLocations;
+import GPStreet.DB.Mapping.Entity.GpstUsers;
 import GPStreet.EJB.StartupBean;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -53,13 +54,17 @@ public class ManageLocations {
        
 
         Integer locationId = null;
+        
         try {
             session = HibernateUtil.getGlobalSession();
             location = new GpstLocations(name,desc,lat,lng,null);
-            
+            GpstLocations existLocation = exists(location, name);
+            if(existLocation == null){
             tx = session.beginTransaction();
             locationId = (int) session.save(location);
             tx.commit();
+            }else
+                return -1;
         } catch (HibernateException ex) {
             if (tx != null) {
                 tx.rollback();
@@ -71,5 +76,34 @@ public class ManageLocations {
         }
         return locationId;
     }
+    
+    public GpstLocations exists (GpstLocations location,String name) {
+    Query query = HibernateUtil.getGlobalSession().createQuery("FROM GpstLocations where name = :name" );
+   query.setString("name", name);
+  
+    return (GpstLocations)query.uniqueResult();
+}
+    
+        public boolean deleteLocation(int locationId){
+        
+        try {
+            session = HibernateUtil.getGlobalSession();
+            
+            location = (GpstLocations)session.get(GpstLocations.class, locationId);
+            
+           
+            tx = session.beginTransaction();
+            session.delete(location);
+            tx.commit();
+        } catch (HibernateException ex) {
+            if (tx != null) {
+                tx.rollback();
+            }
+            logger.error(ex.getMessage());
+            return false;
+        }
+        return true;
+    }
+
     
 }
