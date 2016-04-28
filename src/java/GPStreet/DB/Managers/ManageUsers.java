@@ -82,8 +82,7 @@ public class ManageUsers {
         try {
             session = HibernateUtil.getGlobalSession();
             user = new GpstUsers( );
-            user.setId(userId);
-            
+            user.setId(userId);            
             tx = session.beginTransaction();
             session.delete(user);
             tx.commit();

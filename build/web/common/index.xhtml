@@ -329,7 +329,9 @@
                          </h:form>
                     </li>
                     <li>
-                        <a href="tables.html"><i class="fa fa-table fa-fw"></i>Tables</a>
+                         <h:form style="display : #{userBean.isAuthorized('products') ? 'block' : 'none'} ">
+                             <h:commandLink actionListener="#{userBean.setPage('../Products/products.xhtml')}" class="fa fa-flask fa-fw" >&nbsp;#{msg['visits.my_visits']}</h:commandLink>
+                         </h:form>
                     </li>
                     <li>
                         <a href="forms.html"><i class="fa fa-edit fa-fw"></i>Forms</a>
