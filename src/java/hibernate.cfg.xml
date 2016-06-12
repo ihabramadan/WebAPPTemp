@@ -8,10 +8,13 @@
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">admin</property>
     <mapping resource="GPStreet/DB/Mapping/Entity/GpstGroups.hbm.xml"/>
-    <mapping resource="GPStreet/DB/Mapping/Entity/GpstState.hbm.xml"/>
-    <mapping resource="GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml"/>
-    <mapping resource="GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml"/>
     <mapping resource="GPStreet/DB/Mapping/Entity/GpstPages.hbm.xml"/>
     <mapping resource="GPStreet/DB/Mapping/Entity/GpstUsers.hbm.xml"/>
+    
+    <mapping resource="GPStreet/DB/Mapping/Entity/GpstState.hbm.xml"/>
+    <mapping resource="GPStreet/DB/Mapping/Entity/GpstTracker.hbm.xml"/>
+    <mapping resource="GPStreet/DB/Mapping/Entity/GpstProducts.hbm.xml"/>
+    <mapping resource="GPStreet/DB/Mapping/Entity/GpstLocations.hbm.xml"/>
+    <mapping resource="GPStreet/DB/Mapping/Entity/GpstProductTypes.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

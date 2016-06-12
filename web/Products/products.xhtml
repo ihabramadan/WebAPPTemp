@@ -9,8 +9,14 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
         
         <title>Products</title>
-    </h:head>
-    <h:body >
+ 
+    <div >
+            <h1 class="page-header" style="display : #{userBean.isAuthorized('products') ? 'block' : 'none'} ">#{msg['products.products']}
+                
+            </h1>
+            
+        </div></h:head>
+    <h:body onload="#{productsBean.bindProducts()}">
 
 
         <div class="col-lg-12">
@@ -26,7 +32,7 @@
                             <td align="right">
                                 <h:form>
                                     <h:commandLink  class='btn  btn-circle btn-lg'  title="#{msg['products.add_product']}" type="button"><i class="fa fa-pluse"></i>
-                                    <f:ajax  listener="#{userData.exitEditMode()}" onevent="showUserModal(0)" render=":UserForm" />
+                                    <f:ajax  listener="#{userData.exitEditMode()}" onevent="showProductsModal(0)" render=":ProductForm" />
                                     </h:commandLink>
                                  </h:form>
                                 
@@ -54,7 +60,7 @@
                         
                         <h:form id="form" style="overflow:scroll;height:550px">
                             
-                            <h:dataTable  value="#{userBean.usersList}" var="usersList" class="table table-striped table-bordered table-hover" id='usersTable'>
+                            <h:dataTable  value="#{productsBean.productsList}" var="productsList" class="table table-striped table-bordered table-hover" id='productsTable'>
 
                                 <h:column>
 
@@ -64,7 +70,7 @@
 
                                     </f:facet>
 
-                                    <h:outputText id="userName" value="#{usersList.username}"/>
+                                    <h:outputText id="productName" value="#{productsList.name}"/>
 
                                 </h:column>
                                 
@@ -72,67 +78,35 @@
 
                                     <f:facet name="header" >
 
-                                        <h:outputText value="#{msg['users.group']}"/>
+                                        <h:outputText value="#{msg['product.description']}"/>
 
                                     </f:facet>
 
-                                    <h:outputText id="group" value="#{usersList.mainGroup.groupname}"/>
+                                    <h:outputText id="group" value="#{productsList.description}"/>
 
                                 </h:column>
                                 <h:column>
 
                                     <f:facet name="header" >
 
-                                        <h:outputText value="#{msg['users.first_name']}"/>
+                                        <h:outputText value="#{msg['product.product_type']}"/>
 
                                     </f:facet>
 
-                                    <h:outputText id="firstName" value="#{usersList.firstname}"/>
+                                    <h:outputText id="firstName" value="#{productsList.gpstProductTypes.description}"/>
 
                                 </h:column>
+                                
                                 <h:column>
 
                                     <f:facet name="header" >
 
-                                        <h:outputText value="#{msg['users.last_name']}"/>
+                                        <h:outputText value="#{msg['product.edit']}"/>
 
                                     </f:facet>
 
-                                    <h:outputText value="#{usersList.lastname}"/>
-
-                                </h:column>
-                                <h:column>
-
-                                    <f:facet name="header" >
-
-                                        <h:outputText value="#{msg['users.email']}"/>
-
-                                    </f:facet>
-
-                                    <h:outputText value="#{usersList.email}"/>
-
-                                </h:column>
-                                <h:column>
-
-                                    <f:facet name="header" >
-
-                                        <h:outputText value="#{msg['users.phone']}"/>
-
-                                    </f:facet>
-
-                                    <h:outputText value="#{usersList.phone}"/>
-
-                                </h:column>
-                                <h:column>
-
-                                    <f:facet name="header" >
-
-                                        <h:outputText value="#{msg['users.edit']}"/>
-
-                                    </f:facet>
-
-                                    <h:commandButton   class='btn btn-primary' type="button"   value="#{msg['users.edit']}">
-                                        <f:ajax  listener="#{userData.handleEvent}"  onevent="showUserModal(#{usersList.id})" render=":UserForm" />
+                                    <h:commandButton   class='btn btn-primary' type="button"   value="#{msg['product.edit']}">
+                                        <f:ajax  listener="#{userData.handleEvent}"  onevent="showProductModal(#{productsList.id})" render=":ProductForm" />
                                     </h:commandButton>
 
                                 </h:column>
@@ -140,11 +114,11 @@
 
                                     <f:facet name="header" >
 
-                                        <h:outputText value="#{msg['users.delete']}"/>
+                                        <h:outputText value="#{msg['product.delete']}"/>
 
                                     </f:facet>
 
-                                    <h:commandButton class='btn btn-danger' onclick="if (!confirm('#{msg['users.you_sure']}')) return false;"   actionListener="#{userBean.deleteUser(usersList.id)}" value="#{msg['users.delete']}"></h:commandButton>
+                                    <h:commandButton class='btn btn-danger' onclick="if (!confirm('#{msg['product.you_sure']}')) return false;"   actionListener="#{productsBean.deleteProduct(productsList.id)}" value="#{msg['product.delete']}"></h:commandButton>
 
                                 </h:column>
                             </h:dataTable>
@@ -154,13 +128,13 @@
                 </div>
             
 
-<ui:include src="userModal.xhtml"/>
+<ui:include src="productsModal.xhtml"/>
             
         </div>
         <script>
             
             
-            function showUserModal(uId){
+            function showProductsModal(uId){
             
             
                 $("#userModal").modal({'backdrop': "static"});
