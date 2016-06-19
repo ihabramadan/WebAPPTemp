@@ -16,7 +16,7 @@
             </h1>
             
         </div></h:head>
-    <h:body onload="#{productsBean.bindProducts()}">
+    <h:body onload="#{productsBean.bindProducts()} #{productTypesBean.bindProductTypes()}">
 
 
         <div class="col-lg-12">
@@ -66,7 +66,7 @@
 
                                     <f:facet name="header" >
 
-                                        <h:outputText value="#{msg['products.product_name']}"/>
+                                        <h:outputText value="#{msg['products.name']}"/>
 
                                     </f:facet>
 
@@ -78,7 +78,7 @@
 
                                     <f:facet name="header" >
 
-                                        <h:outputText value="#{msg['product.description']}"/>
+                                        <h:outputText value="#{msg['products.description']}"/>
 
                                     </f:facet>
 
@@ -89,7 +89,7 @@
 
                                     <f:facet name="header" >
 
-                                        <h:outputText value="#{msg['product.product_type']}"/>
+                                        <h:outputText value="#{msg['products.type']}"/>
 
                                     </f:facet>
 
@@ -101,11 +101,11 @@
 
                                     <f:facet name="header" >
 
-                                        <h:outputText value="#{msg['product.edit']}"/>
+                                        <h:outputText value="#{msg['products.edit']}"/>
 
                                     </f:facet>
 
-                                    <h:commandButton   class='btn btn-primary' type="button"   value="#{msg['product.edit']}">
+                                    <h:commandButton   class='btn btn-primary' type="button"   value="#{msg['products.edit']}">
                                         <f:ajax  listener="#{userData.handleEvent}"  onevent="showProductModal(#{productsList.id})" render=":ProductForm" />
                                     </h:commandButton>
 
@@ -114,11 +114,11 @@
 
                                     <f:facet name="header" >
 
-                                        <h:outputText value="#{msg['product.delete']}"/>
+                                        <h:outputText value="#{msg['products.delete']}"/>
 
                                     </f:facet>
 
-                                    <h:commandButton class='btn btn-danger' onclick="if (!confirm('#{msg['product.you_sure']}')) return false;"   actionListener="#{productsBean.deleteProduct(productsList.id)}" value="#{msg['product.delete']}"></h:commandButton>
+                                    <h:commandButton class='btn btn-danger' onclick="if (!confirm('#{msg['products.you_sure']}')) return false;"   actionListener="#{productsBean.deleteProduct(productsList.id)}" value="#{msg['products.delete']}"></h:commandButton>
 
                                 </h:column>
                             </h:dataTable>
@@ -137,7 +137,7 @@
             function showProductsModal(uId){
             
             
-                $("#userModal").modal({'backdrop': "static"});
+                $("#productsModal").modal({'backdrop': "static"});
                 //$('#userModal').modal('show');  
                 
             }

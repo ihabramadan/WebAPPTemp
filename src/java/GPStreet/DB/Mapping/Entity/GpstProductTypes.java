@@ -23,10 +23,10 @@ public class GpstProductTypes  implements java.io.Serializable {
     public GpstProductTypes(String type) {
         this.type = type;
     }
-    public GpstProductTypes(String type, String description, Set gpstProductses) {
+    public GpstProductTypes(String type, String description) {
        this.type = type;
        this.description = description;
-       this.gpstProductses = gpstProductses;
+
     }
    
     public Integer getId() {

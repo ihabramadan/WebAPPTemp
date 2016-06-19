@@ -5,15 +5,7 @@
 
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>UserModal</title>
-
-
-
-
-
-        <!-- Include the plugin's CSS and JS: -->
-
-        <title>Users</title>
+        <title>ProductModal</title>
     </h:head>
 
 
@@ -22,17 +14,17 @@
 
 
 
-    <div  class="modal fade " id="userModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div  class="modal fade " id="productsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="userModalLabel"></h4>
+                    <h4 class="modal-title" id="productModalLabel"></h4>
                 </div>
                 <div class="modal-body edit_content">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            #{msg['users.add_user']}
+                            #{msg['products.add_product']}
                         </div>
                         <div class="panel-body">
                             <div class="form-group">
@@ -56,47 +48,24 @@
                                     <div class="form-group" >
 
                                     </div>
-                                    <label >#{msg['users.user_name']}</label><h:outputText style="color:red" value="*" />
+                                    <label >#{msg['products.name']}</label><h:outputText style="color:red" value="*" />
 
-                                    <h:inputText disabled="#{userData.editMode}" value="#{userData.userName}" class="form-control" required="true" requiredMessage="#{msg['users.user_name_required']}" ></h:inputText>
+                                    <h:inputText disabled="#{productData.editMode}" value="#{productData.name}" class="form-control" required="true" requiredMessage="#{msg['products.product_name_required']}" ></h:inputText>
 
-                                    <label>#{msg['users.first_name']}</label><h:outputText style="color:red" value="*" />
+                                    <label>#{msg['products.descreption']}</label>
 
-                                    <h:inputText value="#{userData.userFirstName}" class="form-control" required="true" requiredMessage="#{msg['users.first_name_required']}" ></h:inputText>
+                                    <h:inputText value="#{productData.description}" class="form-control" ></h:inputText>
+                                    
 
-                                    <div class="form-group " >    
-                                        <label>#{msg['users.last_name']}</label><h:outputText style="color:red" value="*" />
-                                        <h:inputText value="#{userData.userLastName}" class="form-control" required="true" requiredMessage="#{msg['users.last_name_required']}" ></h:inputText>
-                                    </div>
                                     <div class="form-group">
-                                        <label>#{msg['users.phone']}</label>
-                                        <h:inputText value="#{userData.userPhone}" class="form-control"></h:inputText>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>#{msg['users.email']}</label>
-                                        <h:inputText value="#{userData.userEmail}" class="form-control" validatorMessage="#{msg['users.invalid_email']}" >                                    
-                                            <!--<f:validateRegex pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" />-->
-                                            <f:validateRegex pattern="^$|^.*@.*\..*$" />
-                                        </h:inputText>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>#{msg['users.group']}</label><h:outputText style="color:red" value="*" />
-                                        <h:selectOneMenu value="#{userData.mainGroup.id}"  class="form-control" id="groupsMenu">
-                                            <f:selectItems value="#{groupsBean.groupsList}" var="glist" itemValue="#{glist.id}" itemLabel="#{glist.groupname}"/>
+                                        <label>#{msg['products.type']}</label><h:outputText style="color:red" value="*" />
+                                        <h:selectOneMenu value="#{productData.type.id}"  class="form-control" id="productTypesMenu">
+                                            <f:selectItems value="#{productTypesBean.productTypesList}" var="ptlist" itemValue="#{ptlist.id}" itemLabel="#{ptlist.type}"/>
 
                                         </h:selectOneMenu>
                                     </div> 
-                                    <div class="form-group">
-                                        <h:outputText rendered="#{!userData.editMode}" value="#{msg['users.password']}"></h:outputText><h:outputText rendered="#{!userData.editMode}" style="color:red" value="*" />
-                                        <h:inputSecret value="#{userData.password}" rendered="#{!userData.editMode}" id="password" class="form-control" required="true" validatorMessage="#{msg['users.invalid_password']}" requiredMessage="#{msg['users.password_required']}" >
-                                            <f:validateRegex pattern="((?=.*[a-z]).{6,})" />
-                                        </h:inputSecret>
-                                    </div>
-                                    <f:event listener="#{userData.validatePassword}"  type="postValidate"/>
-                                    <div class="form-group">
-                                        <h:outputText rendered="#{!userData.editMode}" value="#{msg['users.confirm_password']}"></h:outputText><h:outputText rendered="#{!userData.editMode}" style="color:red" value="*" />
-                                        <h:inputSecret  rendered="#{!userData.editMode}" value="#{userData.userConfirmPassword}" id="confirmPassword" class="form-control"></h:inputSecret>
-                                    </div>
+
+                                    
 
                                     <div class="modal-footer">
 
@@ -104,8 +73,8 @@
 
                                         <div class="form-group">
                                             <button type="button" class="btn btn-default" data-dismiss="modal">#{msg['groupsModal.close']}</button>
-                                            <h:commandButton rendered="#{userData.editMode}" actionListener="#{userData.saveChanges()}" class="btn btn-primary"  value="#{msg['groupsModal.save_changes']}"  ></h:commandButton>
-                                            <h:commandButton   rendered="#{!userData.editMode}" class='btn btn-primary' id="addButton"  actionListener="#{userData.addUser()}" value="#{msg['users.add_user']}">
+                                            <h:commandButton rendered="#{productData.editMode}" actionListener="#{productData.saveChanges()}" class="btn btn-primary"  value="#{msg['groupsModal.save_changes']}"  ></h:commandButton>
+                                            <h:commandButton   rendered="#{!productData.editMode}" class='btn btn-primary' id="addButton"  actionListener="#{productData.addProduct()}" value="#{msg['products.add_product']}">
 
                                             </h:commandButton>
                                         </div>
