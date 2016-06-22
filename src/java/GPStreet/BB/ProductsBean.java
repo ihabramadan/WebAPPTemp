@@ -7,9 +7,13 @@ package GPStreet.BB;
 
 import GPStreet.DB.Managers.ManageProducts;
 import GPStreet.DB.Mapping.Entity.GpstProducts;
+import GPStreet.EJB.StartupBean;
 import java.util.ArrayList;
 import java.util.List;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 
 /**
  *
@@ -17,12 +21,14 @@ import javax.faces.bean.ManagedBean;
  */
 
 @ManagedBean(name = "productsBean")
+@SessionScoped
 public class ProductsBean {
     int id;
     String name;
     String description;
     int typeId;
     List<GpstProducts> productsList = new ArrayList<>();
+    private ManageProducts mp = new ManageProducts();
     
     public void bindProducts(){
         ManageProducts mp = new ManageProducts();
@@ -74,6 +80,25 @@ public class ProductsBean {
 
     public void setProductsList(List<GpstProducts> productsList) {
         this.productsList = productsList;
+    }
+    
+    
+    public boolean deleteProduct(int productId){
+        boolean success = false;
+        
+        success = mp.deleteProduct(productId);
+        if(success == false){
+            FacesContext.getCurrentInstance().addMessage("error", new FacesMessage(StartupBean.localRB.getString("database.error")));
+            return false;
+        }
+        else{
+            FacesContext.getCurrentInstance().addMessage("success", new FacesMessage(StartupBean.localRB.getString("products.delete_success")));
+            return true;
+        }
+            
+    }
+    public void addProduct(){
+        
     }
     
 }

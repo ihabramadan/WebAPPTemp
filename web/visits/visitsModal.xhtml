@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-          
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <h:head>
@@ -25,13 +25,15 @@
                             <div class="form-group">
                                 
                                 <h:form id="locationsModalform">
-                                    <label>#{msg['visits.name']}</label><h:outputText style="color:red" value="*" />
-                                    <div class="form-group">
-                                        <h:inputText value="#{locationsData.name}" required="true" requiredMessage="#{msg['locationsModal.name_required']}" class="form-control"/>                            
+                                <div class="form-group">
+                                        <h:outputLabel value="#{msg['visits.start_date']}  " for="startpicker" />
+                                        <h:inputText  pt:placeholder="#{msg['visits.start_date']}" value="#{visitsModel.startDate}" id="startpicker" class="datetimepicker form-control" />
                                     </div>
-                                    <label>#{msg['locationsModal.description']}</label>
-                                    <div class="form-group">
-                                        <h:inputText id="description" value="#{locationsData.description}" class="form-control"/>                            
+
+                                    <div
+                                        class="form-group">
+                                        <h:outputLabel value="#{msg['visits.end_date']}  " for="endpicker" />
+                                        <h:inputText pt:placeholder="#{msg['visits.end_date']}" value="#{visitsModel.endDate}" id="endpicker" class="datetimepicker form-control"/>
                                     </div>
                                     <label>#{msg['locationsModal.lat']}</label><h:outputText style="color:red" value="*" />
                                     <div class="form-group">

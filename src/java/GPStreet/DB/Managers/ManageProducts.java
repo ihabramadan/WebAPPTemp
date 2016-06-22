@@ -6,6 +6,7 @@
 package GPStreet.DB.Managers;
 
 import GPStreet.DB.HibernateUtil;
+import GPStreet.DB.Mapping.Entity.GpstGroups;
 import GPStreet.DB.Mapping.Entity.GpstLocations;
 import GPStreet.DB.Mapping.Entity.GpstProductTypes;
 import GPStreet.DB.Mapping.Entity.GpstProducts;
@@ -89,7 +90,7 @@ public class ManageProducts {
         return (GpstProducts) query.uniqueResult();
     }
 
-    public boolean deleteLocation(int productId) {
+    public boolean deleteProduct(int productId) {
 
         try {
             session = HibernateUtil.getGlobalSession();
@@ -103,6 +104,37 @@ public class ManageProducts {
             if (tx != null) {
                 tx.rollback();
             }
+            logger.error(ex.getMessage());
+            return false;
+        }
+        return true;
+    }
+    
+     public boolean updateProduct(int productId,String name,String description,int typeId){
+        GpstProducts product = null;
+        
+       
+
+        
+        try {
+            session = HibernateUtil.getGlobalSession();
+            
+            
+            product= (GpstProducts)session.get(GpstProducts.class,productId);
+            
+            tx = session.beginTransaction();
+            product.setName(name);
+            product.setDescription(description);
+            product.setGpstProductTypes((GpstProductTypes)session.get(GpstProductTypes.class, typeId));
+            
+            session.save(product);
+            tx.commit();
+        } catch (HibernateException ex) {
+            if (tx != null) {
+                tx.rollback();
+                
+            }
+            FacesContext.getCurrentInstance().addMessage("addError", new FacesMessage(StartupBean.localRB.getString("users.database_error")));
             logger.error(ex.getMessage());
             return false;
         }

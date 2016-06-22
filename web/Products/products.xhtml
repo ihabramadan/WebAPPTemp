@@ -32,7 +32,7 @@
                             <td align="right">
                                 <h:form>
                                     <h:commandLink  class='btn  btn-circle btn-lg'  title="#{msg['products.add_product']}" type="button"><i class="fa fa-pluse"></i>
-                                    <f:ajax  listener="#{userData.exitEditMode()}" onevent="showProductsModal(0)" render=":ProductForm" />
+                                    <f:ajax  listener="#{productData.exitEditMode()}" onevent="showProductsModal(0)" render=":ProductForm" />
                                     </h:commandLink>
                                  </h:form>
                                 
@@ -106,7 +106,7 @@
                                     </f:facet>
 
                                     <h:commandButton   class='btn btn-primary' type="button"   value="#{msg['products.edit']}">
-                                        <f:ajax  listener="#{userData.handleEvent}"  onevent="showProductModal(#{productsList.id})" render=":ProductForm" />
+                                        <f:ajax  listener="#{productData.handleEvent}"  onevent="showProductsModal(#{productsList.id})" render=":ProductForm" />
                                     </h:commandButton>
 
                                 </h:column>

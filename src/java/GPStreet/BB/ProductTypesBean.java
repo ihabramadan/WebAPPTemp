@@ -12,6 +12,7 @@ import GPStreet.DB.Mapping.Entity.GpstProducts;
 import java.util.ArrayList;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 
 /**
  *
@@ -19,6 +20,7 @@ import javax.faces.bean.ManagedBean;
  */
 
 @ManagedBean(name = "productTypesBean")
+@SessionScoped
 public class ProductTypesBean {
     int id;
     String type;

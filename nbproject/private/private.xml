@@ -6,9 +6,13 @@
             <file>file:/E:/GPStreet/GPStreet/web/Products/products.xhtml</file>
             <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/web/messages/Messages_en.properties</file>
             <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/common/ProductData.java</file>
+            <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/DB/Managers/ManageUsers.java</file>
             <file>file:/E:/GPStreet/GPStreet/web/settings/settings.xhtml</file>
+            <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/DB/Mapping/Entity/GpstProductTypes.java</file>
+            <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/BB/CommonBB.java</file>
             <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/BB/GroupsBean.java</file>
             <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/BB/ProductTypesBean.java</file>
+            <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/BB/PagesBean.java</file>
             <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/common/UserData.java</file>
             <file>file:/E:/GPStreet/GPStreet/web/settings/users.xhtml</file>
             <file>file:/E:/GPStreet/GPStreet/web/Products/productsModal.xhtml</file>
@@ -16,6 +20,8 @@
             <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/DB/Managers/ManageProducts.java</file>
             <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/DB/Managers/ManageProductTypes.java</file>
             <file>file:/E:/GPStreet/GPStreet/web/settings/userModal.xhtml</file>
+            <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/BB/UserBean.java</file>
+            <file>file:/E:/GPStreet/GPStreet/src/java/GPStreet/DAO/UserDAO.java</file>
         </group>
     </open-files>
 </project-private>

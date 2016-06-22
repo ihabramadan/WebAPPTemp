@@ -5,14 +5,27 @@
  */
 package GPStreet.common;
 
+import GPStreet.BB.GroupsBean;
+import GPStreet.BB.PagesBean;
+import GPStreet.DAO.UserDAO;
+import GPStreet.DB.Managers.ManageProducts;
+import GPStreet.DB.Mapping.Entity.GpstGroups;
 import GPStreet.DB.Mapping.Entity.GpstProductTypes;
+import GPStreet.DB.Mapping.Entity.GpstProducts;
 import GPStreet.DB.Mapping.Entity.GpstUsers;
+import GPStreet.EJB.StartupBean;
 import java.io.Serializable;
+import java.sql.SQLException;
+import java.util.Iterator;
+import java.util.List;
+import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 import javax.faces.event.AjaxBehaviorEvent;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
+import org.apache.log4j.Logger;
 
 /**
  *
@@ -23,6 +36,8 @@ import javax.inject.Named;
 @ViewScoped
 public class ProductData implements Serializable {
 
+    private Logger logger = Logger.getLogger(ProductData.class);
+    private ManageProducts mp = new ManageProducts();
     /**
      * Creates a new instance of Product Data
      */
@@ -67,7 +82,6 @@ public class ProductData implements Serializable {
         this.type = type;
     }
 
-    
     public Boolean getEditMode() {
         return editMode;
     }
@@ -76,29 +90,90 @@ public class ProductData implements Serializable {
         this.editMode = editMode;
     }
 
-//    public  void handleEvent(final AjaxBehaviorEvent event) {
-//    //get the member from the FacesContext.
-//        editMode = true;
-//    FacesContext context = FacesContext.getCurrentInstance();
-//        GpstUsers userBean;
-//    userBean = context.getApplication().evaluateExpressionGet(context, "#{usersList}", GpstUsers.class);
-//    this.userName  =  userBean.getUsername();
-//    this.password = userBean.getPassword();
-//    this.userFirstName = userBean.getFirstname();
-//    this.userLastName = userBean.getLastname();
-//    this.userPhone = userBean.getPhone();
-//    this.userEmail = userBean.getEmail();
-//    this.mainGroup = userBean.getMainGroup();
-//    this.userId = userBean.getId();
-//    
-    
-    void clear(){
+    public  void handleEvent(final AjaxBehaviorEvent event) {
+    //get the member from the FacesContext.
+        editMode = true;
+    FacesContext context = FacesContext.getCurrentInstance();
+        GpstProducts product;
+    product = context.getApplication().evaluateExpressionGet(context, "#{productsList}", GpstProducts.class);
+    this.id  =  product.getId();
+    this.name = product.getName();
+    this.description = product.getDescription();
+    this.type = product.getGpstProductTypes();
+    }
+    public void clear() {
         this.id = 0;
-        this.name="";
-        this.type= null;
-        this.description="";
+        this.name = "";
+        this.type = new GpstProductTypes();
+        this.description = "";
         editMode = false;
     }
+
+    @PostConstruct
+    public void init() {
+        editMode = false;
+        type = new GpstProductTypes();
+    }
+
     
+    public void exitEditMode(){
+        editMode = false;
+        this.name  =  null;
+        this.type= new GpstProductTypes();
+        this.description = null;
+        this.id = 0;
+        clearMessages();
+        
+    }
+
     
+    public void addProduct() {
+        try {
+            
+            
+            Integer productId = mp.addProduct(name, description, type.getId());
+            
+            if(productId == -1){
+            FacesContext.getCurrentInstance().addMessage("error", new FacesMessage(StartupBean.localRB.getString("users.database_error")));
+            clear();
+            }else{
+            FacesContext.getCurrentInstance().addMessage("success", new FacesMessage(StartupBean.localRB.getString("products.add_success")));
+            
+            }
+        
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            clear();
+        }
+    }
+    
+    void clearMessages(){
+        Iterator<String> itIds = FacesContext.getCurrentInstance().getClientIdsWithMessages();
+        while (itIds.hasNext()) {
+            List<FacesMessage> messageList = FacesContext.getCurrentInstance().getMessageList(itIds.next());
+            if (!messageList.isEmpty()) { // if empty, it will be unmodifiable and throw UnsupportedOperationException...
+                messageList.clear();
+            }
 }
+    }
+    public Boolean saveChanges(){
+        try{
+        Boolean result = mp.updateProduct(this.id, this.name, this.description, this.type.getId());
+        if(result == false){
+            FacesContext.getCurrentInstance().addMessage("error", new FacesMessage(StartupBean.localRB.getString("users.database_error")));
+            clear();
+            return false;
+        }else{
+            FacesContext.getCurrentInstance().addMessage("success", new FacesMessage(StartupBean.localRB.getString("products.updated")));
+            
+            return true;
+            
+        }
+        }catch(Exception ex){
+            logger.error(ex.getMessage());
+            return false;
+        }
+    }
+    
+
+    }
